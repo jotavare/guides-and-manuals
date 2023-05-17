@@ -22,18 +22,33 @@ If you dont have a newtowrk card you can always buy a external one.
 ## Procedure
 
 ### Determine the Network Interface
-Open a terminal and type `ip a`
-Identify the wireless network interfaces, which usually start with wlanX (e.g., wlan0). This information will be needed later.
-#INSERTIMAGEHERE#
+Identify the wireless network interfaces, which usually start with w (e.g., wlp3s0). This information will be needed later.
+Open a terminal and type:
+
+```
+ip a
+```
 
 ### Enable Monitor Mode
 Use the airmon-ng tool to switch your network card to monitor mode.
-Enter the command `airmon-ng start <wireless interface>`, replacing <wireless interface> with the name of your wireless interface (e.g., wlan0).
-This command will enable monitor mode on your network card, but it will break your internet connection temporarily, click here to restore.
+<br>This will enable monitor mode on your network card, but it will break your internet connection temporarily.
+<br>Enter the command:
+
+```
+airmon-ng start <wireless interface>
+```
+
+Replace:
+- `<wireless interface>` - name of your wireless interface (e.g., airmon-ng start wlp3s0).
 
 ### Verify Monitor Mode
-Run the command `iwconfig` in a terminal to check if the network card's mode has changed to monitor.
-The wireless interface should be displayed as <interface>mon (e.g., wlan0mon).
+
+```
+iwconfig
+```
+
+Run the command in a terminal to check if the network card's mode has changed to monitor.
+The wireless interface should be displayed as `<interface>mon` (e.g., wlp3s0mon).
 If not, it means your network card doesn't support monitor mode, and you'll need the external network card mentioned earlier.
 
 ### Scan for Networks
