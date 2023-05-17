@@ -24,6 +24,8 @@ Identify the wireless network interfaces, which usually start with w (e.g., wlp3
 ip a
 ```
 
+> _The "ip a" command in Linux displays network interface information, including IP addresses, MAC addresses, and related configurations. It is used for troubleshooting and network configuration purposes._
+
 ### 2 - Enable Monitor Mode
 Use the airmon-ng tool to switch your network card to monitor mode.
 <br>It will break your internet connection temporarily.
