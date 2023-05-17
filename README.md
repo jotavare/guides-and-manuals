@@ -9,21 +9,16 @@ When you connect to a network from a wireless device, a `handshake` is sent from
 While it's not possible to reverse the encrypted password, you can use a technique called a word list attack. A word list is a huge text file containing thousands of passwords. By comparing the encrypted handshake password with the passwords in the word list, you can determine the real password.
 
 ## Requirements
-
-If you have `Kali Linux` you can skip this step because it already comes with the necessary tools pre-installed.
-
 For this guide, to perform Wi-Fi network hacking, you'll need:
-- Computer running `Linux` distribution
-- Computer with a network card that supports `monitor mode`
-- Install the package `Aircrack-ng` with the command `sudo apt install aircrack-ng`
-
-If you dont have a newtowrk card you can always buy a external one.
+- Computer running `Linux` distribution;
+- Computer with a network card that supports `monitor mode`;
+- Install the package `Aircrack-ng` with the command `sudo apt install aircrack-ng`;
 
 ## Procedure
 
 ### 1 - Determine the Network Interface
 
-<br>Identify the wireless network interfaces, which usually start with w (e.g., wlp3s0).
+Identify the wireless network interfaces, which usually start with w (e.g., wlp3s0).
 <br>This information will be needed later.
 <br>Open a terminal and type:
 
@@ -33,7 +28,7 @@ ip a
 
 ### 2 - Enable Monitor Mode
 
-<br>Use the airmon-ng tool to switch your network card to monitor mode.
+Use the airmon-ng tool to switch your network card to monitor mode.
 <br>It will break your internet connection temporarily.
 <br>Enter the command:
 
@@ -41,11 +36,11 @@ ip a
 airmon-ng start <wireless interface>
 ```
 
-- Example: `airmon-ng start wlp3s0`
+Example: `airmon-ng start wlp3s0`
 
 ### 3 - Verify Monitor Mode
 
-<br>The wireless interface should be displayed as `<interface>mon` (e.g., wlp3s0mon).
+The wireless interface should be displayed as `<interface>mon` (e.g., wlp3s0mon).
 <br>If not, it means your network card doesn't support monitor mode, and you'll need the external network card mentioned earlier.
 <br>Run the command in a terminal to check if the network card's mode has changed to monitor.
 
@@ -55,7 +50,7 @@ iwconfig
 
 ### 4 - Scan for Networks
 
-<br>Use airodump-ng to view the networks around you.
+Use airodump-ng to view the networks around you.
 <br>This command will display a list of nearby networks along with their BSSIDs (network MAC addresses) and channels.
 <br>Enter the command:
 
@@ -63,7 +58,7 @@ iwconfig
 airodump-ng <wireless interface>mon
 ```
 
-- Example: `airodump-ng wlp3s0mon`
+Example: `airodump-ng wlp3s0mon`
 
 
 ### 5 - Target Network
