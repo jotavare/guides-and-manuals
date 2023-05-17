@@ -84,32 +84,33 @@ aireplay-ng -0 10 -a <BSSID> -c <client ESSID> <wireless interface>mon
 - `<wireless interface>mon` - name of your wireless interface in monitor mode;
 
 ### 8 - Capture the Handshake
-Observe the terminal running airodump-ng and wait for a device to reconnect.
-Once the handshake is captured, you can stop airodump-ng by pressing Ctrl+C.
-The captured handshake will be saved in the specified filename.
+Observe the terminal running `airodump-ng` (step 6) and wait for a device to reconnect.
+<br>Once the handshake is captured, you can stop `airodump-ng` by pressing `Ctrl+C`.
+<br>The captured handshake will be saved in the specified filename.
 
 ### 9 - Word List Attack
-Kali Linux comes with pre-installed word lists located in the directory mentioned below.
-Use the aircrack-ng command to crack the password.
-Enter aircrack-ng -w <wordlist> <filename> to start the cracking process.
-<wordlist> with the path to the desired word list file (e.g., /usr/share/wordlists/rockyou.txt)
-<filename> with the name of the captured handshake file.
+Kali Linux comes with pre-installed word lists located in the directory `/usr/share/wordlists`.
+<br>If your not on Kali, you can download a word list from here.
+<br>Now lets attempt to match the captured handshake with passwords from the word list.
+<br>Use the command:
 
-This command will attempt to match the captured handshake with passwords from the word list.
+```
+aircrack-ng -w <wordlist> <filename>
+```
+
+- `<wordlist>` - path to the desired word list file (e.g., /usr/share/wordlists/rockyou.txt);
+- `<filename>` - name of the captured handshake file;
+
+### 10 - Cracked!
+Note: After performing these steps, your internet connection may still be interrupted. To fix this, you can either restart your computer or execute the command airmon-ng stop <monitor interface> followed by systemctl restart network* to restart the network services.
 
 ## Protecting Yourself
 While you cannot prevent the authentication process, you can protect against word list attacks by choosing a long and random password that is unlikely to be found in any word list.
 
----
-  
-Note: After performing these steps, your internet connection may still be interrupted. To fix this, you can either restart your computer or execute the command airmon-ng stop <monitor interface> followed by systemctl restart network* to restart the network services.
-Conclusion
-
+## Conclusion
 In this guide, we explored the process of Wi-Fi network hacking for educational purposes only. It is essential to respect privacy and legality when using these techniques. We discussed capturing handshakes, performing deauthentication attacks, and cracking passwords using word lists. Remember to always use this knowledge responsibly and protect yourself by setting strong passwords for your Wi-Fi networks.
 
-If you found this guide helpful, feel free to leave a like and thank you for reading!
-    
-    
+If you found this guide helpful, feel free to leave a star and thank you for reading!
 
-# GLOSSARY
-# DISCLAIMER
+## GLOSSARY
+## DISCLAIMER
