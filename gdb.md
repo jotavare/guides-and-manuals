@@ -23,15 +23,29 @@
 
 | Command | Result |
 | :------ | :----- |
-| `break` <where>                         | Set a new breakpoint.                     |
-| `delete` <breakpoint#>                  | Remove a breakpoint.                      |
-| `clear`                                 | Delete all breakpoints.                   |
-| `enable` <breakpoint#>                  | Enable a disabled breakpoint.             |
-| `disable` <breakpoint#>                 | Disable a breakpoint.                     |
+| `break` main                         | set a breakpoint on a function                     |
+| `break` 42                            | set a breakpoint on a function                    |
+| `break` main.c:42                     | set breakpoint at file and line (or function)     |
+  
 </td></tr> </table
 </div>
 
-
+*(gdb) break basic.c:101        set breakpoint at file and line (or function)
+*(gdb) info breakpoints        show breakpoints
+*(gdb) delete 1         delete a breakpoint by number
+(gdb) delete        	delete all breakpoints (prompted)
+(gdb) clear             delete breakpoints at current line
+(gdb) clear function    delete breakpoints at function
+(gdb) clear line        delete breakpoints at line
+(gdb) disable 2         turn a breakpoint off, but don't remove it
+(gdb) enable 2          turn disabled breakpoint back on
+(gdb) tbreak function|line        set a temporary breakpoint
+(gdb) commands break-no ... end   set gdb commands with breakpoint
+(gdb) ignore break-no count       ignore bpt N-1 times before activation
+(gdb) condition break-no expression         break only if condition is true
+(gdb) condition 2 i == 20         example: break on breakpoint 2 if i equals 20
+(gdb) watch expression        set software watchpoint on variable
+(gdb) info watchpoints        show current watchpoints
 
 
 
