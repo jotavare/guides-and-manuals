@@ -23,7 +23,7 @@
 
 | Command | Result |
 | :------ | :----- |
-| `break` (<line or function>)                      | set a breakpoint on a line or function            |
+| `break` (line or function)                      | set a breakpoint on a line or function            |
 | `break` main.c:42                               | set breakpoint at file and (line or function)     |
 | `tbreak` (line or function)                     | set a temporary breakpoint                        |
 | `watch` (variable)                              | set software watchpoint on variable               |
