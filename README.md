@@ -2,4 +2,4 @@
 | :----: |
 | valgrind             |
 | gdb                  |
-| wifi-network-hacking |
+| wifi network hacking |
