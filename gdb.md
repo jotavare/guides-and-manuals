@@ -38,8 +38,8 @@
 | (gdb) `commands` <breakpoint number> ... end        | set gdb commands with breakpoint                  |
 | (gdb) `ignore` <breakpoint number> <n times>        | ignore breakpoint n times before activation       |
 | (gdb) `condition` <breakpoint number> <expression>  | break only if condition is true                   |
-| (gdb) `condition` <breakpoint number> <condition>   | example: condition 1 i == 2                       |
-| (gdb) `condition` <breakpoint number>               | delete condition at breakpoint number            |
+| (gdb) `condition` <breakpoint number> <condition>   | example: _condition 1 i == 2_                     |
+| (gdb) `condition` <breakpoint number>               | delete condition at breakpoint number             |
   
 </td></tr> </table
 </div>
