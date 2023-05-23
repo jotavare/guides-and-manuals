@@ -39,7 +39,7 @@
 | (gdb) `ignore` <breakpoint number> <n times>          | ignore breakpoint n times before activation       |
 | (gdb) `condition` <breakpoint number> <expression>    | break only if expression is true                  |
 | (gdb) `condition` <breakpoint number> <condition>     | example: `condition 1 i == 2`                     |
-| (gdb) `condition` '<breakpoint number>'                 | delete condition at breakpoint number             |
+| (gdb) `condition` "<breakpoint number>"                 | delete condition at breakpoint number             |
   
 </td></tr> </table
 </div>
