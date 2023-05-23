@@ -23,23 +23,23 @@
 
 | Command | Result |
 | :------ | :----- |
-| (gdb) `break` (line or function)                      | set a breakpoint on a line or function            |
-| (gdb) `break` main.c:42                               | set breakpoint at file and (line or function)     |
-| (gdb) `tbreak` (line or function)                     | set a temporary breakpoint                        |
-| (gdb) `watch` (variable)                              | set software watchpoint on variable               |
-| (gdb) `info breakpoints`                              | show breakpoints                                  |
-| (gdb) `info watchpoints`                              | show current watchpoints                          |
-| (gdb) `delete` (breakpoint number)                    | delete a breakpoint by number                     |
-| (gdb) `delete`                                        | delete all breakpoints (prompted)                 |
-| (gdb) `clear`                                         | delete breakpoints at current line                |
-| (gdb) `clear` (line or function)                      | delete breakpoints at line or function            |
-| (gdb) `disable` (breakpoint number)                   | turn a breakpoint off, but don't remove it        |
-| (gdb) `enable` (breakpoint number)                    | turn disabled breakpoint back on                  |
-| (gdb) `commands` (breakpoint number) (commands) `end` | set gdb commands with breakpoint                  |
-| (gdb) `ignore` (breakpoint number) (n times)          | ignore breakpoint n times before activation       |
-| (gdb) `condition` (breakpoint number) (expression)    | break only if expression is true                  |
-| (gdb) `condition` (breakpoint number) (condition)     | example: `condition 1 i == 2`                     |
-| (gdb) `condition` (breakpoint number)                 | delete condition at breakpoint number             |
+| `break` (line or function)                      | set a breakpoint on a line or function            |
+| `break` main.c:42                               | set breakpoint at file and (line or function)     |
+| `tbreak` (line or function)                     | set a temporary breakpoint                        |
+| `watch` (variable)                              | set software watchpoint on variable               |
+| `info breakpoints`                              | show breakpoints                                  |
+| `info watchpoints`                              | show current watchpoints                          |
+| `delete` (breakpoint number)                    | delete a breakpoint by number                     |
+| `delete`                                        | delete all breakpoints (prompted)                 |
+| `clear`                                         | delete breakpoints at current line                |
+| `clear` (line or function)                      | delete breakpoints at line or function            |
+| `disable` (breakpoint number)                   | turn a breakpoint off, but don't remove it        |
+| `enable` (breakpoint number)                    | turn disabled breakpoint back on                  |
+| `commands` (breakpoint number) (commands) `end` | set gdb commands with breakpoint                  |
+| `ignore` (breakpoint number) (n times)          | ignore breakpoint n times before activation       |
+| `condition` (breakpoint number) (expression)    | break only if expression is true                  |
+| `condition` (breakpoint number) (condition)     | example: `condition 1 i == 2`                     |
+| `condition` (breakpoint number)                 | delete condition at breakpoint number             |
   
 </td></tr> </table
 </div>
