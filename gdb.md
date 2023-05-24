@@ -43,6 +43,8 @@
   
 </td></tr> </table
 </div>
+  
+set follow-fork-mode <child or parent>
 
 
 
