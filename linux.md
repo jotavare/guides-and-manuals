@@ -27,7 +27,7 @@
   | `touch [file]`                | create or update file |
   | `cat [file]`                  | output contents of file |
   | `tav [file]`                  | output contents of file in reverse order |
-  | `cat [file] | more`           | output all contents if the file is bigger than the terminal |
+  | `cat [file] [|] more`           | output all contents if the file is bigger than the terminal |
   | `cat [file1] [file2]`         | output contents of file1 and file2 |
   | `cat -n [file]`               | output all lines with numbers |
   | `cat -b [file]`               | output all nonempty lines with numbers |
