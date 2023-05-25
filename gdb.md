@@ -2,7 +2,7 @@
 
 <div>
 <table>
-<tr><th>RUNNING</th>
+<tr><th>RUNNING?!</th>
 <tr><td>
 
 | Command | Result |
@@ -13,6 +13,24 @@
 | `set args` <args...>                  | Set arguments to pass to program to be debugged.    |
 | `run`                                 | Run the program to be debugged.                     |
 | `kill`                                | Kill the running program.                           |
+</td></tr> </table
+</div>
+  
+<div>
+<table>
+<tr><th>HELP</th>
+<tr><td>
+
+| Command | Result |
+| :------ | :----- |
+| `help`        	                        | list command classes |
+| `help running`                          | list commands in one command class |
+| `help run`        	                    | bottom-level help for a command "run" | 
+| `help info`                             | list info commands (running program state) |
+| `help info line`                        | help for a particular info comman |
+| `help show`                             | list show commands (gdb state) |
+| `help show commands`                    | specific help for a show comma |
+
 </td></tr> </table
 </div>
   
