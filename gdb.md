@@ -101,6 +101,8 @@ set follow-fork-mode <child or parent>
 <tr><th>BROWSING SOURCE</th>
 <tr><td>
 
+| Command | Result |
+| :------ | :----- |
 | (gdb) list 101                  | list 10 lines around line 101 |
 | (gdb) list 1,10                 | list lines 1 to 10 |
 | (gdb) list main  	              | list lines around function |
