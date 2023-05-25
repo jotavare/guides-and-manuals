@@ -1,4 +1,21 @@
+set follow-fork-mode <child or parent>
+
 # GDB Commands
+
+*(gdb) run        	run the program with current arguments
+*(gdb) run args redirection        run with args and redirection
+(gdb) set args args...        set arguments for run 
+(gdb) show args        show current arguments to run
+*(gdb) cont            continue the program
+*(gdb) step            single step the program; step into functions
+(gdb) step count       singlestep \fIcount\fR times
+*(gdb) next            step but step over functions 
+(gdb) next count       next \fIcount\fR times
+*(gdb) CTRL-C          actually SIGINT, stop execution of current program 
+*(gdb) attach process-id        attach to running program
+*(gdb) detach        detach from running program
+*(gdb) finish        finish current function's execution
+(gdb) kill           kill current executing program
 
 <div>
 <table>
@@ -62,8 +79,22 @@
 </td></tr> </table
 </div>
   
-set follow-fork-mode <child or parent>
+<div>
+<table>
+<tr><th>STACK BACKTRACE</th>
+<tr><td>
+  
+| Command | Result |
+| :------ | :----- |
+| (gdb) `bt`                  | print stack backtrace |
+| (gdb) `frame`        	      | show current execution position |
+| (gdb) `up`        	        | move up stack trace  (towards main) |
+| (gdb) `down`        	      | move down stack trace (away from main) |
+| (gdb) `info locals`         | print automatic variables in frame |
+| (gdb) `info args`           | print function parameters | 
 
+</td></tr> </table
+</div>
 
 
 
