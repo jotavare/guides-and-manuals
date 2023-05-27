@@ -10,10 +10,10 @@
 	<a href='https://profile.intra.42.fr/users/jotavare' target="_blank"><img alt='42' src='https://img.shields.io/badge/Porto-100000?style=flat-square&logo=42&logoColor=white&labelColor=000000&color=000000'/></a>
 </p>
 
-| Guides |
-| :----: |
-| [GDB](https://github.com/jotavare/guides/blob/main/gdb.md)                           |
-| [Git](https://github.com/jotavare/guides/blob/main/git.md)                           |
-| [Linux](https://github.com/jotavare/guides/blob/main/linux.md)                           |
-| [Valgrind](https://github.com/jotavare/valgrind/blob/main/gdb.md)                    |
-| [Wifi Network Hacking](https://github.com/jotavare/guides/blob/main/wifi-network-hacking.md)  |
+
+
+* [GDB](https://github.com/jotavare/guides/blob/main/gdb/README.md)
+* [Git](https://github.com/jotavare/guides/blob/main/git.md)
+* [Linux](https://github.com/jotavare/guides/blob/main/linux.md)
+* [Valgrind](https://github.com/jotavare/valgrind/blob/main/gdb.md)
+* [Wifi Network Hacking](https://github.com/jotavare/guides/blob/main/wifi-network-hacking.md)
