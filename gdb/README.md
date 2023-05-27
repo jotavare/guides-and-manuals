@@ -1,8 +1,15 @@
 set follow-fork-mode <child or parent>
+set height lpp
+set height unlimited
+show height
+set width cpl
+set width unlimited
+show width
+set pagination on
+set pagination off
+show pagination
 
 # GDB Commands
-
-
 
 <div>
 <table>
