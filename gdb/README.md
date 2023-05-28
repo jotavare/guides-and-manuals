@@ -110,33 +110,7 @@ layout next
 layout prev
 layout src
 
-b -> break
-c -> continue
-d -> delete
-f -> frame
-i -> info
-j -> jump
-l -> list
-n -> next
-p -> print
-r -> run
-s -> step
-u -> until
 
-There are also two or more letters, such as:
-
-aw -> awatch
-bt -> backtrace
-dir -> directory
-disas -> disassemble
-fin -> finish
-ig -> ignore
-ni -> nexti
-rw -> rwatch
-si -> stepi
-tb -> tbreak
-wa -> watch
-win -> winheight
 
   (gdb) shell ls
 
@@ -414,3 +388,39 @@ or
 </table>
 </div>
 
+<div>
+<table>
+<tr><th>One Letter</th><th>Two Letter</th></tr>
+<tr><td>
+
+| b | break |
+| c | continue |
+| d | delete |
+| f | frame |
+| i | info |
+| j | jump |
+| l | list |
+| n | next |
+| p | print |
+| r | run |
+| s | step |
+| u | until |
+
+</td><td>
+
+| aw    | awatch |
+| bt    | backtrace |
+| dir   | directory |
+| disas | disassemble |
+| fin   | finish |
+| ig    | ignore |
+| ni    | nexti |
+| rw    | rwatch |
+| si    | stepi |
+| tb    | tbreak |
+| wa    | watch |
+| win   | winheight |
+
+</td></tr>
+</table>
+</div>
