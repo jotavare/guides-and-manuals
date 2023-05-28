@@ -1,13 +1,4 @@
 set follow-fork-mode <child or parent>
-set height lpp
-set height unlimited
-show height
-set width cpl
-set width unlimited
-show width
-set pagination on
-set pagination off
-show pagination
 
 set history filename fname 
 set history save
@@ -32,37 +23,9 @@ show commands
 show commands n
 show commands +
   
-gdb program
-gdb program core
-gdb program 1234
-would attach gdb to process 1234
-gdb --args gcc -O2 -c foo.c
-gdb -silent
 
-gdb -statistics
 gdbtui gdb --tui 
-
 $ gdb -q -tui <file>
-
-Then when in gdb:
-
-(gdb) break main
-(gdb) run
-(gdb) layout asm
-(gdb) layout reg
-(gdb) list 10 
-winheight src +4
-winheight cmd
-win win_name src cmd asm regs src
-layout asm
-layout split
-layout regs
-tui reg float
-tui reg system
-tui reg general
-layout next
-layout prev
-layout src
 (gdb) shell ls
 (gdb) !ls
 -tui” parameters (for example: gdb -tui program), or use " Crtl+X+A
@@ -78,10 +41,16 @@ layout src
 <table>
 <tr><th>RUNNING THE PROGRAM</th>
 <tr><td>
-
+  
 |    | Command                               | Result                                             |
 | :- | :------------------------------------ | :------------------------------------------------- |
-| 🔵 | `gdb` <program> [core dump]           | Start GDB (with optional core dump).               |
+| 🔵 | `gdb`        		                     | Start gdb.                                         |
+| 🔵 | `gdb -silent`                         | Start gdb without the beginning information.       |
+| 🔵 | `gdb -statistics`                     | Print statistics about time and memory usage.      |
+| 🔵 | `gdb` [object]      	                 | Normal debug.                                      |
+| 🔵 | `gdb` [object] [core] 	               | core debug (must specify core file).               |
+| 🔵 | `gdb` [object] [pid]  	               | Attach to running process.                         |
+| 🔵 | `gdb` [program] [core dump]           | Start GDB (with optional core dump).               |
 | 🔵 | `gdb --args` [program] [args...]      | Start GDB and pass arguments.                      |
 | 🟢 | `gdb` --pid` [pid]                    | Start GDB and attach to process.                   |
 | 🟢 | `run`                                 | Run the program with current arguments.            |
@@ -93,6 +62,7 @@ layout src
 | 🟢 | `step` [number of lines]              | Step n number of lines.                            |
 | 🟢 | `next`                                | Next line.                                         |
 | 🟢 | `next` [number of lines]              | Next n number of lines.                            |
+| 🟢 | `refresh`                             | Refresh the screen.                                |
 | 🔵 | `attach` [process-id]                 | Attach to running program.                         |
 | 🔵 | `detach`                              | Detach from running program.                       |
 | 🔵 | `define` [command ...] `end`          | Define user command.                               |
@@ -106,6 +76,44 @@ layout src
 </td></tr>
 </table>
 </div>
+  
+<div>
+<table>
+<tr><th>LAYOUT</th>
+<tr><td>
+
+|    | Command                                 | Result                                                 |
+| :- | --------------------------------------- | ------------------------------------------------------ |
+| 🔵 | `help` or `-h`                          | List command classes.                                  |
+
+(gdb) layout asm
+(gdb) layout reg
+layout asm
+layout split
+layout regs
+tui reg float
+tui reg system
+tui reg general
+layout next
+layout prev
+layout src
+winheight src +4
+winheight cmd
+win win_name src cmd asm regs src
+set height lpp
+set height unlimited
+show height
+set width cpl
+set width unlimited
+show width
+set pagination on
+set pagination off
+show pagination
+  
+  
+</td></tr>
+</table>
+</div>  
 
 <div>
 <table>
@@ -133,17 +141,17 @@ layout src
   
 |    | Shortcut             | Result                                                   |
 | -- | -------------------  | -------------------------------------------------------- |
-| 🟢 | `CTRL` + `C`         | Actually SIGINT, stop execution of current program.      |
-| 🟢 | `CTRL` + `A`         | Enter or leave the TUI mode.                             |
+| 🟢 | `CTRL` + `X` + `A`   | Enter or leave the TUI mode.                             |
 | 🟢 | `CTRL` + `X` + `1`   | Use a TUI layout with only one window.                   |
 | 🟢 | `CTRL` + `X` + `2`   | Use a TUI layout with at least two windows.              |
-| 🟢 | `CTRL` + `O`         | Change the active window (use scrolling and arrow keys). |
+| 🟢 | `CTRL` + `X` + `O`   | Change the active window (use scrolling and arrow keys). |
 | 🔵 | `PgUp Scroll`        | The active window one page up.                           |
 | 🔵 | `PgDn Scroll`        | The active window one page down.                         |
 | 🔵 | `Up Scroll`          | The active window one line up.                           |
 | 🔵 | `Down Scroll`        | The active window one line down.                         |
 | 🔵 | `Left Scroll`        | The active window one column left.                       |
 | 🔵 | `Right Scroll`       | The active window one column right.                      |
+| 🟢 | `CTRL` + `C`         | Actually SIGINT, stop execution of current program.      |
 | 🟢 | `CTRL` + `L`         | Refresh the screen.                                      |
 | 🟢 | `CTRL` + `P`         | Previous command.                                        |
 | 🟢 | `CTRL` + `N`         | Next command.                                            |
