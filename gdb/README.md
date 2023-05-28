@@ -390,40 +390,42 @@ or
 
 <div>
 <table>
-<tr><th>One Letter</th><th>Two Letter</th></tr><th>Keyboard</th></tr>
+<tr><th>One Letter</th><th>Two Letter</th>
 <tr><td>
 
-| Shortcut | Command |
-| :------ | :----- |
-| b | break |
-| c | continue |
-| d | delete |
-| f | frame |
-| i | info |
-| j | jump |
-| l | list |
-| n | next |
-| p | print |
-| r | run |
-| s | step |
-| u | until |
+|    | Shortcut         | Command      |   
+| :- | :--------------- | :----------- |
+| 🔵 | `b`              | `break`      |
+| 🔵 | `c`              | `continue`   |
+| 🔵 | `d`              | `delete`     |
+| 🔵 | `f`              | `frame`      |
+| 🔵 | `i`              | `info`       |
+| 🔵 | `j`              | `jump`       |
+| 🔵 | `l`              | `list`       |
+| 🔵 | `n`              | `next`       |
+| 🔵 | `p`              | `print`      |
+| 🔵 | `r`              | `run`        |
+| 🔵 | `s`              | `step`       |
+| 🔵 | `u`              | `until`      |
 
 </td><td>
 
-| Shortcut | Command |
-| :------ | :----- |
-| aw    | awatch |
-| bt    | backtrace |
-| dir   | directory |
-| disas | disassemble |
-| fin   | finish |
-| ig    | ignore |
-| ni    | nexti |
-| rw    | rwatch |
-| si    | stepi |
-| tb    | tbreak |
-| wa    | watch |
-| win   | winheight |
+|    | Shortcut   | Command        |
+| :- | :--------- | :------------- |
+| 🔵 | `aw`       | `awatch`       |
+| 🔵 | `bt`       | `backtrace`    |
+| 🔵 | `dir`      | `directory`    |
+| 🔵 | `disas`    | `disassemble`  |
+| 🔵 | `fin`      | `finish`       |
+| 🔵 | `ig`       | `ignore`       |
+| 🔵 | `ni`       | `nexti`        |
+| 🔵 | `rw`       | `rwatch`       |
+| 🔵 | `si`       | `stepi`        |
+| 🔵 | `tb`       | `tbreak`       |
+| 🔵 | `wa`       | `watch`        |
+| 🔵 | `win`      | `winheight`    |
+| 🔵 | `ref`      | `refresh`      |
+| 🔵 | `disp`     | `display`      |
   
 </td></tr>
 </table>
