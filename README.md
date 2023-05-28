@@ -12,8 +12,8 @@
 
 
 
-* [GDB](https://github.com/jotavare/guides/blob/main/gdb/README.md)
-* [Git](https://github.com/jotavare/guides/blob/main/git.md)
-* [Linux](https://github.com/jotavare/guides/blob/main/linux.md)
-* [Valgrind](https://github.com/jotavare/valgrind/blob/main/gdb.md)
-* [Wifi Network Hacking](https://github.com/jotavare/guides/blob/main/wifi-network-hacking.md)
+* [GDB](https://github.com/jotavare/guides/blob/main/gdb/README.md) (still working on it)
+* [Git](https://github.com/jotavare/guides/blob/main/git.md) (still working on it)
+* [Linux](https://github.com/jotavare/guides/blob/main/linux.md) (still working on it)
+* [Valgrind](https://github.com/jotavare/valgrind/blob/main/gdb.md) (still working on it)
+* [Wifi Network Hacking](https://github.com/jotavare/guides/blob/main/wifi-network-hacking.md) (still working on it)
