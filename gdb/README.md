@@ -234,7 +234,7 @@ or
 <tr><th>STACK BACKTRACE</th>
 <tr><td>
   
-| Color | Command | Result |
+| # | Command | Result |
 | :------ | :------ | :----- |
 | 🟢 | `bt`                  | print stack backtrace |
 | 🔵 | `frame`        	      | show current execution position |
