@@ -9,80 +9,34 @@ set pagination on
 set pagination off
 show pagination
 
-246 Debugging with gdb
-To issue a command to gdb without affecting certain aspects of the state which is seen
-by users, prefix it with ‘server ’ (see Section 28.2 [Server Prefix], page 356). This means
-that this command will not affect the command history, nor will it affect gdb’s notion of
-which command to repeat if RET is pressed on a line by itself.
-The server prefix does not affect the recording of values into the value history; to print
-a value without recording it into the value history, use the output command instead of the
-print command.
-Here is the description of gdb commands related to command history.
-set history filename fname
-Set the name of the gdb command history file to fname. This is the file where
-gdb reads an initial command history list, and where it writes the command
-history from this session when it exits. You can access this list through history
-expansion or through the history command editing characters listed below.
-This file defaults to the value of the environment variable GDBHISTFILE, or to
-‘./.gdb_history’ (‘./_gdb_history’ on MS-DOS) if this variable is not set.
+set history filename fname 
 set history save
 set history save on
-Record command history in a file, whose name may be specified with the set
-history filename command. By default, this option is disabled.
+history filename command
 set history save off
-Stop recording command history in a file.
 set history size size
-Set the number of commands which gdb keeps in its history list. This defaults
-to the value of the environment variable HISTSIZE, or to 256 if this variable is
-not set.
-History expansion assigns special meaning to the character !. See Section 32.1.1 [Event
-Designators], page 385, for more details.
-Since ! is also the logical not operator in C, history expansion is off by default. If you
-decide to enable history expansion with the set history expansion on command, you may
-sometimes need to follow ! (when it is used as logical not, in an expression) with a space
-or a tab to prevent it from being expanded. The readline history facilities do not attempt
-substitution on the strings != and !(, even when history expansion is enabled.
-The commands to control history expansion are:
+History expansion
+!
+!=
 set history expansion on
 set history expansion
-Enable history expansion. History expansion is off by default.
+Enable history expansion..
 set history expansion off
 Disable history expansion.
-Chapter 22: Controlling gdb 247
 show history
 show history filename
 show history save
 show history size
 show history expansion
-These commands display the state of the gdb history parameters. show
-history by itself displays all four states.
 show commands
-Display the last ten commands in the command history.
 show commands n
-Print ten commands centered on command number n.
 show commands +
-Print ten commands just after the commands last printed
-  
   
 gdb program
-You can also start with both an executable program and a core file specified:
 gdb program core
-You can, instead, specify a process ID as a second argument, if you want to debug a
-running process:
 gdb program 1234
-would attach gdb to process 1234 (unless you also have a file named ‘1234’; gdb does check
-for a core file first).
-Taking advantage of the second command-line argument requires a fairly complete op-
-erating system; when you use gdb as a remote debugger attached to a bare board, there
-may not be any notion of “process”, and there is often no way to get a core dump. gdb
-will warn you if it is unable to attach or to read core dumps.
-You can optionally have gdb pass any arguments after the executable file to the inferior
-using --args. This option stops option processing.
+would attach gdb to process 1234
 gdb --args gcc -O2 -c foo.c
-This will cause gdb to debug gcc, and to set gcc’s command-line arguments (see
-Section 4.3 [Arguments], page 28) to ‘-O2 -c foo.c’.
-You can run gdb without printing the front material, which describes gdb’s
-non-warranty, by specifying -silent:
 gdb -silent
 
 gdb -statistics
@@ -109,17 +63,10 @@ tui reg general
 layout next
 layout prev
 layout src
-
-
-
-  (gdb) shell ls
-
-or
-
+(gdb) shell ls
 (gdb) !ls
-
-
 -tui” parameters (for example: gdb -tui program), or use " Crtl+X+A
+
 # GDB Commands
 
 - [100 GDB Tips](https://github.com/hellogcc/100-gdb-tips)
@@ -412,20 +359,20 @@ or
 
 |    | Shortcut   | Command        |
 | :- | :--------- | :------------- |
-| 🔵 | `aw` ->       | `awatch`       |
-| 🔵 | `bt` ->      | `backtrace`    |
-| 🔵 | `dir` ->     | `directory`    |
-| 🔵 | `disas` ->   | `disassemble`  |
-| 🔵 | `fin` ->     | `finish`       |
-| 🔵 | `ig` ->      | `ignore`       |
-| 🔵 | `ni` ->      | `nexti`        |
-| 🔵 | `rw` ->      | `rwatch`       |
-| 🔵 | `si` ->      | `stepi`        |
-| 🔵 | `tb` ->      | `tbreak`       |
-| 🔵 | `wa` ->      | `watch`        |
-| 🔵 | `win`  ->    | `winheight`    |
-| 🔵 | `ref` ->     | `refresh`      |
-| 🔵 | `disp` ->   | `display`      |
+| 🔵 | `aw`       | `awatch`       |
+| 🔵 | `bt`       | `backtrace`    |
+| 🔵 | `dir`      | `directory`    |
+| 🔵 | `disas`    | `disassemble`  |
+| 🔵 | `fin`      | `finish`       |
+| 🔵 | `ig`       | `ignore`       |
+| 🔵 | `ni`       | `nexti`        |
+| 🔵 | `rw`       | `rwatch`       |
+| 🔵 | `si`       | `stepi`        |
+| 🔵 | `tb`       | `tbreak`       |
+| 🔵 | `wa`       | `watch`        |
+| 🔵 | `win`      | `winheight`    |
+| 🔵 | `ref`      | `refresh`      |
+| 🔵 | `disp`     | `display`      |
   
 </td></tr>
 </table>
