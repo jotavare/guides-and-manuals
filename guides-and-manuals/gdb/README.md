@@ -227,33 +227,33 @@ layout src
 <tr><th>Browsing Data</th>
 <tr><td>
 
-| Command | Result |
-| :------ | :----- |
-| print expression                | print expression, added to value history |
-| print/x expressionR             | print in hex |
-| print array[i]@count            | artificial array - print array range |
-| print $        	                | print last value |
-| print *$->next                  | print thru list |
-| print $1        	              | print value 1 from value history |
-| print ::gx                      | force scope to be global |
-| print 'basic.c'::gx             | global scope in named file (>=4.6) |
-| print/x &main                   | print address of function |
-| x/countFormatSize address       | low-level examine command |
-| x/x &gx        	                | print gx in hex |
-| x/4wx &main                     | print 4 longs at start of \fImain\fR in hex |
-| x/gf &gd1                       | print double |
-| help x        	                | show formats for x |
-| info locals                     | print local automatics only |
-| info functions regexp           | print function names |
-| info variables  regexp          | print global variable names |
-| ptype name                      | print type definition |
-| whatis expression               | print type of expression |
-| set variable = expression       | assign value |
-| display expression              | display expression result at stop |
-| undisplay                       | delete displays |
-| info display                    | show displays |
-| show values                     | print value history (>= gdb 4.0) |
-| info history                    | print value history (gdb 3.5) |
+|    | Command                         | Result |
+| :- | :------------------------------ | :----- |
+| 🟢 | `print` [expression]            | Print variable, added to value history. |
+| 🟢 | `print/x` [expression]          | Print variable in hex format. |
+| 🔵 | `print` [array[i]@count]        | Artificial array - print array range. |
+| 🔵 | `print $`        	             | Print last value. |
+| 🔵 | `print *$->next`                | Print thru history list. |
+| 🔵 | `print $1`        	             | Print value 1 from value history. |
+| 🔵 | `print ::gx`                    | Force scope to be global. |
+| 🔵 | `print [basic.c]::gx`           | Global scope in named file. |
+| 🔵 | `print/x` [&main]               | Print address of function. |
+| 🔵 | `x/countFormatSize` [address]   | Low-level examine command. |
+| 🔵 | `x/x` [&gx]        	           | Print gx in hex. |
+| 🔵 | `x/4wx` [&main]                 | Print 4 longs at start of main in hex format. |
+| 🔵 | `x/gf` [&gd1]                   | Print double. |
+| 🔵 | `help x`        	               | Show formats for x. |
+| 🟢 | `info locals`                   | Print local automatics only. |
+| 🔵 | `info functions regexp`         | Print function names. |
+| 🔵 | `info variables regexp`         | Print global variable names. |
+| 🟢 | `ptype` [expression]            | Print type definition. |
+| 🟢 | `whatis` [expression]           | Print type of expression. |
+| 🟢 | `set` [variable] = [expression] | Assign value. |
+| 🔵 | `display` [expression]          | Display expression result at stop. |
+| 🔵 | `undisplay`                     | Delete displays. |
+| 🔵 | `info display`                  | Show displays. |
+| 🔵 | `show values`                   | Print value history. |
+| 🔵 | `info history`                  | Print value history. |
 
 </td></tr>
 </table>
