@@ -14,19 +14,19 @@
 
 <div align="center">
 <table>
-<tr><th>GDB</th><th>WIFI</th><th>GIT</th></tr>
+<tr><th>GNU Project Debugger</th><th>Wifi Network Hacking</th><th>Git</th><th>Linux</th><th>GIT</th><th>Valgrind</th></tr>
 <tr><td>
-
-<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/gdb.png" />
-
+<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/gdb.png"/>
 </td><td>
-	
-<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/wifi.png" />
-	
+<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/wifi.png"/>
 </td><td>
-	
-<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/git.png" />
-
+<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/git.png"/>
+</td><td>
+<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/valgrind.png"/>
+</td><td>
+<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/linux.png"/>
+</td><td>
+<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/markdown.png"/>
 </td></tr>
 </table>
 </div>
