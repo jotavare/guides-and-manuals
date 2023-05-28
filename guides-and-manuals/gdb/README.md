@@ -101,7 +101,7 @@ layout src
 </td></tr>
 </table>
 </div>
-  
+
 <div>
 <table>
 <tr><th>Help</th>
@@ -117,11 +117,38 @@ layout src
 | 🔵 | `help show`                             | List show commands for displaying GDB state.           |
 | 🔵 | `help show commands`                    | Specific help for the "show commands" command.         |
 
+</td></tr>
+</table>
+</div>  
+  
+<div>
+<table>
+<tr><th>Keyboard Shortcuts</th>
+<tr><td>
+  
+|    | Shortcut            | Result                                                   |
+| -- | ------------------- | -------------------------------------------------------- |
+| 🟢 | `CTRL` + `C`        | Actually SIGINT, stop execution of current program.      |
+| 🟢 | `CTRL` + `A`        | Enter or leave the TUI mode.                             |
+| 🟢 | `CTRL` + `X` + `1`  | Use a TUI layout with only one window.                   |
+| 🟢 | `CTRL` + `X` + `2`  | Use a TUI layout with at least two windows.              |
+| 🟢 | `CTRL` + `O`        | Change the active window (use scrolling and arrow keys). |
+| 🔵 | `PgUp Scroll`       | The active window one page up.                           |
+| 🔵 | `PgDn Scroll`       | The active window one page down.                         |
+| 🔵 | `Up Scroll`         | The active window one line up.                           |
+| 🔵 | `Down Scroll`       | The active window one line down.                         |
+| 🔵 | `Left Scroll`       | The active window one column left.                       |
+| 🔵 | `Right Scroll`      | The active window one column right.                      |
+| 🟢 | `CTRL` + `L`        | Refresh the screen.                                      |
+| 🟢 | `CTRL` + `P`        | Previous command.                                        |
+| 🟢 | `CTRL` + `N`        | Next command.                                            |
+| 🟢 | `CTRL` + `B`        | Move left in the command text.                           |
+| 🟢 | `CTRL` + `F`        | Move right in the command text.                          |
 
 </td></tr>
 </table>
 </div>
-  
+
 <div>
 <table>
 <tr><th>Breakpoints and Watchpoints</th>
@@ -146,7 +173,6 @@ layout src
 | 🔵 | `condition` [breakpoint or watchpoint number] [expression]   | End only if the expression is true.                         |
 | 🔵 | `condition` [breakpoint or watchpoint number] [condition]    | End only if the condition is true.                          |
 | 🔵 | `condition` [breakpoint or watchpoint number]                | Delete condition at a breakpoint or watchpoint number.      |
-
   
 </td></tr>
 </table>
@@ -157,8 +183,8 @@ layout src
 <tr><th>Stack Backtrace</th>
 <tr><td>
   
-| #  | Command         | Result                                  |
-|----|-----------------|-----------------------------------------|
+|    | Command         | Result                                  |
+| :- | --------------- | --------------------------------------- |
 | 🟢 | `bt`            | Print stack backtrace.                  |
 | 🔵 | `frame`         | Show current execution position.        |
 | 🔵 | `up`            | Move up stack trace (towards main).     |
@@ -377,32 +403,3 @@ layout src
 </td></tr>
 </table>
 </div>
-
-<div>
-<table>
-<tr><th>Keyboard Shortcuts</th>
-<tr><td>
-  
-|    | Shortcut            | Result                                                   |
-| -- | ------------------- | -------------------------------------------------------- |
-| 🟢 | `CTRL` + `C`        | Actually SIGINT, stop execution of current program.      |
-| 🟢 | `CTRL` + `A`        | Enter or leave the TUI mode.                             |
-| 🟢 | `CTRL` + `X` + `1`  | Use a TUI layout with only one window.                   |
-| 🟢 | `CTRL` + `X` + `2`  | Use a TUI layout with at least two windows.              |
-| 🟢 | `CTRL` + `O`        | Change the active window (use scrolling and arrow keys). |
-| 🔵 | `PgUp Scroll`       | The active window one page up.                           |
-| 🔵 | `PgDn Scroll`       | The active window one page down.                         |
-| 🔵 | `Up Scroll`         | The active window one line up.                           |
-| 🔵 | `Down Scroll`       | The active window one line down.                         |
-| 🔵 | `Left Scroll`       | The active window one column left.                       |
-| 🔵 | `Right Scroll`      | The active window one column right.                      |
-| 🟢 | `CTRL` + `L`        | Refresh the screen.                                      |
-| 🟢 | `CTRL` + `P`        | Previous command.                                        |
-| 🟢 | `CTRL` + `N`        | Next command.                                            |
-| 🟢 | `CTRL` + `B`        | Move left in the command text.                           |
-| 🟢 | `CTRL` + `F`        | Move right in the command text.                          |
-
-</td></tr>
-</table>
-</div>
-
