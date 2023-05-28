@@ -180,25 +180,25 @@ or
 <tr><th>Breakpoints and Watchpoints</th>
 <tr><td>
 
-| #   | Command                                                       | Result                                                     |
-|------|--------------------------------------------------------------|------------------------------------------------------------|
-| 🟢   | `break` [line or function]                                   | Set a breakpoint on a line or function.                     |
-| 🔵   | `break` main.c:42                                            | Set breakpoint at file and (line or function).              |
-| 🔵   | `tbreak` [line or function]                                  | Set a temporary breakpoint.                                 |
-| 🟢   | `watch` [variable]                                           | Set a software watchpoint on a variable.                    |
-| 🟢   | `info breakpoints`                                           | Show breakpoints and watchpoints.                           |
-| 🔵   | `info watchpoints`                                           | Show current watchpoints.                                   |
-| 🔵   | `delete` [breakpoint or watchpoint number]                   | Delete a breakpoint or watchpoint by number.                |
-| 🔵   | `delete`                                                     | Delete all breakpoints and watchpoints (prompted).          |
-| 🟢   | `clear`                                                      | Delete breakpoints and watchpoints at the current line.     |
-| 🔵   | `clear` [line or function]                                   | Delete breakpoints or watchpoints at a line or function.    |
-| 🔵   | `disable` [breakpoint or watchpoint number]                  | Turn a breakpoint or watchpoint off, but don't remove it.   |
-| 🔵   | `enable` [breakpoint or watchpoint number]                   | Turn a disabled breakpoint or watchpoint back on.           |
-| 🔵   | `commands` [breakpoint or watchpoint number] [commands] `end`| Set GDB commands with a breakpoint or watchpoint.           |
-| 🔵   | `ignore` [breakpoint or watchpoint number] [n times]         | Ignore a breakpoint or watchpoint n times before activation.|
-| 🔵   | `condition` [breakpoint or watchpoint number] [expression]   | End only if the expression is true.                         |
-| 🔵   | `condition` [breakpoint or watchpoint number] [condition]    | End only if the condition is true.                          |
-| 🔵   | `condition` [breakpoint or watchpoint number]                | Delete condition at a breakpoint or watchpoint number.      |
+| #  | Command                                                       | Result                                                     |
+|----|--------------------------------------------------------------|------------------------------------------------------------|
+| 🟢 | `break` [line or function]                                   | Set a breakpoint on a line or function.                     |
+| 🔵 | `break` main.c:42                                            | Set breakpoint at file and (line or function).              |
+| 🔵 | `tbreak` [line or function]                                  | Set a temporary breakpoint.                                 |
+| 🟢 | `watch` [variable]                                           | Set a software watchpoint on a variable.                    |
+| 🟢 | `info breakpoints`                                           | Show breakpoints and watchpoints.                           |
+| 🔵 | `info watchpoints`                                           | Show current watchpoints.                                   |
+| 🔵 | `delete` [breakpoint or watchpoint number]                   | Delete a breakpoint or watchpoint by number.                |
+| 🔵 | `delete`                                                     | Delete all breakpoints and watchpoints (prompted).          |
+| 🟢 | `clear`                                                      | Delete breakpoints and watchpoints at the current line.     |
+| 🔵 | `clear` [line or function]                                   | Delete breakpoints or watchpoints at a line or function.    |
+| 🔵 | `disable` [breakpoint or watchpoint number]                  | Turn a breakpoint or watchpoint off, but don't remove it.   |
+| 🔵 | `enable` [breakpoint or watchpoint number]                   | Turn a disabled breakpoint or watchpoint back on.           |
+| 🔵 | `commands` [breakpoint or watchpoint number] [commands] `end`| Set GDB commands with a breakpoint or watchpoint.           |
+| 🔵 | `ignore` [breakpoint or watchpoint number] [n times]         | Ignore a breakpoint or watchpoint n times before activation.|
+| 🔵 | `condition` [breakpoint or watchpoint number] [expression]   | End only if the expression is true.                         |
+| 🔵 | `condition` [breakpoint or watchpoint number] [condition]    | End only if the condition is true.                          |
+| 🔵 | `condition` [breakpoint or watchpoint number]                | Delete condition at a breakpoint or watchpoint number.      |
 
   
 </td></tr>
@@ -390,7 +390,7 @@ or
 
 <div>
 <table>
-<tr><th>One Letter</th><th>Two Letter</th></tr>
+<tr><th>One Letter</th><th>Two Letter</th></tr><th>Keyboard</th></tr>
 <tr><td>
 
 | Shortcut | Command |
@@ -424,7 +424,28 @@ or
 | tb    | tbreak |
 | wa    | watch |
 | win   | winheight |
+  
+</td><td>
+  
+| Shortcut | Result |
+| :------ | :----- |
+| `CTRL` + `A`        | Enter or leave the TUI mode. |
+| `CTRL` + `X` + `1`  | Use a TUI layout with only one window. |
+| `CTRL` + `X` + `2`  | Use a TUI layout with at least two windows. |
+| `CTRL` + `O`        | Change the active window (use scrolling and arrow keys). |
+| `PgUp Scroll`       | the active window one page up. |
+| `PgDn Scroll`       | the active window one page down. |
+| `Up Scroll`         | the active window one line up. |
+| `Down Scroll`       | the active window one line down. |
+| `Left Scroll`       | the active window one column left. |
+| `Right Scroll`      | the active window one column right. |
+| `CTRL` + `L`        | Refresh the screen. |
+| `CTRL` + `P`        | Previous command. |
+| `CTRL` + `N`        | Next command. |
+| `CTRL` + `B`        | Move left in the command text. |
+| `CTRL` + `F`        | Move right in the command text. |
 
 </td></tr>
 </table>
 </div>
+
