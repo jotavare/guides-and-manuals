@@ -390,7 +390,7 @@ or
 
 <div>
 <table>
-<tr><th>One Letter</th><th>Two Letter</th>
+<tr><th>Shortcuts</th><th></th>
 <tr><td>
 
 |    | Shortcut         | Command      |   
@@ -412,20 +412,20 @@ or
 
 |    | Shortcut   | Command        |
 | :- | :--------- | :------------- |
-| 🔵 | `aw`       | `awatch`       |
-| 🔵 | `bt`       | `backtrace`    |
-| 🔵 | `dir`      | `directory`    |
-| 🔵 | `disas`    | `disassemble`  |
-| 🔵 | `fin`      | `finish`       |
-| 🔵 | `ig`       | `ignore`       |
-| 🔵 | `ni`       | `nexti`        |
-| 🔵 | `rw`       | `rwatch`       |
-| 🔵 | `si`       | `stepi`        |
-| 🔵 | `tb`       | `tbreak`       |
-| 🔵 | `wa`       | `watch`        |
-| 🔵 | `win`      | `winheight`    |
-| 🔵 | `ref`      | `refresh`      |
-| 🔵 | `disp`     | `display`      |
+| 🔵 | `aw` ->       | `awatch`       |
+| 🔵 | `bt` ->      | `backtrace`    |
+| 🔵 | `dir` ->     | `directory`    |
+| 🔵 | `disas` ->   | `disassemble`  |
+| 🔵 | `fin` ->     | `finish`       |
+| 🔵 | `ig` ->      | `ignore`       |
+| 🔵 | `ni` ->      | `nexti`        |
+| 🔵 | `rw` ->      | `rwatch`       |
+| 🔵 | `si` ->      | `stepi`        |
+| 🔵 | `tb` ->      | `tbreak`       |
+| 🔵 | `wa` ->      | `watch`        |
+| 🔵 | `win`  ->    | `winheight`    |
+| 🔵 | `ref` ->     | `refresh`      |
+| 🔵 | `disp` ->   | `display`      |
   
 </td></tr>
 </table>
