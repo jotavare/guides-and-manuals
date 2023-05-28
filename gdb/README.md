@@ -393,6 +393,8 @@ or
 <tr><th>One Letter</th><th>Two Letter</th></tr>
 <tr><td>
 
+| Shortcut | Command |
+| :------ | :----- |
 | b | break |
 | c | continue |
 | d | delete |
@@ -408,6 +410,8 @@ or
 
 </td><td>
 
+| Shortcut | Command |
+| :------ | :----- |
 | aw    | awatch |
 | bt    | backtrace |
 | dir   | directory |
