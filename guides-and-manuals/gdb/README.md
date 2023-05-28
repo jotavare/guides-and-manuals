@@ -95,6 +95,11 @@ layout src
 | 🟢 | `next` [number of lines]              | Next n number of lines.                            |
 | 🔵 | `attach` [process-id]                 | Attach to running program.                         |
 | 🔵 | `detach`                              | Detach from running program.                       |
+| 🔵 | `define` [command ...] `end`          | Define user command.                               |
+| 🔵 | `RETURN`                              | Repeat last command.                               |
+| 🔵 | `shell` [command] [args]              | Execute shell command.                             |
+| 🔵 | `source` [file]                       | Load gdb commands from file.                       |
+| 🟢 | `quit`                                | Quit gdb.                                          |
 | 🟢 | `finish`                              | Finish current function's execution.               |
 | 🟢 | `kill`                                | Kill current executing program.                    |
 
@@ -126,24 +131,25 @@ layout src
 <tr><th>Keyboard Shortcuts</th>
 <tr><td>
   
-|    | Shortcut            | Result                                                   |
-| -- | ------------------- | -------------------------------------------------------- |
-| 🟢 | `CTRL` + `C`        | Actually SIGINT, stop execution of current program.      |
-| 🟢 | `CTRL` + `A`        | Enter or leave the TUI mode.                             |
-| 🟢 | `CTRL` + `X` + `1`  | Use a TUI layout with only one window.                   |
-| 🟢 | `CTRL` + `X` + `2`  | Use a TUI layout with at least two windows.              |
-| 🟢 | `CTRL` + `O`        | Change the active window (use scrolling and arrow keys). |
-| 🔵 | `PgUp Scroll`       | The active window one page up.                           |
-| 🔵 | `PgDn Scroll`       | The active window one page down.                         |
-| 🔵 | `Up Scroll`         | The active window one line up.                           |
-| 🔵 | `Down Scroll`       | The active window one line down.                         |
-| 🔵 | `Left Scroll`       | The active window one column left.                       |
-| 🔵 | `Right Scroll`      | The active window one column right.                      |
-| 🟢 | `CTRL` + `L`        | Refresh the screen.                                      |
-| 🟢 | `CTRL` + `P`        | Previous command.                                        |
-| 🟢 | `CTRL` + `N`        | Next command.                                            |
-| 🟢 | `CTRL` + `B`        | Move left in the command text.                           |
-| 🟢 | `CTRL` + `F`        | Move right in the command text.                          |
+|    | Shortcut             | Result                                                   |
+| -- | -------------------  | -------------------------------------------------------- |
+| 🟢 | `CTRL` + `C`         | Actually SIGINT, stop execution of current program.      |
+| 🟢 | `CTRL` + `A`         | Enter or leave the TUI mode.                             |
+| 🟢 | `CTRL` + `X` + `1`   | Use a TUI layout with only one window.                   |
+| 🟢 | `CTRL` + `X` + `2`   | Use a TUI layout with at least two windows.              |
+| 🟢 | `CTRL` + `O`         | Change the active window (use scrolling and arrow keys). |
+| 🔵 | `PgUp Scroll`        | The active window one page up.                           |
+| 🔵 | `PgDn Scroll`        | The active window one page down.                         |
+| 🔵 | `Up Scroll`          | The active window one line up.                           |
+| 🔵 | `Down Scroll`        | The active window one line down.                         |
+| 🔵 | `Left Scroll`        | The active window one column left.                       |
+| 🔵 | `Right Scroll`       | The active window one column right.                      |
+| 🟢 | `CTRL` + `L`         | Refresh the screen.                                      |
+| 🟢 | `CTRL` + `P`         | Previous command.                                        |
+| 🟢 | `CTRL` + `N`         | Next command.                                            |
+| 🟢 | `CTRL` + `B`         | Move left in the command text.                           |
+| 🟢 | `CTRL` + `F`         | Move right in the command text.                          |
+| 🔵 | `ESC` + `CTRL` + `J` | Switch to vi edit mode from emacs edit mode.             |
 
 </td></tr>
 </table>
@@ -227,33 +233,33 @@ layout src
 <tr><th>Browsing Data</th>
 <tr><td>
 
-|    | Command                         | Result |
-| :- | :------------------------------ | :----- |
-| 🟢 | `print` [expression]            | Print variable, added to value history. |
-| 🟢 | `print/x` [expression]          | Print variable in hex format. |
-| 🔵 | `print` [array[i]@count]        | Artificial array - print array range. |
-| 🔵 | `print $`        	             | Print last value. |
-| 🔵 | `print *$->next`                | Print thru history list. |
-| 🔵 | `print $1`        	             | Print value 1 from value history. |
-| 🔵 | `print ::gx`                    | Force scope to be global. |
-| 🔵 | `print [basic.c]::gx`           | Global scope in named file. |
-| 🔵 | `print/x` [&main]               | Print address of function. |
-| 🔵 | `x/countFormatSize` [address]   | Low-level examine command. |
-| 🔵 | `x/x` [&gx]        	           | Print gx in hex. |
-| 🔵 | `x/4wx` [&main]                 | Print 4 longs at start of main in hex format. |
-| 🔵 | `x/gf` [&gd1]                   | Print double. |
-| 🔵 | `help x`        	               | Show formats for x. |
-| 🟢 | `info locals`                   | Print local automatics only. |
-| 🔵 | `info functions regexp`         | Print function names. |
-| 🔵 | `info variables regexp`         | Print global variable names. |
-| 🟢 | `ptype` [expression]            | Print type definition. |
-| 🟢 | `whatis` [expression]           | Print type of expression. |
-| 🟢 | `set` [variable] = [expression] | Assign value. |
-| 🔵 | `display` [expression]          | Display expression result at stop. |
-| 🔵 | `undisplay`                     | Delete displays. |
-| 🔵 | `info display`                  | Show displays. |
-| 🔵 | `show values`                   | Print value history. |
-| 🔵 | `info history`                  | Print value history. |
+|    | Command                         | Result                                         |
+| :- | :------------------------------ | :--------------------------------------------- |
+| 🟢 | `print` [expression]            | Print variable, added to value history.        |
+| 🟢 | `print/x` [expression]          | Print variable in hex format.                  |
+| 🔵 | `print` [array[i]@count]        | Artificial array - print array range.          |
+| 🔵 | `print $`        	             | Print last value.                              |
+| 🔵 | `print *$->next`                | Print thru history list.                       |
+| 🔵 | `print $1`        	             | Print value 1 from value history.              |
+| 🔵 | `print ::gx`                    | Force scope to be global.                      |
+| 🔵 | `print [basic.c]::gx`           | Global scope in named file.                    |
+| 🔵 | `print/x` [&main]               | Print address of function.                     |
+| 🔵 | `x/countFormatSize` [address]   | Low-level examine command.                     |
+| 🔵 | `x/x` [&gx]        	           | Print gx in hex.                               |
+| 🔵 | `x/4wx` [&main]                 | Print 4 longs at start of main in hex format.  |
+| 🔵 | `x/gf` [&gd1]                   | Print double.                                  |
+| 🔵 | `help x`        	               | Show formats for x.                            |
+| 🟢 | `info locals`                   | Print local automatics only.                   |
+| 🟢 | `info functions regexp`         | Print function names.                          |
+| 🟢 | `info variables regexp`         | Print global variable names.                   |
+| 🟢 | `ptype` [expression]            | Print type definition.                         |
+| 🟢 | `whatis` [expression]           | Print type of expression.                      |
+| 🟢 | `set` [variable] = [expression] | Assign value.                                  |
+| 🟢 | `display` [expression]          | Display expression result at stop.             |
+| 🔵 | `undisplay`                     | Delete displays.                               |
+| 🟢 | `info display`                  | Show displays.                                 |
+| 🟢 | `show values`                   | Print value history.                           |
+| 🟢 | `info history`                  | Print value history.                           |
 
 </td></tr>
 </table>
@@ -283,7 +289,7 @@ layout src
 
 |    | Command                  | Result                                    |
 | :- | :----------------------- | :---------------------------------------- |
-| 🔵 | `info signals`        	  | Print signal setup.                       |
+| 🟢 | `info signals`        	  | Print signal setup.                       |
 | 🔵 | `handle signo actions`   | Set debugger actions for signal.          |
 | 🔵 | `handle INT print`       | Print message when signal occurs.         |
 | 🔵 | `handle INT noprint`     | Don't print message.                      |
@@ -303,21 +309,19 @@ layout src
 <tr><th>Machine-level Debug</th>
 <tr><td>
 
-| Command | Result |
-| :------ | :----- |
-| info registers        	  | print registers sans floats |
-| info all-registers        | print all registers |
-| print/x $pc             	| print one register |
-| stepi        		          | single step at machine level |
-| si        		            | single step at machine level |
-| nexti        		          | single step (over functions) at machine level |
-| ni        		            | single step (over functions) at machine level |
-| display/i $pc        	    | print current instruction in display |
-| x/x &gx        	        	| print variable gx in hex |
-| info line 22            	| print addresses for object code for line 22 |
-| info line *0x2c4e         | print line number of object code at address |
-| x/10i main              	| disassemble first 10 instructions in \fImain\fR |
-| disassemble addr          | dissassemble code for function around addr |
+|    | Command                  | Result                                          |
+| :- | :----------------------- | :---------------------------------------------- |
+| 🟢 | `info registers`        	| Print registers sans floats.                    |
+| 🟢 | `info all-registers`     | Print all registers.                            |
+| 🔵 | `print/x` [$pc]          | Print one register.                             |
+| 🔵 | `stepi`        		      | Single step at machine level.                   |
+| 🔵 | `nexti`        		      | Single step (over functions) at machine level.  |
+| 🔵 | `display/i` [$pc]        | Print current instruction in display.           |
+| 🔵 | `x/x` [&gx]        	    | Print variable gx in hex.                       |
+| 🟢 | `info line` [42]         | Print addresses for object code for line 42.    |
+| 🟢 | `info line` [*0x2c4e]    | Print line number of object code at address.    |
+| 🔵 | `x/10i` [main]           | Disassemble first 10 instructions in main.      |
+| 🔵 | `disassemble` [address]  | Dissassemble code for function around address.  |
 
 </td></tr>
 </table>
@@ -328,34 +332,16 @@ layout src
 <tr><th>History Display</th>
 <tr><td>
 
-| Command | Result |
-| :------ | :----- |
-| show commands                  | print command history (>= gdb 4.0) |
-| info editing       	           | print command history (gdb 3.5) |
-| ESC-CTRL-J        	           | switch to vi edit mode from emacs edit mode |
-| set history expansion on       | turn on c-shell like history |
-| break class::member            | set breakpoint on class member. may get menu |
-| list class::member             | list member in class |
-| ptype class                    | print class members |
-| print *this        	           | print contents of this pointer |
-| rbreak regexpr     	           | useful for breakpoint on overloaded member name |
-
-</td></tr>
-</table>
-</div>
-
-<div>
-<table>
-<tr><th>Miscellaneous</th>
-<tr><td>
-
-| Command | Result |
-| :------ | :----- |
-| define command ... end      | define user command |
-| RETURN                      | repeat last command |
-| shell command args          | execute shell command |
-| source file                 | load gdb commands from file |
-| quit                        | quit gdb |
+|    | Command                         | Result                                            |
+| :- | :------------------------------ | :------------------------------------------------ |
+| 🟢 | `show commands`                 | Print command history.                            |
+| 🔵 | `info editing`       	         | Print command history.                            |
+| 🔵 | `set history expansion on`      | Turn on c-shell like history.                     |
+| 🔵 | `break class::[member]`         | Set breakpoint on class member. May get menu.     |
+| 🔵 | `list class::[member]`          | List member in class.                             |
+| 🔵 | `ptype` [class]                 | Print class members.                              |
+| 🔵 | `print` [*this]      	         | Print contents of this pointer.                   |
+| 🔵 | `rbreak regexpr`     	         | Useful for breakpoint on overloaded member name.  |
 
 </td></tr>
 </table>
