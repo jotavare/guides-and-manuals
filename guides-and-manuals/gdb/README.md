@@ -72,31 +72,31 @@ layout src
 - [100 GDB Tips](https://github.com/hellogcc/100-gdb-tips)
 - [GDB Dashboard](https://github.com/cyrus-and/gdb-dashboard)
 - [GDB Cheetsheat](https://raw.githubusercontent.com/hellogcc/100-gdb-tips/master/refcard.pdf)
+- [GDB Cheetsheat](https://gist.github.com/rkubik/b96c23bd8ed58333de37f2b8cd052c30)
 
 <div>
 <table>
-<tr><th>RUN</th>
+<tr><th>Running the Program</th>
 <tr><td>
 
-| Command | Result |
-| :------ | :----- |
-| `gdb` <program> [core dump]           | Start GDB (with optional core dump). |
-| `gdb` --args <program> <args...>      | Start GDB and pass arguments |
-| `gdb` --pid <pid>                     | Start GDB and attach to process. |
-| `run`                                 | run the program with current arguments |
-| run args redirection                  | run with args and redirection |
-| `set args` <args...>                  | set arguments for run |
-| show args                             | show current arguments to run |
-| cont                                  | continue the program |
-| step                                 | single step the program; step into functions |
-| step count                            | singlestep \fIcount\fR times |
-| next                                  | step but step over functions |
-| next count                            | next \fIcount\fR times |
-| CTRL-C                                | actually SIGINT, stop execution of current program |
-| attach process-id                     | attach to running program |
-| detach                                | detach from running program |
-| finish                                | finish current function's execution |
-| `kill`                                | kill current executing program |
+|    | Command                               | Result                                             |
+| :- | :------------------------------------ | :------------------------------------------------- |
+| 🔵 | `gdb` <program> [core dump]           | Start GDB (with optional core dump).               |
+| 🔵 | `gdb --args` [program] [args...]      | Start GDB and pass arguments.                      |
+| 🟢 | `gdb` --pid` [pid]                    | Start GDB and attach to process.                   |
+| 🟢 | `run`                                 | Run the program with current arguments.            |
+| 🔵 | `run` [args] [redirection]            | Run with args and redirection.                     |
+| 🟢 | `set args` [args...]                  | Set arguments for run.                             |
+| 🟢 | `show args`                           | Show current arguments to run.                     |
+| 🔵 | `cont`                                | Continue the program.                              |
+| 🟢 | `step`                                | Single step the program, also step into functions. |
+| 🟢 | `step` [number of lines]              | Step n number of lines.                            |
+| 🟢 | `next`                                | Next line.                                         |
+| 🟢 | `next` [number of lines]              | Next n number of lines.                            |
+| 🔵 | `attach` [process-id]                 | Attach to running program.                         |
+| 🔵 | `detach`                              | Detach from running program.                       |
+| 🟢 | `finish`                              | Finish current function's execution.               |
+| 🟢 | `kill`                                | Kill current executing program.                    |
 
 </td></tr>
 </table>
@@ -107,8 +107,8 @@ layout src
 <tr><th>Help</th>
 <tr><td>
 
-| #  | Command                                 | Result                                                 |
-|----|-----------------------------------------|--------------------------------------------------------|
+|    | Command                                 | Result                                                 |
+| :- | --------------------------------------- | ------------------------------------------------------ |
 | 🔵 | `help` or `-h`                          | List command classes.                                  |
 | 🔵 | `help running`                          | List commands in the "running" command class.          |
 | 🔵 | `help run`                              | Bottom-level help for the command "run".               |
@@ -127,8 +127,8 @@ layout src
 <tr><th>Breakpoints and Watchpoints</th>
 <tr><td>
 
-| #  | Command                                                       | Result                                                     |
-|----|--------------------------------------------------------------|------------------------------------------------------------|
+|    | Command                                                      | Result                                                      |
+| :--| ------------------------------------------------------------ | ----------------------------------------------------------- |
 | 🟢 | `break` [line or function]                                   | Set a breakpoint on a line or function.                     |
 | 🔵 | `break` main.c:42                                            | Set breakpoint at file and (line or function).              |
 | 🔵 | `tbreak` [line or function]                                  | Set a temporary breakpoint.                                 |
@@ -159,7 +159,7 @@ layout src
   
 | #  | Command         | Result                                  |
 |----|-----------------|-----------------------------------------|
-| 🟢  `bt`            | Print stack backtrace.                  |
+| 🟢 | `bt`            | Print stack backtrace.                  |
 | 🔵 | `frame`         | Show current execution position.        |
 | 🔵 | `up`            | Move up stack trace (towards main).     |
 | 🔵 | `down`          | Move down stack trace (away from main). |
@@ -175,15 +175,15 @@ layout src
 <tr><th>Browsing Source</th>
 <tr><td>
 
-|    | Command                      | Result                                             |
-| :- | :--------------------------- | :------------------------------------------------- |
-| 🔵 | `list` [20]                  | List 10 lines around line `20`.                    |
+|    | Command                      | Result                                              |
+| :- | :--------------------------- | :-------------------------------------------------- |
+| 🔵 | `list` [20]                  | List 10 lines around line `20`.                     |
 | 🔵 | `list` [1,10]                | List lines `1` to `10`.                             |
 | 🔵 | `list` [main]                | List lines around function `main`.                  |
 | 🔵 | `list` [basic.c:main]        | List from another file `basic.c`.                   |
 | 🔵 | `list -`                     | List previous 10 lines.                             |
-| 🔵 | `info address` [Symbol name] | Displays the address of a given symbol.
-| 🔵 | `list` [*0x22e4]             | List source at address `p0x22e4`.                    |
+| 🔵 | `info address` [Symbol name] | Displays the address of a given symbol.             |
+| 🔵 | `list` [*0x22e4]             | List source at address `p0x22e4`.                   |
 | 🔵 | `cd` [dir]                   | Change current directory to `dir`.                  |
 | 🔵 | `pwd`                        | Print working directory.                            |
 | 🔵 | `search regexpr`             | Forward search for regular expression `regexpr`.    |
@@ -255,8 +255,8 @@ layout src
 <tr><th>Signal Control</th>
 <tr><td>
 
-|    | Command                  | Result                                   |
-| :- | :----------------------- | :--------------------------------------- |
+|    | Command                  | Result                                    |
+| :- | :----------------------- | :---------------------------------------- |
 | 🔵 | `info signals`        	  | Print signal setup.                       |
 | 🔵 | `handle signo actions`   | Set debugger actions for signal.          |
 | 🔵 | `handle INT print`       | Print message when signal occurs.         |
@@ -305,7 +305,7 @@ layout src
 | Command | Result |
 | :------ | :----- |
 | show commands                  | print command history (>= gdb 4.0) |
-| info editing       	        rint command history (gdb 3.5) |
+| info editing       	           | print command history (gdb 3.5) |
 | ESC-CTRL-J        	           | switch to vi edit mode from emacs edit mode |
 | set history expansion on       | turn on c-shell like history |
 | break class::member            | set breakpoint on class member. may get menu |
@@ -385,6 +385,7 @@ layout src
   
 |    | Shortcut            | Result                                                   |
 | -- | ------------------- | -------------------------------------------------------- |
+| 🟢 | `CTRL` + `C`        | Actually SIGINT, stop execution of current program.      |
 | 🟢 | `CTRL` + `A`        | Enter or leave the TUI mode.                             |
 | 🟢 | `CTRL` + `X` + `1`  | Use a TUI layout with only one window.                   |
 | 🟢 | `CTRL` + `X` + `2`  | Use a TUI layout with at least two windows.              |
