@@ -12,19 +12,27 @@
 
 <div align="center">
 <table>
-<tr><th>GNU Project Debugger</th><th>Wifi Network Hacking</th><th>Git</th><th>Linux</th><th>Valgrind</th><th>Markdown</th></tr>
+<tr><th>GNU Project Debugger</th><th>Wifi Network Hacking</th><th>Git</th></tr>
 <tr><td>
 <img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/gdb.png"/>
 </td><td>
 <img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/wifi.png"/>
 </td><td>
 <img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/git.png"/>
+</td></tr>
+</table>
+</div>
+
+<div align="center">
+<table>
+<tr><th>Linux</th><th>Valgrind</th><th>Markdown</th></tr>
+<tr><td>
+<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/linux.png"/>
 </td><td>
 <img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/valgrind.png"/>
-</td><td>
-<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/linux.png"/>
 </td><td>
 <img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/markdown.png"/>
 </td></tr>
 </table>
 </div>
+
