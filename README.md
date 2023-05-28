@@ -14,11 +14,17 @@
 <table>
 <tr><th>GNU Project Debugger</th><th>Wifi Network Hacking</th><th>Git</th></tr>
 <tr><td>
-<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/gdb.png"/>
-</td><td>
-<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/wifi.png"/>
-</td><td>
-<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/git.png"/>
+	<a href="https://github.com/jotavare/guides-and-manuals/tree/main/guides-and-manuals/gdb">
+	<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/gdb.png"/>
+	</a>
+	</td><td>
+	<a href="https://github.com/jotavare/guides-and-manuals/tree/main/guides-and-manuals/wifi-network-hacking">
+	<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/wifi.png"/>
+	</a>
+	</td><td>
+	<a href="https://github.com/jotavare/guides-and-manuals/tree/main/guides-and-manuals/git">
+	<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/git.png"/>
+	</a>
 </td></tr>
 </table>
 </div>
@@ -27,11 +33,17 @@
 <table>
 <tr><th>Linux</th><th>Valgrind</th><th>Markdown</th></tr>
 <tr><td>
-<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/linux.png"/>
-</td><td>
-<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/valgrind.png"/>
-</td><td>
-<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/markdown.png"/>
+	<a href="https://github.com/jotavare/guides-and-manuals/tree/main/guides-and-manuals/linux">
+	<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/linux.png"/>
+	</a>
+	</td><td>
+	<a href="https://github.com/jotavare/guides-and-manuals/tree/main/guides-and-manuals/valgrind">
+	<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/valgrind.png"/>
+	</a>
+	</td><td>
+	<a href="https://github.com/jotavare/guides-and-manuals/tree/main/guides-and-manuals/markdown">
+	<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/markdown.png"/>
+	</a>
 </td></tr>
 </table>
 </div>
