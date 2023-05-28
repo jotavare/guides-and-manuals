@@ -76,7 +76,7 @@ layout src
 
 <div>
 <table>
-<tr><th>Running the Program</th>
+<tr><th>RUNNING THE PROGRAM</th>
 <tr><td>
 
 |    | Command                               | Result                                             |
@@ -109,7 +109,7 @@ layout src
 
 <div>
 <table>
-<tr><th>Help</th>
+<tr><th>HELP</th>
 <tr><td>
 
 |    | Command                                 | Result                                                 |
@@ -128,7 +128,7 @@ layout src
   
 <div>
 <table>
-<tr><th>Keyboard Shortcuts</th>
+<tr><th>KEYBOARD SHORTCUTS</th>
 <tr><td>
   
 |    | Shortcut             | Result                                                   |
@@ -157,7 +157,7 @@ layout src
 
 <div>
 <table>
-<tr><th>Breakpoints and Watchpoints</th>
+<tr><th>BREAKPOINTS AND WATCHPOINTS</th>
 <tr><td>
 
 |    | Command                                                      | Result                                                      |
@@ -186,7 +186,7 @@ layout src
   
 <div>
 <table>
-<tr><th>Stack Backtrace</th>
+<tr><th>STACK BACKTRACE</th>
 <tr><td>
   
 |    | Command         | Result                                  |
@@ -204,7 +204,7 @@ layout src
   
 <div>
 <table>
-<tr><th>Browsing Source</th>
+<tr><th>BROWSING SOURCE</th>
 <tr><td>
 
 |    | Command                      | Result                                              |
@@ -230,7 +230,7 @@ layout src
 
 <div>
 <table>
-<tr><th>Browsing Data</th>
+<tr><th>BROWSING DATA</th>
 <tr><td>
 
 |    | Command                         | Result                                         |
@@ -267,7 +267,7 @@ layout src
 
 <div>
 <table>
-<tr><th>Object File manipulation</th>
+<tr><th>OBJECT FILE MANIPULATION</th>
 <tr><td>
 
 |    | Command                  | Result                               |
@@ -284,7 +284,7 @@ layout src
 
 <div>
 <table>
-<tr><th>Signal Control</th>
+<tr><th>SIGNAL CONTROL</th>
 <tr><td>
 
 |    | Command                  | Result                                    |
@@ -306,7 +306,7 @@ layout src
 
 <div>
 <table>
-<tr><th>Machine-level Debug</th>
+<tr><th>MACHINE-LEVEL DEBUG</th>
 <tr><td>
 
 |    | Command                  | Result                                          |
@@ -329,7 +329,7 @@ layout src
 
 <div>
 <table>
-<tr><th>History Display</th>
+<tr><th>HISTORY DISPLAY</th>
 <tr><td>
 
 |    | Command                         | Result                                            |
@@ -349,7 +349,7 @@ layout src
 
 <div>
 <table>
-<tr><th>Shortcuts</th><th>Shortcuts</th>
+<tr><th>SHORTCUTS</th><th>SHORTCUTS</th>
 <tr><td>
 
 |    | Shortcut   | Command      |   
