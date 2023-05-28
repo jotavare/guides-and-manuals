@@ -235,7 +235,7 @@ or
 <tr><td>
   
 | # | Command | Result |
-| :------ | :------ | :----- |
+| :------: | :------ | :----- |
 | 🟢 | `bt`                  | print stack backtrace |
 | 🔵 | `frame`        	      | show current execution position |
 | 🔵 | `up`        	        | move up stack trace  (towards main) |
