@@ -234,14 +234,14 @@ or
 <tr><th>STACK BACKTRACE</th>
 <tr><td>
   
-| Command | Result |
-| :------ | :----- |
-| `bt`                  | print stack backtrace |
-| `frame`        	      | show current execution position |
-| `up`        	        | move up stack trace  (towards main) |
-| `down`        	      | move down stack trace (away from main) |
-| `info locals`         | print automatic variables in frame |
-| `info args`           | print function parameters | 
+| Color | Command | Result |
+| :------ | :------ | :----- |
+| 🟢 | `bt`                  | print stack backtrace |
+| 🔵 | `frame`        	      | show current execution position |
+| 🔵 | `up`        	        | move up stack trace  (towards main) |
+| 🔵 | `down`        	      | move down stack trace (away from main) |
+| 🟢 | `info locals`         | print automatic variables in frame |
+| 🟢 | `info args`           | print function parameters | 
 
 </td></tr>
 </table>
