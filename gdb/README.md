@@ -148,9 +148,9 @@ or
 -tui” parameters (for example: gdb -tui program), or use " Crtl+X+A
 # GDB Commands
 
-https://github.com/hellogcc/100-gdb-tips
-https://github.com/cyrus-and/gdb-dashboard
-https://raw.githubusercontent.com/hellogcc/100-gdb-tips/master/refcard.pdf
+- [100 GDB Tips](https://github.com/hellogcc/100-gdb-tips)
+- [GDB Dashboard](https://github.com/cyrus-and/gdb-dashboard)
+- [GDB Cheetsheat](https://raw.githubusercontent.com/hellogcc/100-gdb-tips/master/refcard.pdf)
 
 <div>
 <table>
@@ -202,28 +202,28 @@ https://raw.githubusercontent.com/hellogcc/100-gdb-tips/master/refcard.pdf
   
 <div>
 <table>
-<tr><th>BREAKPOINTS</th>
+<tr><th>Breakpoints and Watchpoints</th>
 <tr><td>
 
 | Command | Result |
 | :------ | :----- |
-| `break` (line or function)                      | set a breakpoint on a line or function            |
-| `break` main.c:42                               | set breakpoint at file and (line or function)     |
-| `tbreak` (line or function)                     | set a temporary breakpoint                        |
-| `watch` (variable)                              | set software watchpoint on variable               |
-| `info breakpoints`                              | show breakpoints                                  |
-| `info watchpoints`                              | show current watchpoints                          |
-| `delete` (breakpoint number)                    | delete a breakpoint by number                     |
-| `delete`                                        | delete all breakpoints (prompted)                 |
-| `clear`                                         | delete breakpoints at current line                |
-| `clear` (line or function)                      | delete breakpoints at line or function            |
-| `disable` (breakpoint number)                   | turn a breakpoint off, but don't remove it        |
-| `enable` (breakpoint number)                    | turn disabled breakpoint back on                  |
-| `commands` (breakpoint number) (commands) `end` | set gdb commands with breakpoint                  |
-| `ignore` (breakpoint number) (n times)          | ignore breakpoint n times before activation       |
-| `condition` (breakpoint number) (expression)    | break only if expression is true                  |
-| `condition` (breakpoint number) (condition)     | example: `condition 1 i == 2`                     |
-| `condition` (breakpoint number)                 | delete condition at breakpoint number             |
+| `break` [line or function]                                    | Set a breakpoint on a line or function.                       |
+| `break` main.c:42                                             | Set breakpoint at file and (line or function).                |
+| `tbreak` [line or function]                                   | Set a temporary breakpoint.                                   |
+| `watch` [variable]                                            | Set a software watchpoint on a variable.                      |
+| `info breakpoints`                                            | Show breakpoints and watchpoints.                             |
+| `info watchpoints`                                            | Show current watchpoints.                                     |
+| `delete` [breakpoint or watchpoint number]                    | Delete a breakpoint or watchpoint by number.                  |
+| `delete`                                                      | Delete all breakpoints and watchpoints (prompted).            |
+| `clear`                                                       | Delete breakpoints and watchpoints at the current line.       |
+| `clear` [line or function]                                    | Delete breakpoints or watchpoints at a line or function.      |
+| `disable` [breakpoint or watchpoint number]                   | Turn a breakpoint or watchpoint off, but don't remove it.     |
+| `enable` [breakpoint or watchpoint number]                    | Turn a disabled breakpoint or watchpoint back on.             |
+| `commands` [breakpoint or watchpoint number] [commands] `end` | Set GDB commands with a breakpoint or watchpoint.             |
+| `ignore` [breakpoint or watchpoint number] [n times]          | Ignore a breakpoint or watchpoint n times before activation.  |
+| `condition` [breakpoint or watchpoint number] [expression]    | End only if the expression is true. `condition 1 i == TRUE`.  |
+| `condition` [breakpoint or watchpoint number] [condition]     | End only if the condition is true. `condition 1 i == 2`.      |
+| `condition` [breakpoint or watchpoint number]                 | Delete condition at a breakpoint or watchpoint number.        |
   
 </td></tr>
 </table>
