@@ -183,18 +183,19 @@ or
   
 <div>
 <table>
-<tr><th>HELP</th>
+<tr><th>Help</th>
 <tr><td>
 
-| Command | Result |
-| :------ | :----- |
-| `help` or `-h` 	                        | list command classes |
-| `help running`                          | list commands in one command class |
-| `help run`        	                    | bottom-level help for a command "run" | 
-| `help info`                             | list info commands (running program state) |
-| `help info line`                        | help for a particular info comman |
-| `help show`                             | list show commands (gdb state) |
-| `help show commands`                    | specific help for a show comma |
+| #  | Command                                 | Result                                                 |
+|----|-----------------------------------------|--------------------------------------------------------|
+| 🔵 | `help` or `-h`                          | List command classes.                                  |
+| 🔵 | `help running`                          | List commands in the "running" command class.          |
+| 🔵 | `help run`                              | Bottom-level help for the command "run".               |
+| 🔵 | `help info`                             | List info commands for examining program state.        |
+| 🔵 | `help info line`                        | Help for the "info line" command.                      |
+| 🔵 | `help show`                             | List show commands for displaying GDB state.           |
+| 🔵 | `help show commands`                    | Specific help for the "show commands" command.         |
+
 
 </td></tr>
 </table>
@@ -205,25 +206,26 @@ or
 <tr><th>Breakpoints and Watchpoints</th>
 <tr><td>
 
-| Command | Result |
-| :------ | :----- |
-| `break` [line or function]                                    | Set a breakpoint on a line or function.                       |
-| `break` main.c:42                                             | Set breakpoint at file and (line or function).                |
-| `tbreak` [line or function]                                   | Set a temporary breakpoint.                                   |
-| `watch` [variable]                                            | Set a software watchpoint on a variable.                      |
-| `info breakpoints`                                            | Show breakpoints and watchpoints.                             |
-| `info watchpoints`                                            | Show current watchpoints.                                     |
-| `delete` [breakpoint or watchpoint number]                    | Delete a breakpoint or watchpoint by number.                  |
-| `delete`                                                      | Delete all breakpoints and watchpoints (prompted).            |
-| `clear`                                                       | Delete breakpoints and watchpoints at the current line.       |
-| `clear` [line or function]                                    | Delete breakpoints or watchpoints at a line or function.      |
-| `disable` [breakpoint or watchpoint number]                   | Turn a breakpoint or watchpoint off, but don't remove it.     |
-| `enable` [breakpoint or watchpoint number]                    | Turn a disabled breakpoint or watchpoint back on.             |
-| `commands` [breakpoint or watchpoint number] [commands] `end` | Set GDB commands with a breakpoint or watchpoint.             |
-| `ignore` [breakpoint or watchpoint number] [n times]          | Ignore a breakpoint or watchpoint n times before activation.  |
-| `condition` [breakpoint or watchpoint number] [expression]    | End only if the expression is true. `condition 1 i == TRUE`.  |
-| `condition` [breakpoint or watchpoint number] [condition]     | End only if the condition is true. `condition 1 i == 2`.      |
-| `condition` [breakpoint or watchpoint number]                 | Delete condition at a breakpoint or watchpoint number.        |
+| #   | Command                                                       | Result                                                     |
+|------|--------------------------------------------------------------|------------------------------------------------------------|
+| 🟢   | `break` [line or function]                                   | Set a breakpoint on a line or function.                     |
+| 🔵   | `break` main.c:42                                            | Set breakpoint at file and (line or function).              |
+| 🔵   | `tbreak` [line or function]                                  | Set a temporary breakpoint.                                 |
+| 🟢   | `watch` [variable]                                           | Set a software watchpoint on a variable.                    |
+| 🟢   | `info breakpoints`                                           | Show breakpoints and watchpoints.                           |
+| 🔵   | `info watchpoints`                                           | Show current watchpoints.                                   |
+| 🔵   | `delete` [breakpoint or watchpoint number]                   | Delete a breakpoint or watchpoint by number.                |
+| 🔵   | `delete`                                                     | Delete all breakpoints and watchpoints (prompted).          |
+| 🟢   | `clear`                                                      | Delete breakpoints and watchpoints at the current line.     |
+| 🔵   | `clear` [line or function]                                   | Delete breakpoints or watchpoints at a line or function.    |
+| 🔵   | `disable` [breakpoint or watchpoint number]                  | Turn a breakpoint or watchpoint off, but don't remove it.   |
+| 🔵   | `enable` [breakpoint or watchpoint number]                   | Turn a disabled breakpoint or watchpoint back on.           |
+| 🔵   | `commands` [breakpoint or watchpoint number] [commands] `end`| Set GDB commands with a breakpoint or watchpoint.           |
+| 🔵   | `ignore` [breakpoint or watchpoint number] [n times]         | Ignore a breakpoint or watchpoint n times before activation.|
+| 🔵   | `condition` [breakpoint or watchpoint number] [expression]   | End only if the expression is true.                         |
+| 🔵   | `condition` [breakpoint or watchpoint number] [condition]    | End only if the condition is true.                          |
+| 🔵   | `condition` [breakpoint or watchpoint number]                | Delete condition at a breakpoint or watchpoint number.      |
+
   
 </td></tr>
 </table>
@@ -231,17 +233,17 @@ or
   
 <div>
 <table>
-<tr><th>STACK BACKTRACE</th>
+<tr><th>Stack Backtrace</th>
 <tr><td>
   
-| # | Command | Result |
-| :------: | :------ | :----- |
-| 🟢 | `bt`                  | print stack backtrace |
-| 🔵 | `frame`        	      | show current execution position |
-| 🔵 | `up`        	        | move up stack trace  (towards main) |
-| 🔵 | `down`        	      | move down stack trace (away from main) |
-| 🟢 | `info locals`         | print automatic variables in frame |
-| 🟢 | `info args`           | print function parameters | 
+| #  | Command         | Result                                  |
+|----|-----------------|-----------------------------------------|
+| 🟢 | `bt`            | Print stack backtrace.                  |
+| 🔵 | `frame`         | Show current execution position.        |
+| 🔵 | `up`            | Move up stack trace (towards main).     |
+| 🔵 | `down`          | Move down stack trace (away from main). |
+| 🟢 | `info locals`   | Print automatic variables in frame.     |
+| 🟢 | `info args`     | Print function parameters.              |
 
 </td></tr>
 </table>
@@ -249,24 +251,25 @@ or
   
 <div>
 <table>
-<tr><th>BROWSING SOURCE</th>
+<tr><th>Browsing Source</th>
 <tr><td>
 
-| Command | Result |
-| :------ | :----- |
-| list 101                  | list 10 lines around line 101 |
-| list 1,10                 | list lines 1 to 10 |
-| list main  	              | list lines around function |
-| list basic.c:main         | list from another file basic.c |
-| list -        	          | list previous 10 lines |
-| list *0x22e4              | list source at address |
-| cd dir        	          | change current directory to \fIdir\fR |
-| pwd          	            | print working directory |
-| search regexpr            | forward current for regular expression |
-| reverse-search regexpr    | backward search for regular expression |
-| dir dirname               | add directory to source path |
-| dir        	              | reset source path to nothing |
-| show directories          | show source path |
+|    | Command                      | Result                                             |
+| :- | :--------------------------- | :------------------------------------------------- |
+| 🔵 | `list` [20]                  | List 10 lines around line `20`.                    |
+| 🔵 | `list` [1,10]                | List lines `1` to `10`.                             |
+| 🔵 | `list` [main]                | List lines around function `main`.                  |
+| 🔵 | `list` [basic.c:main]        | List from another file `basic.c`.                   |
+| 🔵 | `list -`                     | List previous 10 lines.                             |
+| 🔵 | `info address` [Symbol name] | Displays the address of a given symbol.
+| 🔵 | `list` [*0x22e4]             | List source at address `p0x22e4`.                    |
+| 🔵 | `cd` [dir]                   | Change current directory to `dir`.                  |
+| 🔵 | `pwd`                        | Print working directory.                            |
+| 🔵 | `search regexpr`             | Forward search for regular expression `regexpr`.    |
+| 🔵 | `reverse-search regexpr`     | Backward search for regular expression `regexpr`.   |
+| 🔵 | `dir` [dirname]              | Add directory `dirname` to source path.             |
+| 🔵 | `dir`                        | Reset source path to nothing.                       |
+| 🔵 | `show directories`           | Show source path.                                   |
 
 </td></tr>
 </table>
