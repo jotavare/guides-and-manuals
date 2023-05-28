@@ -10,11 +10,9 @@
 	<a href='https://profile.intra.42.fr/users/jotavare' target="_blank"><img alt='42' src='https://img.shields.io/badge/Porto-100000?style=flat-square&logo=42&logoColor=white&labelColor=000000&color=000000'/></a>
 </p>
 
-
-
 <div align="center">
 <table>
-<tr><th>GNU Project Debugger</th><th>Wifi Network Hacking</th><th>Git</th><th>Linux</th><th>GIT</th><th>Valgrind</th></tr>
+<tr><th>GNU Project Debugger</th><th>Wifi Network Hacking</th><th>Git</th><th>Linux</th><th>Valgrind</th><th>Markdown</th></tr>
 <tr><td>
 <img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/gdb.png"/>
 </td><td>
