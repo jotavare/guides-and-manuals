@@ -347,16 +347,31 @@
 <tr><th>HISTORY DISPLAY</th>
 <tr><td>
 
-|    | Command                         | Result                                            |
-| :- | :------------------------------ | :------------------------------------------------ |
-| 🟢 | `show commands`                 | Print command history.                            |
-| 🔵 | `info editing`       	         | Print command history.                            |
-| 🔵 | `set history expansion on`      | Turn on c-shell like history.                     |
-| 🔵 | `break class::[member]`         | Set breakpoint on class member. May get menu.     |
-| 🔵 | `list class::[member]`          | List member in class.                             |
-| 🔵 | `ptype` [class]                 | Print class members.                              |
-| 🔵 | `print` [*this]      	         | Print contents of this pointer.                   |
-| 🔵 | `rbreak regexpr`     	         | Useful for breakpoint on overloaded member name.  |
+|    | Command                                     | Result                                                                                               |
+| :- | :------------------------------------------ | :--------------------------------------------------------------------------------------------------- |
+| 🟢 | `show commands`                             | Print command history.                                                                               |
+| 🔵 | `info editing`       	                     | Print command history.                                                                               |
+| 🔵 | `set history filename [fname]`              | Set the name of the GDB command history file to fname.                                               |
+| 🔵 | `set history save`                          | Record command history in a file.                                                                    |
+| 🔵 | `set history save [on] [off]`               | Record or don't record the command history into the file specified.                                  |
+| 🔵 | `set history size [size]`                   | Set the number of commands gdb keeps in its history list based on the size.                          |
+| 🔵 | `set history size unlimited`                | Set the number of commands gdb keeps in its history list as unlimited.                               |
+| 🔵 | `set history remove-duplicates [count]`     | Removed the first duplicate entry in history based on count.                                         |
+| 🔵 | `set history remove-duplicates unlimited`   | Removed dupicate entrys in history.                                                                  |
+| 🔵 | `set history expansion [on] [off]`          | Enable or disable history expansion. History expansion assigns special meaning to the character `!`. |
+| 🔵 | `show history`                              | Display all four history states.                                                                     |
+| 🔵 | `show history filename`                     | Display the history of filename.                                                                     |
+| 🔵 | `show history save`                         | Display the history of save.                                                                         |
+| 🔵 | `show history size`                         | Display the history of size.                                                                         |
+| 🔵 | `show history exp`                          | Display the history of exp.                                                                          |
+| 🔵 | `show commands`                             | Display the last ten commands in the command history.                                                |
+| 🔵 | `show commands [n]`                         | Print ten commands centered on command number n.                                                     |
+| 🔵 | `show commands +`                           | Print ten commands just after the commands last printed.                                             | 
+| 🔵 | `break class::[member]`                     | Set breakpoint on class member. May get menu.                                                        |
+| 🔵 | `list class::[member]`                      | List member in class.                                                                                |
+| 🔵 | `ptype` [class]                             | Print class members.                                                                                 |
+| 🔵 | `print` [*this]      	                     | Print contents of this pointer.                                                                      |
+| 🔵 | `rbreak regexpr`     	                     | Useful for breakpoint on overloaded member name.                                                     |
 
 </td></tr>
 </table>
@@ -412,45 +427,3 @@ $ gdb -q -tui <file>
 (gdb) shell ls
 (gdb) !ls
 -tui” parameters (for example: gdb -tui program), or use " Crtl+X+A
-  
-  
-  
-set history filename [fname]
-
-    Set the name of the GDB command history file to fname. This is the file where GDB reads an initial command history list, and where it writes the command history from this session when it exits. You can access this list through history expansion or through the history command editing characters listed below. This file defaults to the value of the environment variable GDBHISTFILE, or to ./.gdb_history (./_gdb_history on MS-DOS) if this variable is not set.
-
-    The GDBHISTFILE environment variable is read after processing any GDB initialization files (see Startup) and after processing any commands passed using command line options (for example, -ex).
-
-    If the fname argument is not given, or if the GDBHISTFILE is the empty string then GDB will neither try to load an existing history file, nor will it try to save the history on exit.
-set history save
-set history save on
-
-    Record command history in a file, whose name may be specified with the set history filename command. By default, this option is disabled. The command history will be recorded when GDB exits. If set history filename is set to the empty string then history saving is disabled, even when set history save is on.
-set history save off
-
-    Don’t record the command history into the file specified by set history filename when GDB exits.
-set history size size
-set history size unlimited
-
-    Set the number of commands which GDB keeps in its history list. This defaults to the value of the environment variable GDBHISTSIZE, or to 256 if this variable is not set. Non-numeric values of GDBHISTSIZE are ignored. If size is unlimited or if GDBHISTSIZE is either a negative number or the empty string, then the number of commands GDB keeps in the history list is unlimited.
-
-    The GDBHISTSIZE environment variable is read after processing any GDB initialization files (see Startup) and after processing any commands passed using command line options (for example, -ex).
-set history remove-duplicates count
-set history remove-duplicates unlimited | Control the removal of duplicate history entries in the command history list. If count is non-zero, GDB will look back at the last count history entries and remove the first entry that is a duplicate of the current entry being added to the command history list. If count is unlimited then this lookbehind is unbounded. If count is 0, then removal of duplicate history entries is disabled.
-
-
-
-History expansion assigns special meaning to the character !
-set history expansion on
-set history expansion | Enable history expansion. History expansion is off by default.
-set history expansion off | Disable history expansion.
-show history
-show history filename
-show history save
-show history size
-show history exp  
-    These commands display the state of the GDB history parameters. show history by itself displays all four states. 
-
-show commands    | Display the last ten commands in the command history.
-show commands n  | Print ten commands centered on command number n.
-show commands +  | Print ten commands just after the commands last printed. 
