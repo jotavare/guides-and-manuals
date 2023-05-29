@@ -12,7 +12,7 @@
 
 <div align="center">
 <table>
-<tr><th>GNU Project Debugger</th><th>Wifi Network Hacking</th><th>Git</th></tr>
+<tr><th>GNU Project Debugger</th><th>Wifi Network Hacking</th><th>Git (empty)</th></tr>
 <tr><td>
 	<a href="https://github.com/jotavare/guides-and-manuals/tree/main/guides-and-manuals/gdb">
 	<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/gdb.png"/>
@@ -31,7 +31,7 @@
 
 <div align="center">
 <table>
-<tr><th>Linux</th><th>Valgrind</th><th>Markdown</th></tr>
+<tr><th>Linux (empty)</th><th>Valgrind (empty)</th><th>Markdown (empty)</th></tr>
 <tr><td>
 	<a href="https://github.com/jotavare/guides-and-manuals/tree/main/guides-and-manuals/linux">
 	<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/linux.png"/>
