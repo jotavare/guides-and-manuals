@@ -62,7 +62,6 @@ $ gdb -q -tui <file>
 | 🟢 | `step` [number of lines]              | Step n number of lines.                            |
 | 🟢 | `next`                                | Next line.                                         |
 | 🟢 | `next` [number of lines]              | Next n number of lines.                            |
-| 🟢 | `refresh`                             | Refresh the screen.                                |
 | 🔵 | `attach` [process-id]                 | Attach to running program.                         |
 | 🔵 | `detach`                              | Detach from running program.                       |
 | 🔵 | `define` [command ...] `end`          | Define user command.                               |
@@ -84,12 +83,29 @@ $ gdb -q -tui <file>
 
 |    | Command                                 | Result                                                 |
 | :- | --------------------------------------- | ------------------------------------------------------ |
-| 🔵 | `layout` [asm] [regs] [src] [cmd]       |
-| 🔵 | `layout split`                          |
-| 🔵 | `layout next`                           |
-| 🔵 | `layout prev`                           |
-  info win
-| 🔵 | `win` [asm] [+10]                       |
+
+info win List and give the size of all displayed windows.
+layout next Display the next layout.
+layout prev Display the previous layout.
+layout src Display the source window only.
+layout asm Display the assembly window only.
+layout split Display the source and assembly window.
+layout regs Display the register window together with the source or assembly window.
+focus next Make the next window active for scrolling.
+focus prev Make the previous window active for scrolling.
+focus src Make the source window active for scrolling.
+focus asm Make the assembly window active for scrolling.
+focus regs Make the register window active for scrolling.
+focus cmd Make the command window active for scrolling.
+refresh Refresh the screen. This is similar to typing C-L.
+tui reg float Show the floating point registers in the register window.
+tui reg general Show the general registers in the register window.
+tui reg next Show the next register group. The list of register groups as well as their order
+tui reg system Show the system registers in the register window.
+update Update the source window and the current execution point.
+winheight name +count Change the height of the window name by count lines. Positive counts increase
+winheight name -count Change the height of the window name by count lines. Positive counts increase
+tabset nchars Set the width of tab stops to be nchars characters
 | 🔵 | `set height lpp`                        |
 | 🔵 | `set height unlimited`                  |
 | 🔵 | `show height`                           |
@@ -102,6 +118,29 @@ $ gdb -q -tui <file>
 | 🔵 | `set pagination on`                     |
 | 🔵 | `set pagination off`                    |
 | 🔵 | `show pagination`                       |
+  
+  
+  set tui border-kind kind
+Select the border appearance for the source, assembly and register windows.
+The possible values are the following:
+space Use a space character to draw the border.
+ascii Use ascii characters ‘+’, ‘-’ and ‘|’ to draw the border.
+acs Use the Alternate Character Set to draw the border. The border is
+drawn using character line graphics if the terminal supports them.
+set tui border-mode mode
+set tui active-border-mode mode
+Select the display attributes for the borders of the inactive windows or the
+active window. The mode can be one of the following:
+normal Use normal attributes to display the border.
+standout Use standout mode.
+reverse Use reverse video mode.
+half Use half bright mode.
+half-standout
+Use half bright and standout mode.
+bold Use extra bright or bold mode.
+bold-standout
+Use extra bright or bold and standout mode.
+  
   
 </td></tr>
 </table>
@@ -137,12 +176,12 @@ $ gdb -q -tui <file>
 | 🟢 | `CTRL` + `X` + `1`   | Use a TUI layout with only one window.                   |
 | 🟢 | `CTRL` + `X` + `2`   | Use a TUI layout with at least two windows.              |
 | 🟢 | `CTRL` + `X` + `O`   | Change the active window (use scrolling and arrow keys). |
-| 🔵 | `PgUp Scroll`        | The active window one page up.                           |
-| 🔵 | `PgDn Scroll`        | The active window one page down.                         |
-| 🔵 | `Up Scroll`          | The active window one line up.                           |
-| 🔵 | `Down Scroll`        | The active window one line down.                         |
-| 🔵 | `Left Scroll`        | The active window one column left.                       |
-| 🔵 | `Right Scroll`       | The active window one column right.                      |
+| 🔵 | `PAGEUP`        | The active window one page up.                           |
+| 🔵 | `PAGEDOWN`        | The active window one page down.                         |
+| 🔵 | `UP`          | The active window one line up.                           |
+| 🔵 | `DOWN`        | The active window one line down.                         |
+| 🔵 | `LEFT`        | The active window one column left.                       |
+| 🔵 | `RIGHT`       | The active window one column right.                      |
 | 🟢 | `CTRL` + `C`         | Actually SIGINT, stop execution of current program.      |
 | 🟢 | `CTRL` + `L`         | Refresh the screen.                                      |
 | 🟢 | `CTRL` + `P`         | Previous command.                                        |
