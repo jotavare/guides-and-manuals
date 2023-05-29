@@ -91,19 +91,16 @@
 | 🔵 | `info win`                              | List and give the size of all displayed windows.                                        |
 | 🔵 | `winheight name +count                  | Change the height of the window name by lines (+ increase and - decreases).             |
 | 🔵 | `tabset nchars                          | Set the width of tab stops to be nchars characters.                                     |
-| 🔵 | `set height lpp`                        |
-| 🔵 | `set height unlimited`                  |
-| 🔵 | `show height`                           |
-| 🔵 | `set width cpl`                         |
-| 🔵 | `set width unlimited`                   |
-| 🔵 | `show width`                            |
-| 🔵 | `tui reg float`                         |
-| 🔵 | `tui reg system`                        |
-| 🔵 | `tui reg general`                       |
-| 🔵 | `set pagination on`                     |
-| 🔵 | `set pagination off`                    |
-| 🔵 | `show pagination`                       |
-| 🔵 | `set tui border-kind`                   | Select the border appearance for the source, assembly and register windows.             |
+| 🔵 | `set height lpp`                        | Specify a screen height of lpp lines.                                                   |
+| 🔵 | `show height`                           | Show current screen height.                                                             |
+| 🔵 | `set width cpl`                         | Specify a screen width of cpl characters.                                               |
+| 🔵 | `show width`                            | Show current screen width.                                                              |
+| 🔵 | `tui reg float`                         | Show the floating point registers in the register window.                               |
+| 🔵 | `tui reg system`                        | Show the system registers in the register window.                                       |
+| 🔵 | `tui reg general`                       | Show the general registers in the register window.                                      |
+| 🔵 | `set pagination [on] [off]`             | Turn the output pagination on or off. Turning pagination off = `set height 0`           |
+| 🔵 | `show pagination`                       | Show the current pagination mode.                                                       |
+| 🔵 | `set tui border-kind [kind]`            | Select the border appearance for the source, assembly and register windows.             |
 | 🔵 | `[space]`                               | Use a space character to draw the border.                                               |
 | 🔵 | `[ascii]`                               | Use ascii characters ‘+’, ‘-’ and ‘|’ to draw the border.                               |
 | 🔵 | `[acs]`                                 | Use the Alternate Character Set to draw the border.                                     |
