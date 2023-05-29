@@ -1,35 +1,3 @@
-set follow-fork-mode <child or parent>
-
-set history filename fname 
-set history save
-set history save on
-history filename command
-set history save off
-set history size size
-History expansion
-!
-!=
-set history expansion on
-set history expansion
-Enable history expansion..
-set history expansion off
-Disable history expansion.
-show history
-show history filename
-show history save
-show history size
-show history expansion
-show commands
-show commands n
-show commands +
-  
-
-gdbtui gdb --tui 
-$ gdb -q -tui <file>
-(gdb) shell ls
-(gdb) !ls
--tui” parameters (for example: gdb -tui program), or use " Crtl+X+A
-
 # GDB Commands
 
 - [100 GDB Tips](https://github.com/hellogcc/100-gdb-tips)
@@ -439,3 +407,35 @@ w where
 </td></tr>
 </table>
 </div>
+
+set follow-fork-mode <child or parent>
+
+set history filename fname 
+set history save
+set history save on
+history filename command
+set history save off
+set history size size
+History expansion
+!
+!=
+set history expansion on
+set history expansion
+Enable history expansion..
+set history expansion off
+Disable history expansion.
+show history
+show history filename
+show history save
+show history size
+show history expansion
+show commands
+show commands n
+show commands +
+  
+
+gdbtui gdb --tui 
+$ gdb -q -tui <file>
+(gdb) shell ls
+(gdb) !ls
+-tui” parameters (for example: gdb -tui program), or use " Crtl+X+A
