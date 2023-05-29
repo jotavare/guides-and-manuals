@@ -43,7 +43,26 @@
 </td></tr>
 </table>
 </div>
-  
+
+<div>
+<table>
+<tr><th>HELP</th>
+<tr><td>
+
+|    | Command                                 | Result                                                 |
+| :- | --------------------------------------- | ------------------------------------------------------ |
+| 🔵 | `help` or `-h`                          | List command classes.                                  |
+| 🔵 | `help running`                          | List commands in the "running" command class.          |
+| 🔵 | `help run`                              | Bottom-level help for the command "run".               |
+| 🔵 | `help info`                             | List info commands for examining program state.        |
+| 🔵 | `help info line`                        | Help for the "info line" command.                      |
+| 🔵 | `help show`                             | List show commands for displaying GDB state.           |
+| 🔵 | `help show commands`                    | Specific help for the "show commands" command.         |
+
+</td></tr>
+</table>
+</div>  
+
 <div>
 <table>
 <tr><th>LAYOUT</th>
@@ -84,51 +103,23 @@
 | 🔵 | `set pagination on`                     |
 | 🔵 | `set pagination off`                    |
 | 🔵 | `show pagination`                       |
-  
-  
-set tui border-kind kind Select the border appearance for the source, assembly and register windows.
-The possible values are the following:
-space Use a space character to draw the border.
-ascii Use ascii characters ‘+’, ‘-’ and ‘|’ to draw the border.
-acs Use the Alternate Character Set to draw the border. The border is
-drawn using character line graphics if the terminal supports them.
-set tui border-mode mode
-set tui active-border-mode mode
-Select the display attributes for the borders of the inactive windows or the
-active window. The mode can be one of the following:
-normal Use normal attributes to display the border.
-standout Use standout mode.
-reverse Use reverse video mode.
-half Use half bright mode.
-half-standout
-Use half bright and standout mode.
-bold Use extra bright or bold mode.
-bold-standout
-Use extra bright or bold and standout mode.
-  
+| 🔵 | `set tui border-kind`                   | Select the border appearance for the source, assembly and register windows.             |
+| 🔵 | `[space]`                               | Use a space character to draw the border.                                               |
+| 🔵 | `[ascii]`                               | Use ascii characters ‘+’, ‘-’ and ‘|’ to draw the border.                               |
+| 🔵 | `[acs]`                                 | Use the Alternate Character Set to draw the border.                                     |
+| 🔵 | `[drawn]`                               | Using character line graphics if the terminal supports them.                            |
+| 🔵 | `set tui border-mode [mode]`            | Select the display attributes for the inactive window border.                           |
+| 🔵 | `set tui active-border-mode [mode]`     | Select the display attributes for the active window border.                             |
+| 🔵 | `[standout]`                            | Use standout mode.                                                                      |
+| 🔵 | `[reverse]`                             | Use reverse video mode.                                                                 |
+| 🔵 | `[half]`                                | Use half bright mode.                                                                   |
+| 🔵 | `[half-standout]`                       | Use half bright and standout mode.                                                      |
+| 🔵 | `[bold]`                                | Use extra bright or bold mode.                                                          |
+| 🔵 | `[bold-standout]`                       | Use extra bright or bold and standout mode.                                             |
   
 </td></tr>
 </table>
-</div>  
-
-<div>
-<table>
-<tr><th>HELP</th>
-<tr><td>
-
-|    | Command                                 | Result                                                 |
-| :- | --------------------------------------- | ------------------------------------------------------ |
-| 🔵 | `help` or `-h`                          | List command classes.                                  |
-| 🔵 | `help running`                          | List commands in the "running" command class.          |
-| 🔵 | `help run`                              | Bottom-level help for the command "run".               |
-| 🔵 | `help info`                             | List info commands for examining program state.        |
-| 🔵 | `help info line`                        | Help for the "info line" command.                      |
-| 🔵 | `help show`                             | List show commands for displaying GDB state.           |
-| 🔵 | `help show commands`                    | Specific help for the "show commands" command.         |
-
-</td></tr>
-</table>
-</div>  
+</div>
   
 <div>
 <table>
@@ -167,11 +158,11 @@ Use extra bright or bold and standout mode.
 |    | Shortcut                   | Result                          |
 | -- | -------------------------- | ------------------------------- |
 | 🔵 | `CTRL` + `X` + `S`         | Switch to single key mode.      |
+| 🔵 | `q`                        | Exit the SingleKey mode.        |
 | 🔵 | `c`                        | continue                        |
 | 🔵 | `d`                        | down                            |
 | 🔵 | `f`                        | finish                          |
 | 🔵 | `n`                        | next                            |
-| 🔵 | `q`                        | Exit the SingleKey mode.        |
 | 🔵 | `r`                        | run                             |
 | 🔵 | `s`                        | step                            |
 | 🔵 | `u`                        | up                              |
