@@ -49,29 +49,29 @@
 <tr><th>LAYOUT</th>
 <tr><td>
 
-|    | Command                                 | Result                                                 |
-| :- | --------------------------------------- | ------------------------------------------------------ |
-| 🔵 | `layout next`                           | Display the next layout.
-| 🔵 | `layout prev`                           | Display the previous layout.
-| 🔵 | `layout src`                            | Display the source window only.
-| 🔵 | `layout asm`                            | Display the assembly window only.
-| 🔵 | `layout split`                          | Display the source and assembly window.
-| 🔵 | `layout regs`                           | Display the register window together with the source or assembly window.
-| 🔵 | `focus next`                            | Make the next window active for scrolling.
-| 🔵 | `focus prev`                            | Make the previous window active for scrolling.
-| 🔵 | `focus src`                             | Make the source window active for scrolling.
-| 🔵 | `focus asm`                             | Make the assembly window active for scrolling.
-| 🔵 | `focus regs`                            | Make the register window active for scrolling.
-| 🔵 | `focus cmd`                             | Make the command window active for scrolling.
-| 🔵 | `refresh`                               | Refresh the screen. This is similar to typing C-L.
-| 🔵 | `tui reg float`                         | Show the floating point registers in the register window.
-| 🔵 | `tui reg general`                       | Show the general registers in the register window.
-| 🔵 | `tui reg system`                        | Show the system registers in the register window.
-| 🔵 | `tui reg next`                          | Show the next register group. The list of register groups as well as their order.
-| 🔵 | `update`                                | Update the source window and the current execution point.
-| 🔵 | `info win`                              | List and give the size of all displayed windows.
-| 🔵 | `winheight name +count                  | Change the height of the window name by lines (+ increase and - decreases).
-| 🔵 | `tabset nchars                          | Set the width of tab stops to be nchars characters
+|    | Command                                 | Result                                                                                  |
+| :- | --------------------------------------- | --------------------------------------------------------------------------------------- |
+| 🔵 | `layout next`                           | Display the next layout.                                                                |
+| 🔵 | `layout prev`                           | Display the previous layout.                                                            |
+| 🔵 | `layout src`                            | Display the source window only.                                                         |
+| 🔵 | `layout asm`                            | Display the assembly window only.                                                       |
+| 🔵 | `layout split`                          | Display the source and assembly window.                                                 |
+| 🔵 | `layout regs`                           | Display the register window together with the source or assembly window.                |
+| 🔵 | `focus next`                            | Make the next window active for scrolling.                                              |
+| 🔵 | `focus prev`                            | Make the previous window active for scrolling.                                          |
+| 🔵 | `focus src`                             | Make the source window active for scrolling.                                            |
+| 🔵 | `focus asm`                             | Make the assembly window active for scrolling.                                          |
+| 🔵 | `focus regs`                            | Make the register window active for scrolling.                                          |
+| 🔵 | `focus cmd`                             | Make the command window active for scrolling.                                           |
+| 🔵 | `refresh`                               | Refresh the screen. This is similar to typing `CTRL` + `L`.                             |
+| 🔵 | `tui reg float`                         | Show the floating point registers in the register window.                               |
+| 🔵 | `tui reg general`                       | Show the general registers in the register window.                                      |
+| 🔵 | `tui reg system`                        | Show the system registers in the register window.                                       |
+| 🔵 | `tui reg next`                          | Show the next register group. The list of register groups as well as their order.       |
+| 🔵 | `update`                                | Update the source window and the current execution point.                               |
+| 🔵 | `info win`                              | List and give the size of all displayed windows.                                        |
+| 🔵 | `winheight name +count                  | Change the height of the window name by lines (+ increase and - decreases).             |
+| 🔵 | `tabset nchars                          | Set the width of tab stops to be nchars characters.                                     |
 | 🔵 | `set height lpp`                        |
 | 🔵 | `set height unlimited`                  |
 | 🔵 | `show height`                           |
@@ -86,8 +86,7 @@
 | 🔵 | `show pagination`                       |
   
   
-  set tui border-kind kind
-Select the border appearance for the source, assembly and register windows.
+set tui border-kind kind Select the border appearance for the source, assembly and register windows.
 The possible values are the following:
 space Use a space character to draw the border.
 ascii Use ascii characters ‘+’, ‘-’ and ‘|’ to draw the border.
@@ -142,12 +141,12 @@ Use extra bright or bold and standout mode.
 | 🟢 | `CTRL` + `X` + `1`   | Use a TUI layout with only one window.                   |
 | 🟢 | `CTRL` + `X` + `2`   | Use a TUI layout with at least two windows.              |
 | 🟢 | `CTRL` + `X` + `O`   | Change the active window (use scrolling and arrow keys). |
-| 🔵 | `PAGEUP`        | The active window one page up.                           |
-| 🔵 | `PAGEDOWN`        | The active window one page down.                         |
-| 🔵 | `UP`          | The active window one line up.                           |
-| 🔵 | `DOWN`        | The active window one line down.                         |
-| 🔵 | `LEFT`        | The active window one column left.                       |
-| 🔵 | `RIGHT`       | The active window one column right.                      |
+| 🔵 | `PAGEUP`             | The active window one page up.                           |
+| 🔵 | `PAGEDOWN`           | The active window one page down.                         |
+| 🔵 | `UP`                 | The active window one line up.                           |
+| 🔵 | `DOWN`               | The active window one line down.                         |
+| 🔵 | `LEFT`               | The active window one column left.                       |
+| 🔵 | `RIGHT`              | The active window one column right.                      |
 | 🟢 | `CTRL` + `C`         | Actually SIGINT, stop execution of current program.      |
 | 🟢 | `CTRL` + `L`         | Refresh the screen.                                      |
 | 🟢 | `CTRL` + `P`         | Previous command.                                        |
@@ -155,19 +154,27 @@ Use extra bright or bold and standout mode.
 | 🟢 | `CTRL` + `B`         | Move left in the command text.                           |
 | 🟢 | `CTRL` + `F`         | Move right in the command text.                          |
 | 🔵 | `ESC` + `CTRL` + `J` | Switch to vi edit mode from emacs edit mode.             |
+  
+</td></tr>
+</table>
+</div>
 
-  mands to single keys. Type C-x s to switch into this mode, where the following key bindings
-are used:
-c continue
-d down
-f finish
-n next
-q exit the SingleKey mode.
-r run
-s step
-u up
-v info locals
-w where
+<div>
+<table>
+<tr><th>SINGLE KEY MODE</th>
+<tr><td>
+
+| 🔵 | `CTRL` + `X` + `S`         | Switch to single key mode.      |
+| 🔵 | `c`                        | continue                        |
+| 🔵 | `d`                        | down                            |
+| 🔵 | `f`                        | finish                          |
+| 🔵 | `n`                        | next                            |
+| 🔵 | `q`                        | Exit the SingleKey mode.        |
+| 🔵 | `r`                        | run                             |
+| 🔵 | `s`                        | step                            |
+| 🔵 | `u`                        | up                              |
+| 🔵 | `v`                        | info locals                     |
+| 🔵 | `w`                        | where                           |
   
 </td></tr>
 </table>
