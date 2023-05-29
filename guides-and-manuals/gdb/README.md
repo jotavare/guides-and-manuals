@@ -83,29 +83,27 @@ $ gdb -q -tui <file>
 
 |    | Command                                 | Result                                                 |
 | :- | --------------------------------------- | ------------------------------------------------------ |
-
-info win List and give the size of all displayed windows.
-layout next Display the next layout.
-layout prev Display the previous layout.
-layout src Display the source window only.
-layout asm Display the assembly window only.
-layout split Display the source and assembly window.
-layout regs Display the register window together with the source or assembly window.
-focus next Make the next window active for scrolling.
-focus prev Make the previous window active for scrolling.
-focus src Make the source window active for scrolling.
-focus asm Make the assembly window active for scrolling.
-focus regs Make the register window active for scrolling.
-focus cmd Make the command window active for scrolling.
-refresh Refresh the screen. This is similar to typing C-L.
-tui reg float Show the floating point registers in the register window.
-tui reg general Show the general registers in the register window.
-tui reg next Show the next register group. The list of register groups as well as their order
-tui reg system Show the system registers in the register window.
-update Update the source window and the current execution point.
-winheight name +count Change the height of the window name by count lines. Positive counts increase
-winheight name -count Change the height of the window name by count lines. Positive counts increase
-tabset nchars Set the width of tab stops to be nchars characters
+| 🔵 | `layout next`                           | Display the next layout.
+| 🔵 | `layout prev`                           | Display the previous layout.
+| 🔵 | `layout src`                            | Display the source window only.
+| 🔵 | `layout asm`                            | Display the assembly window only.
+| 🔵 | `layout split`                          | Display the source and assembly window.
+| 🔵 | `layout regs`                           | Display the register window together with the source or assembly window.
+| 🔵 | `focus next`                            | Make the next window active for scrolling.
+| 🔵 | `focus prev`                            | Make the previous window active for scrolling.
+| 🔵 | `focus src`                             | Make the source window active for scrolling.
+| 🔵 | `focus asm`                             | Make the assembly window active for scrolling.
+| 🔵 | `focus regs`                            | Make the register window active for scrolling.
+| 🔵 | `focus cmd`                             | Make the command window active for scrolling.
+| 🔵 | `refresh`                               | Refresh the screen. This is similar to typing C-L.
+| 🔵 | `tui reg float`                         | Show the floating point registers in the register window.
+| 🔵 | `tui reg general`                       | Show the general registers in the register window.
+| 🔵 | `tui reg system`                        | Show the system registers in the register window.
+| 🔵 | `tui reg next`                          | Show the next register group. The list of register groups as well as their order.
+| 🔵 | `update`                                | Update the source window and the current execution point.
+| 🔵 | `info win`                              | List and give the size of all displayed windows.
+| 🔵 | `winheight name +count                  | Change the height of the window name by lines (+ increase and - decreases).
+| 🔵 | `tabset nchars                          | Set the width of tab stops to be nchars characters
 | 🔵 | `set height lpp`                        |
 | 🔵 | `set height unlimited`                  |
 | 🔵 | `show height`                           |
