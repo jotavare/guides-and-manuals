@@ -89,8 +89,8 @@
 | 🔵 | `tui reg next`                          | Show the next register group. The list of register groups as well as their order.       |
 | 🔵 | `update`                                | Update the source window and the current execution point.                               |
 | 🔵 | `info win`                              | List and give the size of all displayed windows.                                        |
-| 🔵 | `winheight` _layout_ _+-number_         | Change the height of the window name by lines (+ increase and - decreases).             |
-| 🔵 | `tabset` _nchars_                       | Set the width of tab stops to be nchars characters.                                     |
+| 🔵 | `winheight` [layout] [+-number]         | Change the height of the window name by lines (+ increase and - decreases).             |
+| 🔵 | `tabset` [nchars]                       | Set the width of tab stops to be nchars characters.                                     |
 | 🔵 | `set height lpp`                        | Specify a screen height of lpp lines.                                                   |
 | 🔵 | `show height`                           | Show current screen height.                                                             |
 | 🔵 | `set width cpl`                         | Specify a screen width of cpl characters.                                               |
@@ -98,21 +98,21 @@
 | 🔵 | `tui reg float`                         | Show the floating point registers in the register window.                               |
 | 🔵 | `tui reg system`                        | Show the system registers in the register window.                                       |
 | 🔵 | `tui reg general`                       | Show the general registers in the register window.                                      |
-| 🔵 | `set pagination` _on_ _off_             | Turn the output pagination on or off. Turning pagination off = `set height 0`           |
+| 🔵 | `set pagination` [on] [off]             | Turn the output pagination on or off. Turning pagination off = `set height 0`           |
 | 🔵 | `show pagination`                       | Show the current pagination mode.                                                       |
-| 🔵 | `set tui border-kind` _kind_            | Select the border appearance for the source, assembly and register windows.             |
-| 🔵 | _space_                                 | Use a space character to draw the border.                                               |
-| 🔵 | _ascii_                                 | Use ascii characters ‘+’, ‘-’ and ‘|’ to draw the border.                               |
-| 🔵 | _acs_                                   | Use the Alternate Character Set to draw the border.                                     |
-| 🔵 | _drawn_                                 | Using character line graphics if the terminal supports them.                            |
-| 🔵 | `set tui border-mode` _mode_            | Select the display attributes for the inactive window border.                           |
-| 🔵 | `set tui active-border-mode` _mode_     | Select the display attributes for the active window border.                             |
-| 🔵 | _standout_                              | Use standout mode.                                                                      |
-| 🔵 | _reverse_                               | Use reverse video mode.                                                                 |
-| 🔵 | _half_                                  | Use half bright mode.                                                                   |
-| 🔵 | _half-standout_                         | Use half bright and standout mode.                                                      |
-| 🔵 | _bold_                                  | Use extra bright or bold mode.                                                          |
-| 🔵 | _bold-standout_                         | Use extra bright or bold and standout mode.                                             |
+| 🔵 | `set tui border-kind` [kind]            | Select the border appearance for the source, assembly and register windows.             |
+| 🔵 | [space]                                 | Use a space character to draw the border.                                               |
+| 🔵 | [ascii]                                 | Use ascii characters ‘+’, ‘-’ and ‘|’ to draw the border.                               |
+| 🔵 | [acs]                                   | Use the Alternate Character Set to draw the border.                                     |
+| 🔵 | [drawn]                                 | Using character line graphics if the terminal supports them.                            |
+| 🔵 | `set tui border-mode` [mode]            | Select the display attributes for the inactive window border.                           |
+| 🔵 | `set tui active-border-mode` [mode]     | Select the display attributes for the active window border.                             |
+| 🔵 | [standout]                              | Use standout mode.                                                                      |
+| 🔵 | [reverse]                               | Use reverse video mode.                                                                 |
+| 🔵 | [half]                                  | Use half bright mode.                                                                   |
+| 🔵 | [half-standout]                         | Use half bright and standout mode.                                                      |
+| 🔵 | [bold]                                  | Use extra bright or bold mode.                                                          |
+| 🔵 | [bold-standout]                         | Use extra bright or bold and standout mode.                                             |
   
 </td></tr>
 </table>
