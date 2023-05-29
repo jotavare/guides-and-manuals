@@ -84,32 +84,24 @@ $ gdb -q -tui <file>
 
 |    | Command                                 | Result                                                 |
 | :- | --------------------------------------- | ------------------------------------------------------ |
-| 🔵 | `help` or `-h`                          | List command classes.                                  |
-
-(gdb) layout asm
-(gdb) layout reg
-layout asm
-layout split
-layout regs
-tui reg float
-tui reg system
-tui reg general
-layout next
-layout prev
-layout src
-winheight src +4
-winheight cmd
-win win_name src cmd asm regs src
-set height lpp
-set height unlimited
-show height
-set width cpl
-set width unlimited
-show width
-set pagination on
-set pagination off
-show pagination
-  
+| 🔵 | `layout` [asm] [regs] [src] [cmd]       |
+| 🔵 | `layout split`                          |
+| 🔵 | `layout next`                           |
+| 🔵 | `layout prev`                           |
+  info win
+| 🔵 | `win` [asm] [+10]                       |
+| 🔵 | `set height lpp`                        |
+| 🔵 | `set height unlimited`                  |
+| 🔵 | `show height`                           |
+| 🔵 | `set width cpl`                         |
+| 🔵 | `set width unlimited`                   |
+| 🔵 | `show width`                            |
+| 🔵 | `tui reg float`                         |
+| 🔵 | `tui reg system`                        |
+| 🔵 | `tui reg general`                       |
+| 🔵 | `set pagination on`                     |
+| 🔵 | `set pagination off`                    |
+| 🔵 | `show pagination`                       |
   
 </td></tr>
 </table>
@@ -159,6 +151,19 @@ show pagination
 | 🟢 | `CTRL` + `F`         | Move right in the command text.                          |
 | 🔵 | `ESC` + `CTRL` + `J` | Switch to vi edit mode from emacs edit mode.             |
 
+  mands to single keys. Type C-x s to switch into this mode, where the following key bindings
+are used:
+c continue
+d down
+f finish
+n next
+q exit the SingleKey mode.
+r run
+s step
+u up
+v info locals
+w where
+  
 </td></tr>
 </table>
 </div>
