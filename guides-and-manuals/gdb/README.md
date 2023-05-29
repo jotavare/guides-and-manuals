@@ -136,7 +136,7 @@ Use extra bright or bold and standout mode.
 <tr><td>
   
 |    | Shortcut             | Result                                                   |
-| -- | -------------------  | -------------------------------------------------------- |
+| -- | -------------------- | -------------------------------------------------------- |
 | 🟢 | `CTRL` + `X` + `A`   | Enter or leave the TUI mode.                             |
 | 🟢 | `CTRL` + `X` + `1`   | Use a TUI layout with only one window.                   |
 | 🟢 | `CTRL` + `X` + `2`   | Use a TUI layout with at least two windows.              |
@@ -164,6 +164,8 @@ Use extra bright or bold and standout mode.
 <tr><th>SINGLE KEY MODE</th>
 <tr><td>
 
+|    | Shortcut                   | Result                          |
+| -- | -------------------------- | ------------------------------- |
 | 🔵 | `CTRL` + `X` + `S`         | Switch to single key mode.      |
 | 🔵 | `c`                        | continue                        |
 | 🔵 | `d`                        | down                            |
