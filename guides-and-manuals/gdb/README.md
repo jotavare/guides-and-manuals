@@ -12,14 +12,14 @@
   
 |    | Command                               | Result                                             |
 | :- | :------------------------------------ | :------------------------------------------------- |
-| 🔵 | `gdb`        		                     | Start gdb.                                         |
+| 🟢 | `gdb`        		                     | Start gdb.                                         |
 | 🔵 | `gdb -silent`                         | Start gdb without the beginning information.       |
-| 🔵 | `gdb -statistics`                     | Print statistics about time and memory usage.      |
-| 🔵 | `gdb` [object]      	                 | Normal debug.                                      |
+| 🟢 | `gdb -statistics`                     | Print statistics about time and memory usage.      |
+| 🟢 | `gdb` [object]      	                 | Normal debug.                                      |
 | 🔵 | `gdb` [object] [core] 	               | core debug (must specify core file).               |
-| 🔵 | `gdb` [object] [pid]  	               | Attach to running process.                         |
+| 🟢 | `gdb` [object] [pid]  	               | Attach to running process.                         |
 | 🔵 | `gdb` [program] [core dump]           | Start GDB (with optional core dump).               |
-| 🔵 | `gdb --args` [program] [args...]      | Start GDB and pass arguments.                      |
+| 🟢 | `gdb --args` [program] [args...]      | Start GDB and pass arguments.                      |
 | 🟢 | `gdb` --pid` [pid]                    | Start GDB and attach to process.                   |
 | 🟢 | `run`                                 | Run the program with current arguments.            |
 | 🔵 | `run` [args] [redirection]            | Run with args and redirection.                     |
@@ -30,8 +30,8 @@
 | 🟢 | `step` [number of lines]              | Step n number of lines.                            |
 | 🟢 | `next`                                | Next line.                                         |
 | 🟢 | `next` [number of lines]              | Next n number of lines.                            |
-| 🔵 | `attach` [process-id]                 | Attach to running program.                         |
-| 🔵 | `detach`                              | Detach from running program.                       |
+| 🟢 | `attach` [process-id]                 | Attach to running program.                         |
+| 🟢 | `detach`                              | Detach from running program.                       |
 | 🔵 | `define` [command ...] `end`          | Define user command.                               |
 | 🔵 | `RETURN`                              | Repeat last command.                               |
 | 🔵 | `shell` [command] [args]              | Execute shell command.                             |
@@ -72,10 +72,10 @@
 | :- | --------------------------------------- | --------------------------------------------------------------------------------------- |
 | 🔵 | `layout next`                           | Display the next layout.                                                                |
 | 🔵 | `layout prev`                           | Display the previous layout.                                                            |
-| 🔵 | `layout src`                            | Display the source window only.                                                         |
-| 🔵 | `layout asm`                            | Display the assembly window only.                                                       |
-| 🔵 | `layout split`                          | Display the source and assembly window.                                                 |
-| 🔵 | `layout regs`                           | Display the register window together with the source or assembly window.                |
+| 🟢 | `layout src`                            | Display the source window only.                                                         |
+| 🟢 | `layout asm`                            | Display the assembly window only.                                                       |
+| 🟢 | `layout split`                          | Display the source and assembly window.                                                 |
+| 🟢 | `layout regs`                           | Display the register window together with the source or assembly window.                |
 | 🔵 | `focus next`                            | Make the next window active for scrolling.                                              |
 | 🔵 | `focus prev`                            | Make the previous window active for scrolling.                                          |
 | 🔵 | `focus src`                             | Make the source window active for scrolling.                                            |
@@ -88,8 +88,8 @@
 | 🔵 | `tui reg system`                        | Show the system registers in the register window.                                       |
 | 🔵 | `tui reg next`                          | Show the next register group. The list of register groups as well as their order.       |
 | 🔵 | `update`                                | Update the source window and the current execution point.                               |
-| 🔵 | `info win`                              | List and give the size of all displayed windows.                                        |
-| 🔵 | `winheight` [layout] [+-number]         | Change the height of the window name by lines (+ increase and - decreases).             |
+| 🟢 | `info win`                              | List and give the size of all displayed windows.                                        |
+| 🟢 | `winheight` [layout] [+-number]         | Change the height of the window name by lines (+ increase and - decreases).             |
 | 🔵 | `tabset` [nchars]                       | Set the width of tab stops to be nchars characters.                                     |
 | 🔵 | `set height lpp`                        | Specify a screen height of lpp lines.                                                   |
 | 🔵 | `show height`                           | Show current screen height.                                                             |
@@ -183,12 +183,12 @@
 | 🟢 | `watch` [variable]                                           | Set a software watchpoint on a variable.                    |
 | 🟢 | `info breakpoints`                                           | Show breakpoints and watchpoints.                           |
 | 🔵 | `info watchpoints`                                           | Show current watchpoints.                                   |
-| 🔵 | `delete` [breakpoint or watchpoint number]                   | Delete a breakpoint or watchpoint by number.                |
-| 🔵 | `delete`                                                     | Delete all breakpoints and watchpoints (prompted).          |
+| 🟢 | `delete` [breakpoint or watchpoint number]                   | Delete a breakpoint or watchpoint by number.                |
+| 🟢 | `delete`                                                     | Delete all breakpoints and watchpoints (prompted).          |
 | 🟢 | `clear`                                                      | Delete breakpoints and watchpoints at the current line.     |
-| 🔵 | `clear` [line or function]                                   | Delete breakpoints or watchpoints at a line or function.    |
-| 🔵 | `disable` [breakpoint or watchpoint number]                  | Turn a breakpoint or watchpoint off, but don't remove it.   |
-| 🔵 | `enable` [breakpoint or watchpoint number]                   | Turn a disabled breakpoint or watchpoint back on.           |
+| 🟢 | `clear` [line or function]                                   | Delete breakpoints or watchpoints at a line or function.    |
+| 🟢 | `disable` [breakpoint or watchpoint number]                  | Turn a breakpoint or watchpoint off, but don't remove it.   |
+| 🟢 | `enable` [breakpoint or watchpoint number]                   | Turn a disabled breakpoint or watchpoint back on.           |
 | 🔵 | `commands` [breakpoint or watchpoint number] [commands] `end`| Set GDB commands with a breakpoint or watchpoint.           |
 | 🔵 | `ignore` [breakpoint or watchpoint number] [n times]         | Ignore a breakpoint or watchpoint n times before activation.|
 | 🔵 | `condition` [breakpoint or watchpoint number] [expression]   | End only if the expression is true.                         |
@@ -229,7 +229,7 @@
 | 🔵 | `list` [main]                | List lines around function `main`.                  |
 | 🔵 | `list` [basic.c:main]        | List from another file `basic.c`.                   |
 | 🔵 | `list -`                     | List previous 10 lines.                             |
-| 🔵 | `info address` [Symbol name] | Displays the address of a given symbol.             |
+| 🟢 | `info address` [Symbol name] | Displays the address of a given symbol.             |
 | 🔵 | `list` [*0x22e4]             | List source at address `p0x22e4`.                   |
 | 🔵 | `cd` [dir]                   | Change current directory to `dir`.                  |
 | 🔵 | `pwd`                        | Print working directory.                            |
@@ -359,12 +359,12 @@
 | 🔵 | `set history remove-duplicates [count]`     | Removed the first duplicate entry in history based on count.                                         |
 | 🔵 | `set history remove-duplicates unlimited`   | Removed dupicate entrys in history.                                                                  |
 | 🔵 | `set history expansion [on] [off]`          | Enable or disable history expansion. History expansion assigns special meaning to the character `!`. |
-| 🔵 | `show history`                              | Display all four history states.                                                                     |
+| 🟢 | `show history`                              | Display all four history states.                                                                     |
 | 🔵 | `show history filename`                     | Display the history of filename.                                                                     |
 | 🔵 | `show history save`                         | Display the history of save.                                                                         |
 | 🔵 | `show history size`                         | Display the history of size.                                                                         |
 | 🔵 | `show history exp`                          | Display the history of exp.                                                                          |
-| 🔵 | `show commands`                             | Display the last ten commands in the command history.                                                |
+| 🟢 | `show commands`                             | Display the last ten commands in the command history.                                                |
 | 🔵 | `show commands [n]`                         | Print ten commands centered on command number n.                                                     |
 | 🔵 | `show commands +`                           | Print ten commands just after the commands last printed.                                             | 
 | 🔵 | `break class::[member]`                     | Set breakpoint on class member. May get menu.                                                        |
@@ -423,7 +423,6 @@
 set follow-fork-mode <child or parent>
 
 gdbtui gdb --tui 
+-tui” parameters (for example: gdb -tui program)
 $ gdb -q -tui <file>
-(gdb) shell ls
-(gdb) !ls
--tui” parameters (for example: gdb -tui program), or use " Crtl+X+A
+
