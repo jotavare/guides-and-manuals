@@ -13,6 +13,7 @@
 |    | Command                               | Result                                             |
 | :- | :------------------------------------ | :------------------------------------------------- |
 | 🟢 | `gdb`        		                     | Start gdb.                                         |
+| 🟢 | `gdb --tui [object]`                  | Start gdb with graphic interface.                  |
 | 🔵 | `gdb -silent`                         | Start gdb without the beginning information.       |
 | 🟢 | `gdb -statistics`                     | Print statistics about time and memory usage.      |
 | 🟢 | `gdb` [object]      	                 | Normal debug.                                      |
@@ -422,7 +423,5 @@
 
 set follow-fork-mode <child or parent>
 
-gdbtui gdb --tui 
--tui” parameters (for example: gdb -tui program)
-$ gdb -q -tui <file>
+
 
