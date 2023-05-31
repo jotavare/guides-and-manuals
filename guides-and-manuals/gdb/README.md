@@ -426,7 +426,110 @@
 </table>
 </div>
 
-set follow-fork-mode <child or parent>
+<div>
+<table>
+<tr><th>MACHINE-LEVEL DEBUG</th>
+<tr><td>
+
+|    | Command                  | Result                                          |
+| :- | :----------------------- | :---------------------------------------------- |
+| 🟢 | `info registers`        	| Print registers sans floats.                    |
+| 🔵 | `print/x [$pc]`          | Print one register.                             |
 
 
 
+</td></tr>
+</table>
+</div>
+
+#Your Program’s Input and Output
+| 🟢 | `info terminal` | Displays information recorded by gdb about the terminal modes your program is using.
+| 🟢 | `run > outfile` | Starts your program, diverting its output to the file outfile.
+| 🟢 | `tty /dev/ttyb` | Directs that processes started with subsequent run commands default to do input and output on the terminal /dev/ttyb and have that as their controlling terminal.
+| 🟢 | `set inferior-tty [ tty ]` | Set the tty for the program being debugged to tty.
+| 🟢 | `show inferior-tty` | Show the current tty for the program being debugged.
+
+#debugging an Already-running Process
+| 🟢 | `attach process-id` | This command attaches to a running process—one that was started outside gdb. 
+| 🟢 | `set exec-file-mismatch ask|warn|off` | Whether to detect mismatch between the current executable file loaded by gdb and the executable file used to start the process.
+| 🟢 | `show exec-file-mismatch` | Show the current value of exec-file-mismatch.
+| 🟢 | `detach` | Release the attached process from gdb control. 
+
+#Killing the Child Process
+| 🟢 | `kill` | Kill the child process in which your program is running under gdb.
+
+#Debugging Multiple Inferiors Connections and Program
+| 🟢 | `info inferiors` | Print a list of all inferiors currently being managed by gdb. 
+| 🟢 | `inferior` | Shows information about the current inferior.
+| 🟢 | `info connections` | Print a list of all open target connections currently being managed by gdb. 
+| 🟢 | `inferior infno`   | Make inferior number infno the current inferior. 
+| 🟢 | `add-inferior [ -copies n ] [ -exec executable ] [-no-connection ]` | Adds n inferiors to be run using executable as the executable; n defaults to 1.
+
+| 🟢 | `clone-inferior [ -copies n ] [ infno ]` | Adds n inferiors ready to execute the same program as inferior infno; n defaults to 1, and infno defaults to the number of the current inferior. 
+| 🟢 | `remove-inferiors infno...` | Removes the inferior or inferiors infno . . . . It is not possible to remove an
+inferior that is running with this command. For those, use the kill or detach
+command first.
+| 🟢 | `detach inferior infno...` | Detach from the inferior or inferiors identified by gdb inferior number(s) infno.
+| 🟢 | `kill inferiors infno...` | Kill the inferior or inferiors identified by gdb inferior number(s) infno . 
+| 🟢 | `set print inferior-events [on]` or `[off]` | The set print inferior-events command allows you to enable or disable
+printing of messages when gdb notices that new inferiors have started or that
+inferiors have exited or have been detached.
+| 🟢 | `show print inferior-events` | Show whether messages will be printed when gdb detects that inferiors have
+started, exited or have been detached.
+| 🟢 | `maint info program-spaces` | Print a list of all program spaces currently being managed by gdb.
+
+<div>
+<table>
+<tr><th>MULTIPLE THREADS</th>
+<tr><td>
+
+|    | Command                                                              | Result                                             |
+| :- | :------------------------------------------------------------------- | :------------------------------------------------- |
+| 🔵 | ‘thread thread-id’                                                   | Switch among threads.                              |
+| 🔵 | ‘info threads’                                                       | Inquire about existing threads.                    |
+| 🔵 | `info threads [-gid] [thread-id-list]`                               | Display information about one or more threads.     |
+| 🔵 | `thread apply [thread-id-list | all] args`                           | Apply a command to a list of threads.              |
+| 🔵 | `maint info sol-threads`                                             | Display info on Solaris user threads.              |
+| 🔵 | `thread thread-id`                                                   | Make thread ID thread-id the current thread.       |
+| 🔵 | `thread apply [thread-id-list | all [-ascending]] [flag]... command` | Apply the named command to one or more threads.    |
+| 🔵 | `[-c]` causes any errors in command to be displayed, and the execution of thread apply then continues.
+| 🔵 | `[-s]` causes any errors or empty output produced by a command to be silently ignored.
+| 🔵 | `[-q]` Disables printing the thread information.
+| 🔵 | `thread apply all -ascending command.`                               | Apply a command to all threads in ascending order. |
+| 🔵 | `taas [option]... command`                   | Applies command on all threads, ignoring errors and empty output. |
+| 🔵 | `tfaas [option]... command`                  | Applies command on all frames of all threads, ignoring errors and empty output. |
+| 🔵 | `thread name [name]`                         | Assign a name to the current thread. |
+| 🔵 | `thread find [regexp]`                       | Search for and display thread ids whose name or systag matches the supplied regular expression. |
+| 🔵 | `set print thread-events [on]` or `[off]`    | Print messages when gdb notices that new threads have started or that threads have exited. |
+| 🔵 | `show print thread-events`                   | Show whether messages will be printed when gdb detects that threads have started and exited. |
+| 🔵 | `set libthread-db-search-path [path]`        | Path is a colon-separated list of directories gdb will use to search for libthread_db. |
+| 🔵 | `show libthread-db-search-path`              | Display current libthread db search path. |
+| 🔵 | `set debug libthread-db [1]` or `[0]`        | |
+| 🔵 | `show debug libthread-db`                    | Display of libthread_db-related events. |
+| 🔵 | `set debug threads [on]` or `[off]`          | |
+| 🔵 | `show debug threads`                         | Print additional messages when threads are created and deleted. |
+
+</td></tr>
+</table>
+</div>
+
+<div>
+<table>
+<tr><th>FORKS</th>
+<tr><td>
+
+|    | Command                                      | Result                                                                               |
+| :- | :------------------------------------------- | :----------------------------------------------------------------------------------- |
+| 🔵 | `set follow-fork-mode.`                      | Follow the child process instead of the parent process.                              |
+| 🔵 | `set follow-fork-mode [parent]` or `[child]` | Set the debugger response to a program call of fork or vfork.                        |
+| 🔵 | `show follow-fork-mode`                      | Display the current debugger response to a fork or vfork call.                       |
+| 🔵 | `set detach-on-fork.`                        | Debug both the parent and child processes.                                           |
+| 🔵 | `set detach-on-fork [on]` or `[off]`         | Detach one of the processes after a fork, or retain debugger control over them both. |
+| 🔵 | `show detach-on-fork [on]` or `[off]`        | Show whether detach-on-fork mode is on/off.                                          |
+| 🔵 | `set follow-exec-mode [mode]`                | Set debugger response to a program call of exec.                                     |
+| 🔵 | `[new]`                                      | Creates a new inferior and rebinds the process to this new inferior.                 |
+| 🔵 | `[same]`                                     | Keeps the process bound to the same inferior.                                        |
+
+</td></tr>
+</table>
+</div>
