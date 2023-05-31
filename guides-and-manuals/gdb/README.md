@@ -5,6 +5,11 @@
 - [PDF GDB Cheetsheat](https://raw.githubusercontent.com/hellogcc/100-gdb-tips/master/refcard.pdf)
 - [GitHub GDB Cheetsheat](https://gist.github.com/rkubik/b96c23bd8ed58333de37f2b8cd052c30)
 
+|    | Definition                |
+| :- | :------------------------ |
+| 🟢 | Most used commands by me  |                 |
+| 🔵 | Least used commands by me |
+
 <div>
 <table>
 <tr><th>RUNNING THE PROGRAM</th>
