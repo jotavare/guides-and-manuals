@@ -90,8 +90,8 @@
 | 🔵 | `tui reg next`                          | Show the next register group. The list of register groups as well as their order.       |
 | 🔵 | `update`                                | Update the source window and the current execution point.                               |
 | 🟢 | `info win`                              | List and give the size of all displayed windows.                                        |
-| 🟢 | `winheight` [layout] [+-number]         | Change the height of the window name by lines (+ increase and - decreases).             |
-| 🔵 | `tabset` [nchars]                       | Set the width of tab stops to be nchars characters.                                     |
+| 🟢 | `winheight [layout] [+-number]`         | Change the height of the window name by lines (+ increase and - decreases).             |
+| 🔵 | `tabset [nchars]`                       | Set the width of tab stops to be nchars characters.                                     |
 | 🔵 | `set height lpp`                        | Specify a screen height of lpp lines.                                                   |
 | 🔵 | `show height`                           | Show current screen height.                                                             |
 | 🔵 | `set width cpl`                         | Specify a screen width of cpl characters.                                               |
@@ -99,21 +99,21 @@
 | 🔵 | `tui reg float`                         | Show the floating point registers in the register window.                               |
 | 🔵 | `tui reg system`                        | Show the system registers in the register window.                                       |
 | 🔵 | `tui reg general`                       | Show the general registers in the register window.                                      |
-| 🔵 | `set pagination` [on] [off]             | Turn the output pagination on or off. Turning pagination off = `set height 0`           |
+| 🔵 | `set pagination [on] [off]`             | Turn the output pagination on or off. Turning pagination off = `set height 0`           |
 | 🔵 | `show pagination`                       | Show the current pagination mode.                                                       |
-| 🔵 | `set tui border-kind` [kind]            | Select the border appearance for the source, assembly and register windows.             |
-| 🔵 | [space]                                 | Use a space character to draw the border.                                               |
-| 🔵 | [ascii]                                 | Use ascii characters ‘+’, ‘-’ and ‘|’ to draw the border.                               |
-| 🔵 | [acs]                                   | Use the Alternate Character Set to draw the border.                                     |
-| 🔵 | [drawn]                                 | Using character line graphics if the terminal supports them.                            |
-| 🔵 | `set tui border-mode` [mode]            | Select the display attributes for the inactive window border.                           |
-| 🔵 | `set tui active-border-mode` [mode]     | Select the display attributes for the active window border.                             |
-| 🔵 | [standout]                              | Use standout mode.                                                                      |
-| 🔵 | [reverse]                               | Use reverse video mode.                                                                 |
-| 🔵 | [half]                                  | Use half bright mode.                                                                   |
-| 🔵 | [half-standout]                         | Use half bright and standout mode.                                                      |
-| 🔵 | [bold]                                  | Use extra bright or bold mode.                                                          |
-| 🔵 | [bold-standout]                         | Use extra bright or bold and standout mode.                                             |
+| 🔵 | `set tui border-kind [kind]`            | Select the border appearance for the source, assembly and register windows.             |
+| 🔵 | `[space]`                                 | Use a space character to draw the border.                                               |
+| 🔵 | `[ascii]`                                 | Use ascii characters ‘+’, ‘-’ and ‘|’ to draw the border.                               |
+| 🔵 | `[acs]`                                   | Use the Alternate Character Set to draw the border.                                     |
+| 🔵 | `[drawn]`                                 | Using character line graphics if the terminal supports them.                            |
+| 🔵 | `set tui border-mode [mode]`            | Select the display attributes for the inactive window border.                           |
+| 🔵 | `set tui active-border-mode [mode]`     | Select the display attributes for the active window border.                             |
+| 🔵 | `[standout]`                              | Use standout mode.                                                                      |
+| 🔵 | `[reverse]`                               | Use reverse video mode.                                                                 |
+| 🔵 | `[half]`                                  | Use half bright mode.                                                                   |
+| 🔵 | `[half-standout]`                         | Use half bright and standout mode.                                                      |
+| 🔵 | `[bold]`                                  | Use extra bright or bold mode.                                                          |
+| 🔵 | `[bold-standout]`                         | Use extra bright or bold and standout mode.                                             |
   
 </td></tr>
 </table>
@@ -178,23 +178,23 @@
 
 |    | Command                                                      | Result                                                      |
 | :--| ------------------------------------------------------------ | ----------------------------------------------------------- |
-| 🟢 | `break` [line or function]                                   | Set a breakpoint on a line or function.                     |
-| 🔵 | `break` main.c:42                                            | Set breakpoint at file and (line or function).              |
-| 🔵 | `tbreak` [line or function]                                  | Set a temporary breakpoint.                                 |
-| 🟢 | `watch` [variable]                                           | Set a software watchpoint on a variable.                    |
+| 🟢 | `break [line or function]`                                   | Set a breakpoint on a line or function.                     |
+| 🔵 | `break main.c:42`                                            | Set breakpoint at file and (line or function).              |
+| 🔵 | `tbreak [line or function]`                                  | Set a temporary breakpoint.                                 |
+| 🟢 | `watch [variable]`                                           | Set a software watchpoint on a variable.                    |
 | 🟢 | `info breakpoints`                                           | Show breakpoints and watchpoints.                           |
 | 🔵 | `info watchpoints`                                           | Show current watchpoints.                                   |
-| 🟢 | `delete` [breakpoint or watchpoint number]                   | Delete a breakpoint or watchpoint by number.                |
+| 🟢 | `delete [breakpoint or watchpoint number]`                   | Delete a breakpoint or watchpoint by number.                |
 | 🟢 | `delete`                                                     | Delete all breakpoints and watchpoints (prompted).          |
 | 🟢 | `clear`                                                      | Delete breakpoints and watchpoints at the current line.     |
-| 🟢 | `clear` [line or function]                                   | Delete breakpoints or watchpoints at a line or function.    |
-| 🟢 | `disable` [breakpoint or watchpoint number]                  | Turn a breakpoint or watchpoint off, but don't remove it.   |
-| 🟢 | `enable` [breakpoint or watchpoint number]                   | Turn a disabled breakpoint or watchpoint back on.           |
-| 🔵 | `commands` [breakpoint or watchpoint number] [commands] `end`| Set GDB commands with a breakpoint or watchpoint.           |
-| 🔵 | `ignore` [breakpoint or watchpoint number] [n times]         | Ignore a breakpoint or watchpoint n times before activation.|
-| 🔵 | `condition` [breakpoint or watchpoint number] [expression]   | End only if the expression is true.                         |
-| 🔵 | `condition` [breakpoint or watchpoint number] [condition]    | End only if the condition is true.                          |
-| 🔵 | `condition` [breakpoint or watchpoint number]                | Delete condition at a breakpoint or watchpoint number.      |
+| 🟢 | `clear [line or function]`                                   | Delete breakpoints or watchpoints at a line or function.    |
+| 🟢 | `disable [breakpoint or watchpoint number]`                  | Turn a breakpoint or watchpoint off, but don't remove it.   |
+| 🟢 | `enable [breakpoint or watchpoint number]`                   | Turn a disabled breakpoint or watchpoint back on.           |
+| 🔵 | `commands [breakpoint or watchpoint number] [commands] end`  | Set GDB commands with a breakpoint or watchpoint.           |
+| 🔵 | `ignore [breakpoint or watchpoint number] [n times]`         | Ignore a breakpoint or watchpoint n times before activation.|
+| 🔵 | `condition [breakpoint or watchpoint number] [expression]`   | End only if the expression is true.                         |
+| 🔵 | `condition [breakpoint or watchpoint number] [condition]`    | End only if the condition is true.                          |
+| 🔵 | `condition [breakpoint or watchpoint number]`                | Delete condition at a breakpoint or watchpoint number.      |
   
 </td></tr>
 </table>
@@ -225,18 +225,18 @@
 
 |    | Command                      | Result                                              |
 | :- | :--------------------------- | :-------------------------------------------------- |
-| 🔵 | `list` [20]                  | List 10 lines around line `20`.                     |
-| 🔵 | `list` [1,10]                | List lines `1` to `10`.                             |
-| 🔵 | `list` [main]                | List lines around function `main`.                  |
-| 🔵 | `list` [basic.c:main]        | List from another file `basic.c`.                   |
+| 🔵 | `list [20]`                  | List 10 lines around line `20`.                     |
+| 🔵 | `list [1,10]`                | List lines `1` to `10`.                             |
+| 🔵 | `list [main]`                | List lines around function `main`.                  |
+| 🔵 | `list [basic.c:main]`        | List from another file `basic.c`.                   |
 | 🔵 | `list -`                     | List previous 10 lines.                             |
-| 🟢 | `info address` [Symbol name] | Displays the address of a given symbol.             |
-| 🔵 | `list` [*0x22e4]             | List source at address `p0x22e4`.                   |
-| 🔵 | `cd` [dir]                   | Change current directory to `dir`.                  |
+| 🟢 | `info address [Symbol name]` | Displays the address of a given symbol.             |
+| 🔵 | `list [*0x22e4]`             | List source at address `p0x22e4`.                   |
+| 🔵 | `cd [dir]`                   | Change current directory to `dir`.                  |
 | 🔵 | `pwd`                        | Print working directory.                            |
 | 🔵 | `search regexpr`             | Forward search for regular expression `regexpr`.    |
 | 🔵 | `reverse-search regexpr`     | Backward search for regular expression `regexpr`.   |
-| 🔵 | `dir` [dirname]              | Add directory `dirname` to source path.             |
+| 🔵 | `dir [dirname]`              | Add directory `dirname` to source path.             |
 | 🔵 | `dir`                        | Reset source path to nothing.                       |
 | 🔵 | `show directories`           | Show source path.                                   |
 
@@ -251,27 +251,27 @@
 
 |    | Command                         | Result                                         |
 | :- | :------------------------------ | :--------------------------------------------- |
-| 🟢 | `print` [expression]            | Print variable, added to value history.        |
-| 🟢 | `print/x` [expression]          | Print variable in hex format.                  |
-| 🔵 | `print` [array[i]@count]        | Artificial array - print array range.          |
+| 🟢 | `print [expression]`            | Print variable, added to value history.        |
+| 🟢 | `print/x [expression]`          | Print variable in hex format.                  |
+| 🔵 | `print [array[i]@count]`        | Artificial array - print array range.          |
 | 🔵 | `print $`        	             | Print last value.                              |
 | 🔵 | `print *$->next`                | Print thru history list.                       |
 | 🔵 | `print $1`        	             | Print value 1 from value history.              |
 | 🔵 | `print ::gx`                    | Force scope to be global.                      |
 | 🔵 | `print [basic.c]::gx`           | Global scope in named file.                    |
-| 🔵 | `print/x` [&main]               | Print address of function.                     |
-| 🔵 | `x/countFormatSize` [address]   | Low-level examine command.                     |
-| 🔵 | `x/x` [&gx]        	           | Print gx in hex.                               |
-| 🔵 | `x/4wx` [&main]                 | Print 4 longs at start of main in hex format.  |
-| 🔵 | `x/gf` [&gd1]                   | Print double.                                  |
+| 🔵 | `print/x [&main]`               | Print address of function.                     |
+| 🔵 | `x/countFormatSize [address]`   | Low-level examine command.                     |
+| 🔵 | `x/x [&gx]`        	           | Print gx in hex.                               |
+| 🔵 | `x/4wx [&main]`                 | Print 4 longs at start of main in hex format.  |
+| 🔵 | `x/gf [&gd1]`                   | Print double.                                  |
 | 🔵 | `help x`        	               | Show formats for x.                            |
 | 🟢 | `info locals`                   | Print local automatics only.                   |
 | 🟢 | `info functions regexp`         | Print function names.                          |
 | 🟢 | `info variables regexp`         | Print global variable names.                   |
-| 🟢 | `ptype` [expression]            | Print type definition.                         |
-| 🟢 | `whatis` [expression]           | Print type of expression.                      |
-| 🟢 | `set` [variable] = [expression] | Assign value.                                  |
-| 🟢 | `display` [expression]          | Display expression result at stop.             |
+| 🟢 | `ptype [expression]`            | Print type definition.                         |
+| 🟢 | `whatis [expression]`           | Print type of expression.                      |
+| 🟢 | `set [variable] = [expression]` | Assign value.                                  |
+| 🟢 | `display [expression]`          | Display expression result at stop.             |
 | 🔵 | `undisplay`                     | Delete displays.                               |
 | 🟢 | `info display`                  | Show displays.                                 |
 | 🟢 | `show values`                   | Print value history.                           |
@@ -288,11 +288,11 @@
 
 |    | Command                  | Result                               |
 | :- | :----------------------- | :----------------------------------- |
-| 🔵 | `file` [object]      		| load new file for debug (sym+exec)   |
+| 🔵 | `file [object]`      		| load new file for debug (sym+exec)   |
 | 🔵 | `file`             		  | discard sym+exec file info           |
-| 🔵 | `symbol-file` [object]   | load only symbol table               |
-| 🔵 | `exec-file` [object] 		| specify object to run (not sym-file) |
-| 🔵 | `core-file` [core]   		| post-mortem debugging                |
+| 🔵 | `symbol-file [object]`   | load only symbol table               |
+| 🔵 | `exec-file [object]` 		| specify object to run (not sym-file) |
+| 🔵 | `core-file [core]`   		| post-mortem debugging                |
 
 </td></tr>
 </table>
@@ -329,15 +329,15 @@
 | :- | :----------------------- | :---------------------------------------------- |
 | 🟢 | `info registers`        	| Print registers sans floats.                    |
 | 🟢 | `info all-registers`     | Print all registers.                            |
-| 🔵 | `print/x` [$pc]          | Print one register.                             |
+| 🔵 | `print/x [$pc]`          | Print one register.                             |
 | 🔵 | `stepi`        		      | Single step at machine level.                   |
 | 🔵 | `nexti`        		      | Single step (over functions) at machine level.  |
-| 🔵 | `display/i` [$pc]        | Print current instruction in display.           |
-| 🔵 | `x/x` [&gx]        	    | Print variable gx in hex.                       |
-| 🟢 | `info line` [42]         | Print addresses for object code for line 42.    |
-| 🟢 | `info line` [*0x2c4e]    | Print line number of object code at address.    |
-| 🔵 | `x/10i` [main]           | Disassemble first 10 instructions in main.      |
-| 🔵 | `disassemble` [address]  | Dissassemble code for function around address.  |
+| 🔵 | `display/i [$pc]`        | Print current instruction in display.           |
+| 🔵 | `x/x [&gx]`        	    | Print variable gx in hex.                       |
+| 🟢 | `info line [42]`         | Print addresses for object code for line 42.    |
+| 🟢 | `info line [*0x2c4e]`    | Print line number of object code at address.    |
+| 🔵 | `x/10i [main]`           | Disassemble first 10 instructions in main.      |
+| 🔵 | `disassemble [address]`  | Dissassemble code for function around address.  |
 
 </td></tr>
 </table>
@@ -370,8 +370,8 @@
 | 🔵 | `show commands +`                           | Print ten commands just after the commands last printed.                                             | 
 | 🔵 | `break class::[member]`                     | Set breakpoint on class member. May get menu.                                                        |
 | 🔵 | `list class::[member]`                      | List member in class.                                                                                |
-| 🔵 | `ptype` [class]                             | Print class members.                                                                                 |
-| 🔵 | `print` [*this]      	                     | Print contents of this pointer.                                                                      |
+| 🔵 | `ptype [class]`                             | Print class members.                                                                                 |
+| 🔵 | `print [*this]`      	                     | Print contents of this pointer.                                                                      |
 | 🔵 | `rbreak regexpr`     	                     | Useful for breakpoint on overloaded member name.                                                     |
 
 </td></tr>
