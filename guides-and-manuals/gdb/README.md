@@ -108,7 +108,7 @@
 | 🔵 | `show pagination`                       | Show the current pagination mode.                                                       |
 | 🔵 | `set tui border-kind [kind]`            | Select the border appearance for the source, assembly and register windows.             |
 | 🔵 | `[space]`                               | Use a space character to draw the border.                                               |
-| 🔵 | `[ascii]`                               | Use ascii characters ‘+’, ‘-’ and ‘|’ to draw the border.                               |
+| 🔵 | `[ascii]`                               | Use ascii characters `+`, `-` and `|` to draw the border.                               |
 | 🔵 | `[acs]`                                 | Use the Alternate Character Set to draw the border.                                     |
 | 🔵 | `[drawn]`                               | Using character line graphics if the terminal supports them.                            |
 | 🔵 | `set tui border-mode [mode]`            | Select the display attributes for the inactive window border.                           |
@@ -408,9 +408,9 @@
 | 🔵 | `show print thread-events`                   | Show whether messages will be printed when threads have started and exited.      |
 | 🔵 | `set libthread-db-search-path [path]`        | List of directories gdb will use to search for libthread_db.                     |
 | 🔵 | `show libthread-db-search-path`              | Display current libthread db search path.                                        |
-| 🔵 | `set debug libthread-db [1/0]`               |                                                                                  |
+| 🔵 | `set debug libthread-db [1/0]`               | Set the debug libthread-db as on or off.                                         |
 | 🔵 | `show debug libthread-db`                    | Display of libthread_db-related events.                                          |
-| 🔵 | `set debug threads [on/off]`                 |                                                                                  |
+| 🔵 | `set debug threads [on/off]`                 | Set the debug threads as on or off.                                              |
 | 🔵 | `show debug threads`                         | Print additional messages when threads are created and deleted.                  |
 
 </td></tr>
