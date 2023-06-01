@@ -92,7 +92,7 @@
 | 🔵 | `tui reg float`                         | Show the floating point registers in the register window.                               |
 | 🔵 | `tui reg general`                       | Show the general registers in the register window.                                      |
 | 🔵 | `tui reg system`                        | Show the system registers in the register window.                                       |
-| 🔵 | `tui reg next`                          | Show the next register group. The list of register groups as well as their order.       |
+| 🔵 | `tui reg next`                          | Show the next register group. List register groups as well as their order.              |
 | 🔵 | `update`                                | Update the source window and the current execution point.                               |
 | 🟢 | `info win`                              | List and give the size of all displayed windows.                                        |
 | 🟢 | `winheight [layout] [+-number]`         | Change the height of the window name by lines (+ increase and - decreases).             |
