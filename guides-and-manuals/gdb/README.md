@@ -88,7 +88,7 @@
 | 🔵 | `focus asm`                             | Make the assembly window active for scrolling.                                          |
 | 🔵 | `focus regs`                            | Make the register window active for scrolling.                                          |
 | 🔵 | `focus cmd`                             | Make the command window active for scrolling.                                           |
-| 🔵 | `refresh`                               | Refresh the screen. This is similar to typing `CTRL` + `L`.                             |
+| 🔵 | `refresh`                               | Refresh the screen. This is similar to typing `CTRL` + `L` or `ref`.                     |
 | 🔵 | `tui reg float`                         | Show the floating point registers in the register window.                               |
 | 🔵 | `tui reg general`                       | Show the general registers in the register window.                                      |
 | 🔵 | `tui reg system`                        | Show the system registers in the register window.                                       |
@@ -107,70 +107,18 @@
 | 🔵 | `set pagination [on] [off]`             | Turn the output pagination on or off. Turning pagination off = `set height 0`           |
 | 🔵 | `show pagination`                       | Show the current pagination mode.                                                       |
 | 🔵 | `set tui border-kind [kind]`            | Select the border appearance for the source, assembly and register windows.             |
-| 🔵 | `[space]`                                 | Use a space character to draw the border.                                               |
-| 🔵 | `[ascii]`                                 | Use ascii characters ‘+’, ‘-’ and ‘|’ to draw the border.                               |
-| 🔵 | `[acs]`                                   | Use the Alternate Character Set to draw the border.                                     |
-| 🔵 | `[drawn]`                                 | Using character line graphics if the terminal supports them.                            |
+| 🔵 | `[space]`                               | Use a space character to draw the border.                                               |
+| 🔵 | `[ascii]`                               | Use ascii characters ‘+’, ‘-’ and ‘|’ to draw the border.                               |
+| 🔵 | `[acs]`                                 | Use the Alternate Character Set to draw the border.                                     |
+| 🔵 | `[drawn]`                               | Using character line graphics if the terminal supports them.                            |
 | 🔵 | `set tui border-mode [mode]`            | Select the display attributes for the inactive window border.                           |
 | 🔵 | `set tui active-border-mode [mode]`     | Select the display attributes for the active window border.                             |
-| 🔵 | `[standout]`                              | Use standout mode.                                                                      |
-| 🔵 | `[reverse]`                               | Use reverse video mode.                                                                 |
-| 🔵 | `[half]`                                  | Use half bright mode.                                                                   |
-| 🔵 | `[half-standout]`                         | Use half bright and standout mode.                                                      |
-| 🔵 | `[bold]`                                  | Use extra bright or bold mode.                                                          |
-| 🔵 | `[bold-standout]`                         | Use extra bright or bold and standout mode.                                             |
-  
-</td></tr>
-</table>
-</div>
-  
-<div>
-<table>
-<tr><th>KEYBOARD SHORTCUTS</th>
-<tr><td>
-  
-|    | Shortcut             | Result                                                   |
-| -- | -------------------- | -------------------------------------------------------- |
-| 🟢 | `CTRL` + `X` + `A`   | Enter or leave the TUI mode.                             |
-| 🟢 | `CTRL` + `X` + `1`   | Use a TUI layout with only one window.                   |
-| 🟢 | `CTRL` + `X` + `2`   | Use a TUI layout with at least two windows.              |
-| 🟢 | `CTRL` + `X` + `O`   | Change the active window (use scrolling and arrow keys). |
-| 🔵 | `PAGEUP`             | The active window one page up.                           |
-| 🔵 | `PAGEDOWN`           | The active window one page down.                         |
-| 🔵 | `UP`                 | The active window one line up.                           |
-| 🔵 | `DOWN`               | The active window one line down.                         |
-| 🔵 | `LEFT`               | The active window one column left.                       |
-| 🔵 | `RIGHT`              | The active window one column right.                      |
-| 🟢 | `CTRL` + `C`         | Actually SIGINT, stop execution of current program.      |
-| 🟢 | `CTRL` + `L`         | Refresh the screen.                                      |
-| 🟢 | `CTRL` + `P`         | Previous command.                                        |
-| 🟢 | `CTRL` + `N`         | Next command.                                            |
-| 🟢 | `CTRL` + `B`         | Move left in the command text.                           |
-| 🟢 | `CTRL` + `F`         | Move right in the command text.                          |
-| 🔵 | `ESC` + `CTRL` + `J` | Switch to vi edit mode from emacs edit mode.             |
-  
-</td></tr>
-</table>
-</div>
-
-<div>
-<table>
-<tr><th>SINGLE KEY MODE</th>
-<tr><td>
-
-|    | Shortcut                   | Result                          |
-| -- | -------------------------- | ------------------------------- |
-| 🔵 | `CTRL` + `X` + `S`         | Switch to single key mode.      |
-| 🔵 | `q`                        | Exit the SingleKey mode.        |
-| 🔵 | `c`                        | continue                        |
-| 🔵 | `d`                        | down                            |
-| 🔵 | `f`                        | finish                          |
-| 🔵 | `n`                        | next                            |
-| 🔵 | `r`                        | run                             |
-| 🔵 | `s`                        | step                            |
-| 🔵 | `u`                        | up                              |
-| 🔵 | `v`                        | info locals                     |
-| 🔵 | `w`                        | where                           |
+| 🔵 | `[standout]`                            | Use standout mode.                                                                      |
+| 🔵 | `[reverse]`                             | Use reverse video mode.                                                                 |
+| 🔵 | `[half]`                                | Use half bright mode.                                                                   |
+| 🔵 | `[half-standout]`                       | Use half bright and standout mode.                                                      |
+| 🔵 | `[bold]`                                | Use extra bright or bold mode.                                                          |
+| 🔵 | `[bold-standout]`                       | Use extra bright or bold and standout mode.                                             |
   
 </td></tr>
 </table>
@@ -385,6 +333,112 @@
 
 <div>
 <table>
+<tr><th>INPUT AND OUTPUT</th>
+<tr><td>
+
+|    | Command                                 | Result                                          |
+| :- | :-------------------------------------- | :---------------------------------------------- |
+| 🔵 | `info terminal`                         | Displays information recorded by gdb about the terminal modes your program is using.
+| 🔵 | `run > outfile`                         | Starts your program, diverting its output to the file outfile.
+| 🔵 | `tty /dev/ttyb`                         | Directs that processes started with subsequent run commands default to do input and output on the terminal /dev/ttyb and have that as their controlling terminal.
+| 🔵 | `set inferior-tty [tty]`                | Set the tty for the program being debugged to tty.
+| 🔵 | `show inferior-tty`                     | Show the current tty for the program being debugged.
+| 🔵 | `attach process-id`                     | This command attaches to a running process—one that was started outside gdb. 
+| 🔵 | `set exec-file-mismatch ask|warn|off`   | Whether to detect mismatch between the current executable file loaded by gdb and the executable file used to start the process.
+| 🔵 | `show exec-file-mismatch`               | Show the current value of exec-file-mismatch.
+| 🔵 | `detach`                                | Release the attached process from gdb control. 
+| 🔵 | `kill`                                  | Kill the child process in which your program is running under gdb.
+
+</td></tr>
+</table>
+</div>
+  
+<div>
+<table>
+<tr><th>MULTIPLE INFERIRORS CONNECTIONS</th>
+<tr><td>
+
+|    | Command                                      | Result                                                                 |
+| :- | :------------------------------------------- | :--------------------------------------------------------------------- |
+| 🔵 | `info inferiors`                             | Print a list of all inferiors currently being managed by gdb.          |
+| 🔵 | `inferior`                                   | Shows information about the current inferior.                          |
+| 🔵 | `info connections`                           | Print a list of all open target connections currently being managed.   | 
+| 🔵 | `inferior infno`                             | Make inferior number infno the current inferior.                       |
+| 🔵 | `add-inferior`                               | Adds n inferiors to be run using executable as the executable.         |
+| 🔵 | `[-copies n]`                                |                                                                        |
+| 🔵 | `[-exec executable]`                         |                                                                        |
+| 🔵 | `[-no-connection]`                           |                                                                        |
+| 🔵 | `clone-inferior [-copies n] [infno]`         | Adds n inferiors ready to execute the same program as inferior infno.  |
+| 🔵 | `remove-inferiors infno...`                  | Removes the inferior or inferiors infno.                               |
+| 🔵 | `detach inferior infno...`                   | Detach from the inferior(s) identified by inferior number(s) infno.    |
+| 🔵 | `kill inferiors infno...`                    | Kill the inferior or inferiors identified by inferior number(s) infno. |
+| 🔵 | `set print inferior-events [on/off]`         | Enable or disable printing of new inferiors.                           |
+| 🔵 | `show print inferior-events`                 | Print if inferiors have started, exited or have been detached.         |
+| 🔵 | `maint info program-spaces`                  | Print a list of all program spaces currently being managed.            |
+
+</td></tr>
+</table>
+</div>
+  
+<div>
+<table>
+<tr><th>MULTIPLE THREADS</th>
+<tr><td>
+
+|    | Command                                      | Result                                                                           |
+| :- | :------------------------------------------- | :------------------------------------------------------------------------------- |
+| 🔵 | `thread thread-id`                           | Switch among threads.                                                            |
+| 🔵 | `info threads`                               | Inquire about existing threads.                                                  |
+| 🔵 | `info threads [-gid] [thread-id-list]`       | Display information about one or more threads.                                   |
+| 🔵 | `thread apply [thread-id-list] args`         | Apply a command to a list of threads.                                            |
+| 🔵 | `maint info sol-threads`                     | Display info on Solaris user threads.                                            |
+| 🔵 | `thread thread-id`                           | Make thread ID thread-id the current thread.                                     |
+| 🔵 | `thread apply [thread-id-list] command`      | Apply the named command to one or more threads.                                  |
+| 🔵 | `[-c]`                                       | Display errors, and the execution of thread apply then continues.                |
+| 🔵 | `[-s]`                                       | Errors or empty output produced by a command to be silently ignored.             |
+| 🔵 | `[-q]`                                       | Disables printing the thread information.                                        |
+| 🔵 | `thread apply all -ascending command.`       | Apply a command to all threads in ascending order.                               |
+| 🔵 | `taas [option]... command`                   | Applies command on all threads, ignoring errors and empty output.                |
+| 🔵 | `tfaas [option]... command`                  | Applies command on all frames of all threads, ignoring errors and empty output.  |
+| 🔵 | `thread name [name]`                         | Assign a name to the current thread.                                             |
+| 🔵 | `thread find [regexp]`                       | Search for and display thread ids whose name or systag matches.                  |
+| 🔵 | `set print thread-events [on/off]`           | Print messages when new threads have started or exited.                          |
+| 🔵 | `show print thread-events`                   | Show whether messages will be printed when threads have started and exited.      |
+| 🔵 | `set libthread-db-search-path [path]`        | List of directories gdb will use to search for libthread_db.                     |
+| 🔵 | `show libthread-db-search-path`              | Display current libthread db search path.                                        |
+| 🔵 | `set debug libthread-db [1/0]`               |                                                                                  |
+| 🔵 | `show debug libthread-db`                    | Display of libthread_db-related events.                                          |
+| 🔵 | `set debug threads [on/off]`                 |                                                                                  |
+| 🔵 | `show debug threads`                         | Print additional messages when threads are created and deleted.                  |
+
+</td></tr>
+</table>
+</div>
+
+<div>
+<table>
+<tr><th>FORKS</th>
+<tr><td>
+
+|    | Command                                      | Result                                                                               |
+| :- | :------------------------------------------- | :----------------------------------------------------------------------------------- |
+| 🔵 | `set follow-fork-mode.`                      | Follow the child process instead of the parent process.                              |
+| 🔵 | `set follow-fork-mode [parent]`              | Set the debugger response to a program call of fork.                                 |
+| 🔵 | `set follow-fork-mode [child]`               | Set the debugger response to a program call of vfork.                                |
+| 🔵 | `show follow-fork-mode`                      | Display the current debugger response to a fork or vfork call.                       |
+| 🔵 | `set detach-on-fork.`                        | Debug both the parent and child processes.                                           |
+| 🔵 | `set detach-on-fork [on/off]`                | Detach one of the processes after a fork, or retain debugger control over them both. |
+| 🔵 | `show detach-on-fork [on/off]`               | Show whether detach-on-fork mode is on/off.                                          |
+| 🔵 | `set follow-exec-mode [mode]`                | Set debugger response to a program call of exec.                                     |
+| 🔵 | `[new]`                                      | Creates a new inferior and rebinds the process to this new inferior.                 |
+| 🔵 | `[same]`                                     | Keeps the process bound to the same inferior.                                        |
+
+</td></tr>
+</table>
+</div>
+
+<div>
+<table>
 <tr><th>SHORTCUTS</th><th>SHORTCUTS</th>
 <tr><td>
 
@@ -425,119 +479,55 @@
 </td></tr>
 </table>
 </div>
-
-<div>
-<table>
-<tr><th>MACHINE-LEVEL DEBUG</th>
-<tr><td>
-
-|    | Command                  | Result                                          |
-| :- | :----------------------- | :---------------------------------------------- |
-| 🟢 | `info registers`        	| Print registers sans floats.                    |
-| 🔵 | `print/x [$pc]`          | Print one register.                             |
-
-
-
-</td></tr>
-</table>
-</div>
-
-#Your Program’s Input and Output
-| 🟢 | `info terminal` | Displays information recorded by gdb about the terminal modes your program is using.
-| 🟢 | `run > outfile` | Starts your program, diverting its output to the file outfile.
-| 🟢 | `tty /dev/ttyb` | Directs that processes started with subsequent run commands default to do input and output on the terminal /dev/ttyb and have that as their controlling terminal.
-| 🟢 | `set inferior-tty [ tty ]` | Set the tty for the program being debugged to tty.
-| 🟢 | `show inferior-tty` | Show the current tty for the program being debugged.
-
-#debugging an Already-running Process
-| 🟢 | `attach process-id` | This command attaches to a running process—one that was started outside gdb. 
-| 🟢 | `set exec-file-mismatch ask|warn|off` | Whether to detect mismatch between the current executable file loaded by gdb and the executable file used to start the process.
-| 🟢 | `show exec-file-mismatch` | Show the current value of exec-file-mismatch.
-| 🟢 | `detach` | Release the attached process from gdb control. 
-
-#Killing the Child Process
-| 🟢 | `kill` | Kill the child process in which your program is running under gdb.
-
-<div>
-<table>
-<tr><th>MULTIPLE INFERIRORS CONNECTIONS</th>
-<tr><td>
-
-|    | Command                                      | Result                                                                 |
-| :- | :------------------------------------------- | :--------------------------------------------------------------------- |
-| 🔵 | `info inferiors`                             | Print a list of all inferiors currently being managed by gdb.          |
-| 🔵 | `inferior`                                   | Shows information about the current inferior.                          |
-| 🔵 | `info connections`                           | Print a list of all open target connections currently being managed.   | 
-| 🔵 | `inferior infno`                             | Make inferior number infno the current inferior.                       |
-| 🔵 | `add-inferior`                               | Adds n inferiors to be run using executable as the executable.         |
-| 🔵 | `[-copies n]`                                | |
-| 🔵 | `[-exec executable]`                         | |
-| 🔵 | `[-no-connection]`                           | |
-| 🔵 | `clone-inferior [-copies n] [infno]`         | Adds n inferiors ready to execute the same program as inferior infno.  |
-| 🔵 | `remove-inferiors infno...`                  | Removes the inferior or inferiors infno.                               |
-| 🔵 | `detach inferior infno...`                   | Detach from the inferior(s) identified by inferior number(s) infno.    |
-| 🔵 | `kill inferiors infno...`                    | Kill the inferior or inferiors identified by inferior number(s) infno. |
-| 🔵 | `set print inferior-events [on/off]`         | Enable or disable printing of new inferiors.                           |
-| 🔵 | `show print inferior-events`                 | Print if inferiors have started, exited or have been detached.         |
-| 🔵 | `maint info program-spaces`                  | Print a list of all program spaces currently being managed.            |
-
-</td></tr>
-</table>
-</div>
   
 <div>
 <table>
-<tr><th>MULTIPLE THREADS</th>
+<tr><th>KEYBOARD SHORTCUTS</th>
 <tr><td>
-
-|    | Command                                      | Result                                             |
-| :- | :------------------------------------------- | :------------------------------------------------- |
-| 🔵 | `thread thread-id`                           | Switch among threads.                              |
-| 🔵 | `info threads`                               | Inquire about existing threads.                    |
-| 🔵 | `info threads [-gid] [thread-id-list]`       | Display information about one or more threads.     |
-| 🔵 | `thread apply [thread-id-list] args`         | Apply a command to a list of threads.              |
-| 🔵 | `maint info sol-threads`                     | Display info on Solaris user threads.              |
-| 🔵 | `thread thread-id`                           | Make thread ID thread-id the current thread.       |
-| 🔵 | `thread apply [thread-id-list] command`      | Apply the named command to one or more threads.    |
-| 🔵 | `[-c]`                                       | Display errors, and the execution of thread apply then continues. |
-| 🔵 | `[-s]`                                       | Errors or empty output produced by a command to be silently ignored. |
-| 🔵 | `[-q]`                                       | Disables printing the thread information. |
-| 🔵 | `thread apply all -ascending command.`       | Apply a command to all threads in ascending order. |
-| 🔵 | `taas [option]... command`                   | Applies command on all threads, ignoring errors and empty output. |
-| 🔵 | `tfaas [option]... command`                  | Applies command on all frames of all threads, ignoring errors and empty output. |
-| 🔵 | `thread name [name]`                         | Assign a name to the current thread. |
-| 🔵 | `thread find [regexp]`                       | Search for and display thread ids whose name or systag matches. |
-| 🔵 | `set print thread-events [on/off]`           | Print messages when new threads have started or exited. |
-| 🔵 | `show print thread-events`                   | Show whether messages will be printed when threads have started and exited. |
-| 🔵 | `set libthread-db-search-path [path]`        | List of directories gdb will use to search for libthread_db. |
-| 🔵 | `show libthread-db-search-path`              | Display current libthread db search path. |
-| 🔵 | `set debug libthread-db [1/0]`               | |
-| 🔵 | `show debug libthread-db`                    | Display of libthread_db-related events. |
-| 🔵 | `set debug threads [on/off]`                 | |
-| 🔵 | `show debug threads`                         | Print additional messages when threads are created and deleted. |
-
+  
+|    | Shortcut             | Result                                                   |
+| -- | -------------------- | -------------------------------------------------------- |
+| 🟢 | `CTRL` + `X` + `A`   | Enter or leave the TUI mode.                             |
+| 🟢 | `CTRL` + `X` + `1`   | Use a TUI layout with only one window.                   |
+| 🟢 | `CTRL` + `X` + `2`   | Use a TUI layout with at least two windows.              |
+| 🟢 | `CTRL` + `X` + `O`   | Change the active window (use scrolling and arrow keys). |
+| 🔵 | `PAGEUP`             | The active window one page up.                           |
+| 🔵 | `PAGEDOWN`           | The active window one page down.                         |
+| 🔵 | `UP`                 | The active window one line up.                           |
+| 🔵 | `DOWN`               | The active window one line down.                         |
+| 🔵 | `LEFT`               | The active window one column left.                       |
+| 🔵 | `RIGHT`              | The active window one column right.                      |
+| 🟢 | `CTRL` + `C`         | Actually SIGINT, stop execution of current program.      |
+| 🟢 | `CTRL` + `L`         | Refresh the screen.                                      |
+| 🟢 | `CTRL` + `P`         | Previous command.                                        |
+| 🟢 | `CTRL` + `N`         | Next command.                                            |
+| 🟢 | `CTRL` + `B`         | Move left in the command text.                           |
+| 🟢 | `CTRL` + `F`         | Move right in the command text.                          |
+| 🔵 | `ESC` + `CTRL` + `J` | Switch to vi edit mode from emacs edit mode.             |
+  
 </td></tr>
 </table>
 </div>
 
 <div>
 <table>
-<tr><th>FORKS</th>
+<tr><th>SINGLE KEY MODE</th>
 <tr><td>
 
-|    | Command                                      | Result                                                                               |
-| :- | :------------------------------------------- | :----------------------------------------------------------------------------------- |
-| 🔵 | `set follow-fork-mode.`                      | Follow the child process instead of the parent process.                              |
-| 🔵 | `set follow-fork-mode [parent]`              | Set the debugger response to a program call of fork.                                 |
-| 🔵 | `set follow-fork-mode [child]`               | Set the debugger response to a program call of vfork.                                |
-| 🔵 | `show follow-fork-mode`                      | Display the current debugger response to a fork or vfork call.                       |
-| 🔵 | `set detach-on-fork.`                        | Debug both the parent and child processes.                                           |
-| 🔵 | `set detach-on-fork [on/off]`                | Detach one of the processes after a fork, or retain debugger control over them both. |
-| 🔵 | `show detach-on-fork [on/off]`               | Show whether detach-on-fork mode is on/off.                                          |
-| 🔵 | `set follow-exec-mode [mode]`                | Set debugger response to a program call of exec.                                     |
-| 🔵 | `[new]`                                      | Creates a new inferior and rebinds the process to this new inferior.                 |
-| 🔵 | `[same]`                                     | Keeps the process bound to the same inferior.                                        |
-
+|    | Shortcut                   | Result                          |
+| -- | -------------------------- | ------------------------------- |
+| 🔵 | `CTRL` + `X` + `S`         | Switch to single key mode.      |
+| 🔵 | `q`                        | Exit the SingleKey mode.        |
+| 🔵 | `c`                        | continue                        |
+| 🔵 | `d`                        | down                            |
+| 🔵 | `f`                        | finish                          |
+| 🔵 | `n`                        | next                            |
+| 🔵 | `r`                        | run                             |
+| 🔵 | `s`                        | step                            |
+| 🔵 | `u`                        | up                              |
+| 🔵 | `v`                        | info locals                     |
+| 🔵 | `w`                        | where                           |
+  
 </td></tr>
 </table>
 </div>
