@@ -458,24 +458,33 @@
 #Killing the Child Process
 | 🟢 | `kill` | Kill the child process in which your program is running under gdb.
 
-#Debugging Multiple Inferiors Connections and Program
-| 🟢 | `info inferiors` | Print a list of all inferiors currently being managed by gdb. 
-| 🟢 | `inferior` | Shows information about the current inferior.
-| 🟢 | `info connections` | Print a list of all open target connections currently being managed by gdb. 
-| 🟢 | `inferior infno`   | Make inferior number infno the current inferior. 
-| 🟢 | `add-inferior [ -copies n ] [ -exec executable ] [-no-connection ]` | Adds n inferiors to be run using executable as the executable; n defaults to 1.
-| 🟢 | `clone-inferior [ -copies n ] [ infno ]` | Adds n inferiors ready to execute the same program as inferior infno; n defaults to 1, and infno defaults to the number of the current inferior. 
-| 🟢 | `remove-inferiors infno...` | Removes the inferior or inferiors infno . . . . It is not possible to remove an
-inferior that is running with this command. For those, use the kill or detach
-command first.
-| 🟢 | `detach inferior infno...` | Detach from the inferior or inferiors identified by gdb inferior number(s) infno.
-| 🟢 | `kill inferiors infno...` | Kill the inferior or inferiors identified by gdb inferior number(s) infno . 
-| 🟢 | `set print inferior-events [on]` or `[off]` | The set print inferior-events command allows you to enable or disable
-printing of messages when gdb notices that new inferiors have started or that
-inferiors have exited or have been detached.
-| 🟢 | `show print inferior-events`              | Show whether messages will be printed when gdb detects that inferiors have started, exited or have been detached.
-| 🟢 | `maint info program-spaces`               | Print a list of all program spaces currently being managed by gdb.
+<div>
+<table>
+<tr><th>MULTIPLE INFERIRORS CONNECTIONS</th>
+<tr><td>
 
+|    | Command                                      | Result                                                                 |
+| :- | :------------------------------------------- | :--------------------------------------------------------------------- |
+| 🔵 | `info inferiors`                             | Print a list of all inferiors currently being managed by gdb.          |
+| 🔵 | `inferior`                                   | Shows information about the current inferior.                          |
+| 🔵 | `info connections`                           | Print a list of all open target connections currently being managed.   | 
+| 🔵 | `inferior infno`                             | Make inferior number infno the current inferior.                       |
+| 🔵 | `add-inferior`                               | Adds n inferiors to be run using executable as the executable.         |
+| 🔵 | `[-copies n]`                                | |
+| 🔵 | `[-exec executable]`                         | |
+| 🔵 | `[-no-connection]`                           | |
+| 🔵 | `clone-inferior [-copies n] [infno]`         | Adds n inferiors ready to execute the same program as inferior infno.  |
+| 🔵 | `remove-inferiors infno...`                  | Removes the inferior or inferiors infno.                               |
+| 🔵 | `detach inferior infno...`                   | Detach from the inferior(s) identified by inferior number(s) infno.    |
+| 🔵 | `kill inferiors infno...`                    | Kill the inferior or inferiors identified by inferior number(s) infno. |
+| 🔵 | `set print inferior-events [on/off]`         | Enable or disable printing of new inferiors.                           |
+| 🔵 | `show print inferior-events`                 | Print if inferiors have started, exited or have been detached.         |
+| 🔵 | `maint info program-spaces`                  | Print a list of all program spaces currently being managed.            |
+
+</td></tr>
+</table>
+</div>
+  
 <div>
 <table>
 <tr><th>MULTIPLE THREADS</th>
