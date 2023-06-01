@@ -7,7 +7,7 @@
 
 |    | Definition                |
 | :- | :------------------------ |
-| 🟢 | Most used commands by me  |                 |
+| 🟢 | Most used commands by me  |
 | 🔵 | Least used commands by me |
 
 <div>
@@ -88,7 +88,7 @@
 | 🔵 | `focus asm`                             | Make the assembly window active for scrolling.                                          |
 | 🔵 | `focus regs`                            | Make the register window active for scrolling.                                          |
 | 🔵 | `focus cmd`                             | Make the command window active for scrolling.                                           |
-| 🔵 | `refresh`                               | Refresh the screen. This is similar to typing `CTRL` + `L` or `ref`.                     |
+| 🔵 | `refresh`                               | Refresh the screen. This is similar to typing `CTRL` + `L` or `ref`.                    |
 | 🔵 | `tui reg float`                         | Show the floating point registers in the register window.                               |
 | 🔵 | `tui reg general`                       | Show the general registers in the register window.                                      |
 | 🔵 | `tui reg system`                        | Show the system registers in the register window.                                       |
@@ -104,7 +104,7 @@
 | 🔵 | `tui reg float`                         | Show the floating point registers in the register window.                               |
 | 🔵 | `tui reg system`                        | Show the system registers in the register window.                                       |
 | 🔵 | `tui reg general`                       | Show the general registers in the register window.                                      |
-| 🔵 | `set pagination [on] [off]`             | Turn the output pagination on or off. Turning pagination off = `set height 0`           |
+| 🔵 | `set pagination [on/off]`               | Turn the output pagination on or off. Turning pagination off = `set height 0`           |
 | 🔵 | `show pagination`                       | Show the current pagination mode.                                                       |
 | 🔵 | `set tui border-kind [kind]`            | Select the border appearance for the source, assembly and register windows.             |
 | 🔵 | `[space]`                               | Use a space character to draw the border.                                               |
@@ -301,31 +301,31 @@
 <tr><th>HISTORY DISPLAY</th>
 <tr><td>
 
-|    | Command                                     | Result                                                                                               |
-| :- | :------------------------------------------ | :--------------------------------------------------------------------------------------------------- |
-| 🟢 | `show commands`                             | Print command history.                                                                               |
-| 🔵 | `info editing`       	                     | Print command history.                                                                               |
-| 🔵 | `set history filename [fname]`              | Set the name of the GDB command history file to fname.                                               |
-| 🔵 | `set history save`                          | Record command history in a file.                                                                    |
-| 🔵 | `set history save [on] [off]`               | Record or don't record the command history into the file specified.                                  |
-| 🔵 | `set history size [size]`                   | Set the number of commands gdb keeps in its history list based on the size.                          |
-| 🔵 | `set history size unlimited`                | Set the number of commands gdb keeps in its history list as unlimited.                               |
-| 🔵 | `set history remove-duplicates [count]`     | Removed the first duplicate entry in history based on count.                                         |
-| 🔵 | `set history remove-duplicates unlimited`   | Removed dupicate entrys in history.                                                                  |
-| 🔵 | `set history expansion [on] [off]`          | Enable or disable history expansion. History expansion assigns special meaning to the character `!`. |
-| 🟢 | `show history`                              | Display all four history states.                                                                     |
-| 🔵 | `show history filename`                     | Display the history of filename.                                                                     |
-| 🔵 | `show history save`                         | Display the history of save.                                                                         |
-| 🔵 | `show history size`                         | Display the history of size.                                                                         |
-| 🔵 | `show history exp`                          | Display the history of exp.                                                                          |
-| 🟢 | `show commands`                             | Display the last ten commands in the command history.                                                |
-| 🔵 | `show commands [n]`                         | Print ten commands centered on command number n.                                                     |
-| 🔵 | `show commands +`                           | Print ten commands just after the commands last printed.                                             | 
-| 🔵 | `break class::[member]`                     | Set breakpoint on class member. May get menu.                                                        |
-| 🔵 | `list class::[member]`                      | List member in class.                                                                                |
-| 🔵 | `ptype [class]`                             | Print class members.                                                                                 |
-| 🔵 | `print [*this]`      	                     | Print contents of this pointer.                                                                      |
-| 🔵 | `rbreak regexpr`     	                     | Useful for breakpoint on overloaded member name.                                                     |
+|    | Command                                     | Result                                                                       |
+| :- | :------------------------------------------ | :--------------------------------------------------------------------------- |
+| 🟢 | `show commands`                             | Print command history.                                                       |
+| 🔵 | `info editing`       	                     | Print command history.                                                       |
+| 🔵 | `set history filename [fname]`              | Set the name of the GDB command history file to fname.                       |
+| 🔵 | `set history save`                          | Record command history in a file.                                            |
+| 🔵 | `set history save [on/off]`                 | Record or don't record the command history into the file specified.          |
+| 🔵 | `set history size [size]`                   | Set the number of commands gdb keeps in its history list based on the size.  |
+| 🔵 | `set history size unlimited`                | Set the number of commands gdb keeps in its history list as unlimited.       |
+| 🔵 | `set history remove-duplicates [count]`     | Removed the first duplicate entry in history based on count.                 |
+| 🔵 | `set history remove-duplicates unlimited`   | Removed dupicate entrys in history.                                          |
+| 🔵 | `set history expansion [on/off]`            | Enable or disable history expansion.                                         |
+| 🟢 | `show history`                              | Display all four history states.                                             |
+| 🔵 | `show history filename`                     | Display the history of filename.                                             |
+| 🔵 | `show history save`                         | Display the history of save.                                                 |
+| 🔵 | `show history size`                         | Display the history of size.                                                 |
+| 🔵 | `show history exp`                          | Display the history of exp.                                                  |
+| 🟢 | `show commands`                             | Display the last ten commands in the command history.                        |
+| 🔵 | `show commands [n]`                         | Print ten commands centered on command number n.                             |
+| 🔵 | `show commands +`                           | Print ten commands just after the commands last printed.                     | 
+| 🔵 | `break class::[member]`                     | Set breakpoint on class member. May get menu.                                |
+| 🔵 | `list class::[member]`                      | List member in class.                                                        |
+| 🔵 | `ptype [class]`                             | Print class members.                                                         |
+| 🔵 | `print [*this]`      	                     | Print contents of this pointer.                                              |
+| 🔵 | `rbreak regexpr`     	                     | Useful for breakpoint on overloaded member name.                             |
 
 </td></tr>
 </table>
@@ -336,18 +336,20 @@
 <tr><th>INPUT AND OUTPUT</th>
 <tr><td>
 
-|    | Command                                 | Result                                          |
-| :- | :-------------------------------------- | :---------------------------------------------- |
-| 🔵 | `info terminal`                         | Displays information recorded by gdb about the terminal modes your program is using.
-| 🔵 | `run > outfile`                         | Starts your program, diverting its output to the file outfile.
-| 🔵 | `tty /dev/ttyb`                         | Directs that processes started with subsequent run commands default to do input and output on the terminal /dev/ttyb and have that as their controlling terminal.
-| 🔵 | `set inferior-tty [tty]`                | Set the tty for the program being debugged to tty.
-| 🔵 | `show inferior-tty`                     | Show the current tty for the program being debugged.
-| 🔵 | `attach process-id`                     | This command attaches to a running process—one that was started outside gdb. 
-| 🔵 | `set exec-file-mismatch ask|warn|off`   | Whether to detect mismatch between the current executable file loaded by gdb and the executable file used to start the process.
-| 🔵 | `show exec-file-mismatch`               | Show the current value of exec-file-mismatch.
-| 🔵 | `detach`                                | Release the attached process from gdb control. 
-| 🔵 | `kill`                                  | Kill the child process in which your program is running under gdb.
+|    | Command                                 | Result                                                                     |
+| :- | :-------------------------------------- | :------------------------------------------------------------------------- |
+| 🔵 | `info terminal`                         | Displays information recorded about the terminal modes.                    |
+| 🔵 | `run > outfile`                         | Starts your program, diverting its output to the file outfile.             |
+| 🔵 | `tty /dev/ttyb`                         | Default processes to do input and output on the terminal /dev/ttyb.        |
+| 🔵 | `set inferior-tty [tty]`                | Set the tty for the program being debugged to tty.                         |
+| 🔵 | `show inferior-tty`                     | Show the current tty for the program being debugged.                       |
+| 🔵 | `attach process-id`                     | Attach to a running process that was started outside gdb.                  |
+| 🔵 | `set exec-file-mismatch [ask]`          | Display a warning and ask the user whether to load the process executable. |
+| 🔵 | `set exec-file-mismatch [warn]`         | Just display a warning.                                                    |
+| 🔵 | `set exec-file-mismatch [off]`          | Don’t attempt to detect a mismatch.                                        |
+| 🔵 | `show exec-file-mismatch`               | Show the current value of exec-file-mismatch.                              |
+| 🔵 | `detach`                                | Release the attached process from gdb control.                             |
+| 🔵 | `kill`                                  | Kill the child process in which your program is running.                   |
 
 </td></tr>
 </table>
