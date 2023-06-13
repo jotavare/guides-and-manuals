@@ -140,7 +140,7 @@ add: can also call functions.
 |    | Command                                                      | Result                                                      |
 | :--| ------------------------------------------------------------ | ----------------------------------------------------------- |
 | 🟢 | `break [line/function]`                                      | Set a breakpoint on a line or function.                     |
-| 🔵 | `break main.c:42`                                            | Set breakpoint at file and (line or function).              |
+| 🔵 | `break main.c:42`                                            | Set breakpoint at the file and (line or function).          |
 | 🔵 | `tbreak [line/function]`                                     | Set a temporary breakpoint.                                 |
 | 🟢 | `watch [variable]`                                           | Set a software watchpoint on a variable.                    |
 | 🟢 | `info breakpoints`                                           | Show breakpoints and watchpoints.                           |
@@ -184,22 +184,22 @@ add: can also call functions.
 <tr><th>BROWSING SOURCE</th>
 <tr><td>
 
-|    | Command                      | Result                                              |
-| :- | :--------------------------- | :-------------------------------------------------- |
-| 🔵 | `list [20]`                  | List 10 lines around line `20`.                     |
-| 🔵 | `list [1,10]`                | List lines `1` to `10`.                             |
-| 🔵 | `list [main]`                | List lines around function `main`.                  |
-| 🔵 | `list [basic.c:main]`        | List from another file `basic.c`.                   |
-| 🔵 | `list -`                     | List previous 10 lines.                             |
-| 🟢 | `info address [Symbol name]` | Displays the address of a given symbol.             |
-| 🔵 | `list [*0x22e4]`             | List source at address `p0x22e4`.                   |
-| 🔵 | `cd [dir]`                   | Change current directory to `dir`.                  |
-| 🔵 | `pwd`                        | Print working directory.                            |
-| 🔵 | `search regexpr`             | Forward search for regular expression `regexpr`.    |
-| 🔵 | `reverse-search regexpr`     | Backward search for regular expression `regexpr`.   |
-| 🔵 | `dir [dirname]`              | Add directory `dirname` to source path.             |
-| 🔵 | `dir`                        | Reset source path to nothing.                       |
-| 🔵 | `show directories`           | Show source path.                                   |
+|    | Command                                   | Result                                              |
+| :- | :---------------------------------------- | :-------------------------------------------------- |
+| 🔵 | `list [20]`                               | List 10 lines around line `20`.                     |
+| 🔵 | `list [1,10]`                             | List lines `1` to `10`.                             |
+| 🔵 | `list [main]`                             | List lines around function `main`.                  |
+| 🔵 | `list [basic.c:main]`                     | List from another file `basic.c`.                   |
+| 🔵 | `list -`                                  | List previous 10 lines.                             |
+| 🟢 | `info address [Symbol name]`              | Displays the address of a given symbol.             |
+| 🔵 | `list [*0x22e4]`                          | List source at address `p0x22e4`.                   |
+| 🔵 | `cd [dir]`                                | Change current directory to `dir`.                  |
+| 🔵 | `pwd`                                     | Print working directory.                            |
+| 🔵 | `search [regular expression]`             | Forward search for regular expression.              |
+| 🔵 | `reverse-search [regular expression]`     | Backward search for regular expression.             |
+| 🔵 | `dir [dirname]`                           | Add directory `dirname` to source path.             |
+| 🔵 | `dir`                                     | Reset source path to nothing.                       |
+| 🔵 | `show directories`                        | Show source path.                                   |
 
 </td></tr>
 </table>
@@ -210,33 +210,33 @@ add: can also call functions.
 <tr><th>BROWSING DATA</th>
 <tr><td>
 
-|    | Command                         | Result                                         |
-| :- | :------------------------------ | :--------------------------------------------- |
-| 🟢 | `print [expression]`            | Print variable, added to value history.        |
-| 🟢 | `print/x [expression]`          | Print variable in hex format.                  |
-| 🔵 | `print [array[i]@count]`        | Artificial array - print array range.          |
-| 🔵 | `print $`        	             | Print last value.                              |
-| 🔵 | `print *$->next`                | Print thru history list.                       |
-| 🔵 | `print $1`        	             | Print value 1 from value history.              |
-| 🔵 | `print ::gx`                    | Force scope to be global.                      |
-| 🔵 | `print [basic.c]::gx`           | Global scope in named file.                    |
-| 🔵 | `print/x [&main]`               | Print address of function.                     |
-| 🔵 | `x/countFormatSize [address]`   | Low-level examine command.                     |
-| 🔵 | `x/x [&gx]`        	           | Print gx in hex.                               |
-| 🔵 | `x/4wx [&main]`                 | Print 4 longs at start of main in hex format.  |
-| 🔵 | `x/gf [&gd1]`                   | Print double.                                  |
-| 🔵 | `help x`        	               | Show formats for x.                            |
-| 🟢 | `info locals`                   | Print local automatics only.                   |
-| 🟢 | `info functions regexp`         | Print function names.                          |
-| 🟢 | `info variables regexp`         | Print global variable names.                   |
-| 🟢 | `ptype [expression]`            | Print type definition.                         |
-| 🟢 | `whatis [expression]`           | Print type of expression.                      |
-| 🟢 | `set [variable] = [expression]` | Assign value.                                  |
-| 🟢 | `display [expression]`          | Display expression result at stop.             |
-| 🔵 | `undisplay`                     | Delete displays.                               |
-| 🟢 | `info display`                  | Show displays.                                 |
-| 🟢 | `show values`                   | Print value history.                           |
-| 🟢 | `info history`                  | Print value history.                           |
+|    | Command                               | Result                                         |
+| :- | :------------------------------------ | :--------------------------------------------- |
+| 🟢 | `print [expression]`                  | Print variable, added to value history.        |
+| 🟢 | `print/x [expression]`                | Print variable in hex format.                  |
+| 🔵 | `print [array[i]@count]`              | Artificial array - print array range.          |
+| 🔵 | `print $`                             | Print last value.                              |
+| 🔵 | `print *$->next`                      | Print thru history list.                       |
+| 🔵 | `print $1`                            | Print value 1 from value history.              |
+| 🔵 | `print ::gx`                          | Force scope to be global.                      |
+| 🔵 | `print [basic.c]::gx`                 | Global scope in named file.                    |
+| 🔵 | `print/x [&main]`                     | Print address of function.                     |
+| 🔵 | `x/countFormatSize [address]`         | Low-level examine command.                     |
+| 🔵 | `x/x [&gx]`                           | Print gx in hex.                               |
+| 🔵 | `x/4wx [&main]`                       | Print 4 longs at start of main in hex format.  |
+| 🔵 | `x/gf [&gd1]`                         | Print double.                                  |
+| 🔵 | `help x`                              | Show formats for x.                            |
+| 🟢 | `info locals`                         | Print local automatics only.                   |
+| 🟢 | `info functions [regular expression]` | Print function names.                          |
+| 🟢 | `info variables [regular expression]` | Print global variable names.                   |
+| 🟢 | `ptype [expression]`                  | Print type definition.                         |
+| 🟢 | `whatis [expression]`                 | Print type of expression.                      |
+| 🟢 | `set [variable] = [expression]`       | Assign value.                                  |
+| 🟢 | `display [expression]`                | Display expression result at stop.             |
+| 🔵 | `undisplay`                           | Delete displays.                               |
+| 🟢 | `info display`                        | Show displays.                                 |
+| 🟢 | `show values`                         | Print value history.                           |
+| 🟢 | `info history`                        | Print value history.                           |
 
 </td></tr>
 </table>
@@ -264,18 +264,18 @@ add: can also call functions.
 <tr><th>SIGNAL CONTROL</th>
 <tr><td>
 
-|    | Command                  | Result                                    |
-| :- | :----------------------- | :---------------------------------------- |
-| 🟢 | `info signals`        	  | Print signal setup.                       |
-| 🔵 | `handle signo actions`   | Set debugger actions for signal.          |
-| 🔵 | `handle INT print`       | Print message when signal occurs.         |
-| 🔵 | `handle INT noprint`     | Don't print message.                      |
-| 🔵 | `handle INT stop`      	| Stop program when signal occurs.          |
-| 🔵 | `handle INT nostop`      | Don't stop program.                       |
-| 🔵 | `handle INT pass`       	| Allow program to receive signal.          |
-| 🔵 | `handle INT nopass`      | Debugger catches signal; program doesn't. |
-| 🔵 | `signal signo`        	  | Continue and send signal to program.      |
-| 🔵 | `signal 0`               | Continue and send no signal to program.   |
+|    | Command                  | Result                                     |
+| :- | :----------------------- | :----------------------------------------- |
+| 🟢 | `info signals`           | Print signal setup.                        |
+| 🔵 | `handle signo actions`   | Set debugger actions for signal.           |
+| 🔵 | `handle INT print`       | Print message when signal occurs.          |
+| 🔵 | `handle INT noprint`     | Don't print message.                       |
+| 🔵 | `handle INT stop`        | Stop program when signal occurs.           |
+| 🔵 | `handle INT nostop`      | Don't stop program.                        |
+| 🔵 | `handle INT pass`        | Allow the program to receive a signal.     |
+| 🔵 | `handle INT nopass`      | Debugger catches signal; program doesn't.  |
+| 🔵 | `signal signo`           | Continue and send signal to program.       |
+| 🔵 | `signal 0`               | Continue and send no signal to the program.|
 
 </td></tr>
 </table>
@@ -286,19 +286,19 @@ add: can also call functions.
 <tr><th>MACHINE-LEVEL DEBUG</th>
 <tr><td>
 
-|    | Command                  | Result                                          |
-| :- | :----------------------- | :---------------------------------------------- |
-| 🟢 | `info registers`        	| Print registers sans floats.                    |
-| 🟢 | `info all-registers`     | Print all registers.                            |
-| 🔵 | `print/x [$pc]`          | Print one register.                             |
-| 🔵 | `stepi`        		      | Single step at machine level.                   |
-| 🔵 | `nexti`        		      | Single step (over functions) at machine level.  |
-| 🔵 | `display/i [$pc]`        | Print current instruction in display.           |
-| 🔵 | `x/x [&gx]`        	    | Print variable gx in hex.                       |
-| 🟢 | `info line [42]`         | Print addresses for object code for line 42.    |
-| 🟢 | `info line [*0x2c4e]`    | Print line number of object code at address.    |
-| 🔵 | `x/10i [main]`           | Disassemble first 10 instructions in main.      |
-| 🔵 | `disassemble [address]`  | Dissassemble code for function around address.  |
+|    | Command                  | Result                                              |
+| :- | :----------------------- | :-------------------------------------------------- |
+| 🟢 | `info registers`        	| Print registers sans floats.                        |
+| 🟢 | `info all-registers`     | Print all registers.                                |
+| 🔵 | `print/x [$pc]`          | Print one register.                                 |
+| 🔵 | `stepi`        		      | Single step at machine level.                       |
+| 🔵 | `nexti`        		      | Single step (over functions) at the machine level.  |
+| 🔵 | `display/i [$pc]`        | Print current instruction in display.               |
+| 🔵 | `x/x [&gx]`        	    | Print variable gx in hex.                           |
+| 🟢 | `info line [42]`         | Print addresses for object code for line 42.        |
+| 🟢 | `info line [*0x2c4e]`    | Print line number of object code at address.        |
+| 🔵 | `x/10i [main]`           | Disassemble first 10 instructions in main.          |
+| 🔵 | `disassemble [address]`  | Dissassemble code for function around address.      |
 
 </td></tr>
 </table>
@@ -318,7 +318,7 @@ add: can also call functions.
 | 🔵 | `set history save [on/off]`                 | Record or don't record the command history into the file specified.          |
 | 🔵 | `set history size [size]`                   | Set the number of commands gdb keeps in its history list based on the size.  |
 | 🔵 | `set history size unlimited`                | Set the number of commands gdb keeps in its history list as unlimited.       |
-| 🔵 | `set history remove-duplicates [count]`     | Removed the first duplicate entry in history based on count.                 |
+| 🔵 | `set history remove-duplicates [count]`     | Removed the first duplicate entry in history based on the count.                 |
 | 🔵 | `set history remove-duplicates unlimited`   | Removed dupicate entrys in history.                                          |
 | 🔵 | `set history expansion [on/off]`            | Enable or disable history expansion.                                         |
 | 🟢 | `show history`                              | Display all four history states.                                             |
@@ -329,11 +329,11 @@ add: can also call functions.
 | 🟢 | `show commands`                             | Display the last ten commands in the command history.                        |
 | 🔵 | `show commands [n]`                         | Print ten commands centered on command number n.                             |
 | 🔵 | `show commands +`                           | Print ten commands just after the commands last printed.                     | 
-| 🔵 | `break class::[member]`                     | Set breakpoint on class member. May get menu.                                |
+| 🔵 | `break class::[member]`                     | Set breakpoint on class member. May get a menu.                                |
 | 🔵 | `list class::[member]`                      | List member in class.                                                        |
 | 🔵 | `ptype [class]`                             | Print class members.                                                         |
 | 🔵 | `print [*this]`      	                     | Print contents of this pointer.                                              |
-| 🔵 | `rbreak regexpr`     	                     | Useful for breakpoint on overloaded member name.                             |
+| 🔵 | `rbreak [regular expression]`               | Useful for breakpoint on overloaded member name.                             |
 
 </td></tr>
 </table>
