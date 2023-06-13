@@ -83,6 +83,8 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🟢 | `finish`                              | Finish current function's execution.               |
 | 🟢 | `kill`                                | Kill current executing program.                    |
 
+<a href="#commands">↥ Back To Top</a> 
+
 </td></tr>
 </table>
 </div>
