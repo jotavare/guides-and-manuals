@@ -22,22 +22,22 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 <p align="center">
 	<a href="#defination">Definition</a> •
 	<a href="#running-the-program">Running the program</a> •
-	<a href="#help">Help</a>
-  <a href="#layout">Layout</a>
-  <a href="#breakpoints-and-watchpoints">Breakpoints and watchpoints</a>
-  <a href="#stack-backtrace">Stack backtrace</a>
-  <a href="#browsing-source">Browsing source</a>
-  <a href="#object-file-manipulation">Object file manipulation</a>
-  <a href="#signal-control">Signal control</a>
-  <a href="#machine--level-debug">Machine-level debug</a>
-  <a href="#history-display">History display</a>
-  <a href="#input-and-output">Input and output</a>
-  <a href="#multiple-inferiors-connections">Multiple inferiors connections</a>
-  <a href="#multiple-threads">Multiple threads</a>
-  <a href="#forks">Forks</a>
-  <a href="#shortcuts">Shortcuts</a>
-  <a href="#keyboard-shortcuts">Keyboard shortcuts</a>
-  <a href="#single-key-mode">Single key mode</a>
+	<a href="#help">Help</a> •
+	<a href="#layout">Layout</a> •
+	<a href="#breakpoints-and-watchpoints">Breakpoints and watchpoints</a> •
+	<a href="#stack-backtrace">Stack backtrace</a> •
+	<a href="#browsing-source">Browsing source</a> •
+	<a href="#object-file-manipulation">Object file manipulation</a> •
+	<a href="#signal-control">Signal control</a> •
+	<a href="#machine--level-debug">Machine-level debug</a> •
+	<a href="#history-display">History display</a> •
+	<a href="#input-and-output">Input and output</a> •
+	<a href="#multiple-inferiors-connections">Multiple inferiors connections</a> •
+	<a href="#multiple-threads">Multiple threads</a> •
+	<a href="#forks">Forks</a> •
+	<a href="#shortcuts">Shortcuts</a> •
+	<a href="#keyboard-shortcuts">Keyboard shortcuts</a> •
+	<a href="#single-key-mode">Single key mode</a> •
 </p>
 
 #### DEFINITION
