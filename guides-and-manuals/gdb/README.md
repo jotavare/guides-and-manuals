@@ -1,6 +1,6 @@
 # GDB Cheat Sheet
 ## About
-Welcome to the GDB Debugger Commands Cheat Sheet repository! My goal is to provide a comprehensive list of optimized GDB commands and their descriptions. This repository serves as a concise quick reference guide for developers and enthusiasts working with GDB.
+Welcome to the GDB Debugger Cheat Sheet repository! My goal is to provide a comprehensive list of optimized GDB commands and their descriptions. This repository serves as a concise quick reference guide for developers and enthusiasts working with GDB.
 
 I hope you find this optimized cheat sheet helpful for your GDB debugging needs. Happy debugging!
 
