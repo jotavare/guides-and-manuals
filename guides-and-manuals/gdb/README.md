@@ -1,5 +1,7 @@
-# GDB Cheat Sheet
-https://github.com/jotavare/jotavare/blob/main/42/banner/new/gdb_banner.png
+<p align="center">
+   <img src="https://github.com/jotavare/jotavare/blob/main/42/banner/new/gdb_banner.png">
+</p>
+
 <p align="center">
 	<a href="#about">About</a> •
 	<a href="#references">References</a> •
