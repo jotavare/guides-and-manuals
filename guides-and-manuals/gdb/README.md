@@ -82,8 +82,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🟢 | `quit`                                | Quit gdb.                                          |
 | 🟢 | `finish`                              | Finish current function's execution.               |
 | 🟢 | `kill`                                | Kill current executing program.                    |
-
-<a href="#commands">↥ Back To Top</a> 
+| ⚪ | <a href="#commands">↥ Back To Top</a> | Scroll back top (index).                           |
 
 </td></tr>
 </table>
@@ -104,6 +103,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🔵 | `help info line`                        | Help for the "info line" command.                      |
 | 🔵 | `help show`                             | List show commands for displaying GDB state.           |
 | 🔵 | `help show commands`                    | Specific help for the "show commands" command.         |
+| ⚪ | <a href="#commands">↥ Back To Top</a>   | Scroll back top (index).                               |
 
 </td></tr>
 </table>
