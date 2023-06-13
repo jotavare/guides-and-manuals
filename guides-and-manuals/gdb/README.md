@@ -1,10 +1,16 @@
-# GDB Commands
+# GDB Cheat Sheet
+## About
+Welcome to the GDB Debugger Commands Cheat Sheet repository! My goal is to provide a comprehensive list of optimized GDB commands and their descriptions. This repository serves as a concise quick reference guide for developers and enthusiasts working with GDB.
 
+I hope you find this optimized cheat sheet helpful for your GDB debugging needs. Happy debugging!
+
+## REFERENCES
 - [100 GDB Tips](https://github.com/hellogcc/100-gdb-tips)
 - [GDB Dashboard](https://github.com/cyrus-and/gdb-dashboard)
 - [PDF GDB Cheetsheat](https://raw.githubusercontent.com/hellogcc/100-gdb-tips/master/refcard.pdf)
 - [GitHub GDB Cheetsheat](https://gist.github.com/rkubik/b96c23bd8ed58333de37f2b8cd052c30)
 
+## COMMANDS
 add: can also call functions.
 
 |    | Definition                |
@@ -25,7 +31,7 @@ add: can also call functions.
 | 🟢 | `gdb -statistics`                     | Print statistics about time and memory usage.      |
 | 🟢 | `gdb [object]`      	                 | Normal debug.                                      |
 | 🔵 | `gdb [object] [core]` 	               | core debug (must specify core file).               |
-| 🟢 | `gdb [object] [pid]`  	               | Attach to running process.                         |
+| 🟢 | `gdb [object] [pid]`  	               | Attach to a running process.                       |
 | 🔵 | `gdb [program] [core dump]`           | Start GDB (with optional core dump).               |
 | 🟢 | `gdb --args [program] [args...]`      | Start GDB and pass arguments.                      |
 | 🟢 | `gdb --pid [pid]`                     | Start GDB and attach to process.                   |
