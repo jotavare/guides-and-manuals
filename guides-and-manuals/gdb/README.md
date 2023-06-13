@@ -151,7 +151,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🔵 | `show pagination`                       | Show the current pagination mode.                                                       |
 | 🔵 | `set tui border-kind [kind]`            | Select the border appearance for the source, assembly and register windows.             |
 | 🔵 | `[space]`                               | Use a space character to draw the border.                                               |
-| 🔵 | `[ascii]`                               | Use ascii characters `+`, `-` and `|` to draw the border.                               |
+| 🔵 | `[ascii]`                               | Use ascii characters `+`, `-` and `\|` to draw the border.                               |
 | 🔵 | `[acs]`                                 | Use the Alternate Character Set to draw the border.                                     |
 | 🔵 | `[drawn]`                               | Using character line graphics if the terminal supports them.                            |
 | 🔵 | `set tui border-mode [mode]`            | Select the display attributes for the inactive window border.                           |
