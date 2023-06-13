@@ -191,7 +191,8 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🔵 | `condition [breakpoint/watchpoint number] [expression]`      | End only if the expression is true.                         |
 | 🔵 | `condition [breakpoint/watchpoint number] [condition]`       | End only if the condition is true.                          |
 | 🔵 | `condition [breakpoint/watchpoint number]`                   | Delete condition at a breakpoint or watchpoint number.      |
-  
+| ⚪ | <a href="#commands">↥ Back To Top</a>                        | Scroll back top (index).                                    |
+
 </td></tr>
 </table>
 </div>
@@ -210,6 +211,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🔵 | `down`          | Move down stack trace (away from main). |
 | 🟢 | `info locals`   | Print automatic variables in frame.     |
 | 🟢 | `info args`     | Print function parameters.              |
+| ⚪ | <a href="#commands">↥ Back To Top</a> | Scroll back top (index).                           |
 
 </td></tr>
 </table>
@@ -237,6 +239,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🔵 | `dir [dirname]`                           | Add directory `dirname` to source path.             |
 | 🔵 | `dir`                                     | Reset source path to nothing.                       |
 | 🔵 | `show directories`                        | Show source path.                                   |
+| ⚪ | <a href="#commands">↥ Back To Top</a>     | Scroll back top (index).                            |
 
 </td></tr>
 </table>
@@ -275,6 +278,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🟢 | `info display`                        | Show displays.                                 |
 | 🟢 | `show values`                         | Print value history.                           |
 | 🟢 | `info history`                        | Print value history.                           |
+| ⚪ | <a href="#commands">↥ Back To Top</a> | Scroll back top (index).                       |
 
 </td></tr>
 </table>
@@ -293,6 +297,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🔵 | `symbol-file [object]`   | load only symbol table               |
 | 🔵 | `exec-file [object]` 		| specify object to run (not sym-file) |
 | 🔵 | `core-file [core]`   		| post-mortem debugging                |
+| ⚪ | <a href="#commands">↥ Back To Top</a> | Scroll back top (index).                           |
 
 </td></tr>
 </table>
@@ -316,6 +321,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🔵 | `handle INT nopass`      | Debugger catches signal; program doesn't.  |
 | 🔵 | `signal signo`           | Continue and send signal to program.       |
 | 🔵 | `signal 0`               | Continue and send no signal to the program.|
+| ⚪ | <a href="#commands">↥ Back To Top</a> | Scroll back top (index).                           |
 
 </td></tr>
 </table>
@@ -340,6 +346,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🟢 | `info line [*0x2c4e]`    | Print line number of object code at address.        |
 | 🔵 | `x/10i [main]`           | Disassemble first 10 instructions in main.          |
 | 🔵 | `disassemble [address]`  | Dissassemble code for function around address.      |
+| ⚪ | <a href="#commands">↥ Back To Top</a> | Scroll back top (index).                           |
 
 </td></tr>
 </table>
@@ -376,6 +383,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🔵 | `ptype [class]`                             | Print class members.                                                         |
 | 🔵 | `print [*this]`      	                     | Print contents of this pointer.                                              |
 | 🔵 | `rbreak [regular expression]`               | Useful for breakpoint on overloaded member name.                             |
+| ⚪ | <a href="#commands">↥ Back To Top</a> | Scroll back top (index).                           |
 
 </td></tr>
 </table>
@@ -401,6 +409,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🔵 | `show exec-file-mismatch`               | Show the current value of exec-file-mismatch.                              |
 | 🔵 | `detach`                                | Release the attached process from gdb control.                             |
 | 🔵 | `kill`                                  | Kill the child process in which your program is running.                   |
+| ⚪ | <a href="#commands">↥ Back To Top</a> | Scroll back top (index).                           |
 
 </td></tr>
 </table>
@@ -429,6 +438,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🔵 | `set print inferior-events [on/off]`         | Enable or disable printing of new inferiors.                           |
 | 🔵 | `show print inferior-events`                 | Print if inferiors have started, exited or have been detached.         |
 | 🔵 | `maint info program-spaces`                  | Print a list of all program spaces currently being managed.            |
+| ⚪ | <a href="#commands">↥ Back To Top</a> | Scroll back top (index).                           |
 
 </td></tr>
 </table>
@@ -465,6 +475,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🔵 | `show debug libthread-db`                    | Display of libthread_db-related events.                                          |
 | 🔵 | `set debug threads [on/off]`                 | Set the debug threads as on or off.                                              |
 | 🔵 | `show debug threads`                         | Print additional messages when threads are created and deleted.                  |
+| ⚪ | <a href="#commands">↥ Back To Top</a> | Scroll back top (index).                           |
 
 </td></tr>
 </table>
@@ -488,6 +499,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🔵 | `set follow-exec-mode [mode]`                | Set debugger response to a program call of exec.                                     |
 | 🔵 | `[new]`                                      | Creates a new inferior and rebinds the process to this new inferior.                 |
 | 🔵 | `[same]`                                     | Keeps the process bound to the same inferior.                                        |
+| ⚪ | <a href="#commands">↥ Back To Top</a> | Scroll back top (index).                           |
 
 </td></tr>
 </table>
@@ -513,6 +525,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🔵 | `r`        | `run`        |
 | 🔵 | `s`        | `step`       |
 | 🔵 | `u`        | `until`      |
+| ⚪ | <a href="#commands">↥ Back To Top</a> | Scroll back top (index).                           |
 
 </td><td>
 
@@ -532,7 +545,8 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🔵 | `win`      | `winheight`    |
 | 🔵 | `ref`      | `refresh`      |
 | 🔵 | `disp`     | `display`      |
-  
+| ⚪ | <a href="#commands">↥ Back To Top</a> | Scroll back top (index).                           |
+
 </td></tr>
 </table>
 </div>
@@ -562,7 +576,8 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🟢 | `CTRL` + `B`         | Move left in the command text.                           |
 | 🟢 | `CTRL` + `F`         | Move right in the command text.                          |
 | 🔵 | `ESC` + `CTRL` + `J` | Switch to vi edit mode from emacs edit mode.             |
-  
+| ⚪ | <a href="#commands">↥ Back To Top</a> | Scroll back top (index).                           |
+
 </td></tr>
 </table>
 </div>
@@ -586,7 +601,8 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🔵 | `u`                        | up                              |
 | 🔵 | `v`                        | info locals                     |
 | 🔵 | `w`                        | where                           |
-  
+| ⚪ | <a href="#commands">↥ Back To Top</a> | Scroll back top (index).                           |
+
 </td></tr>
 </table>
 </div>
