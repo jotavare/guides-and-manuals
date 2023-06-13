@@ -22,7 +22,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 ## COMMANDS
 
 <p align="center">
-	<a href="#defination">Definition</a> •
+	<a href="#definition">Definition</a> •
 	<a href="#running-the-program">Running the program</a> •
 	<a href="#help">Help</a> •
 	<a href="#layout">Layout</a> •
@@ -31,7 +31,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 	<a href="#browsing-source">Browsing source</a> •
 	<a href="#object-file-manipulation">Object file manipulation</a> •
 	<a href="#signal-control">Signal control</a> •
-	<a href="#machine--level-debug">Machine-level debug</a> •
+	<a href="#machine-level-debug">Machine-level debug</a> •
 	<a href="#history-display">History display</a> •
 	<a href="#input-and-output">Input and output</a> •
 	<a href="#multiple-inferiors-connections">Multiple inferiors connections</a> •
@@ -56,13 +56,13 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
   
 |    | Command                               | Result                                             |
 | :- | :------------------------------------ | :------------------------------------------------- |
-| 🟢 | `gdb`        		                     | Start gdb.                                         |
+| 🟢 | `gdb`                                 | Start gdb.                                         |
 | 🟢 | `gdb --tui [object]`                  | Start gdb with graphic interface.                  |
 | 🔵 | `gdb -silent`                         | Start gdb without the beginning information.       |
 | 🟢 | `gdb -statistics`                     | Print statistics about time and memory usage.      |
-| 🟢 | `gdb [object]`      	                 | Normal debug.                                      |
-| 🔵 | `gdb [object] [core]` 	               | core debug (must specify core file).               |
-| 🟢 | `gdb [object] [pid]`  	               | Attach to a running process.                       |
+| 🟢 | `gdb [object]`                        | Normal debug.                                      |
+| 🔵 | `gdb [object] [core]`                 | core debug (must specify core file).               |
+| 🟢 | `gdb [object] [pid]`                  | Attach to a running process.                       |
 | 🔵 | `gdb [program] [core dump]`           | Start GDB (with optional core dump).               |
 | 🟢 | `gdb --args [program] [args...]`      | Start GDB and pass arguments.                      |
 | 🟢 | `gdb --pid [pid]`                     | Start GDB and attach to process.                   |
@@ -289,11 +289,11 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 
 |    | Command                  | Result                               |
 | :- | :----------------------- | :----------------------------------- |
-| 🔵 | `file [object]`      		| load new file for debug (sym+exec)   |
-| 🔵 | `file`             		  | discard sym+exec file info           |
+| 🔵 | `file [object]`          | load new file for debug (sym+exec)   |
+| 🔵 | `file`                   | discard sym+exec file info           |
 | 🔵 | `symbol-file [object]`   | load only symbol table               |
-| 🔵 | `exec-file [object]` 		| specify object to run (not sym-file) |
-| 🔵 | `core-file [core]`   		| post-mortem debugging                |
+| 🔵 | `exec-file [object]`     | specify object to run (not sym-file) |
+| 🔵 | `core-file [core]`       | post-mortem debugging                |
 
 </td></tr>
 </table>
@@ -330,13 +330,13 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 
 |    | Command                  | Result                                              |
 | :- | :----------------------- | :-------------------------------------------------- |
-| 🟢 | `info registers`        	| Print registers sans floats.                        |
+| 🟢 | `info registers`         | Print registers sans floats.                        |
 | 🟢 | `info all-registers`     | Print all registers.                                |
 | 🔵 | `print/x [$pc]`          | Print one register.                                 |
-| 🔵 | `stepi`        		      | Single step at machine level.                       |
-| 🔵 | `nexti`        		      | Single step (over functions) at the machine level.  |
+| 🔵 | `stepi`                  | Single step at machine level.                       |
+| 🔵 | `nexti`                  | Single step (over functions) at the machine level.  |
 | 🔵 | `display/i [$pc]`        | Print current instruction in display.               |
-| 🔵 | `x/x [&gx]`        	    | Print variable gx in hex.                           |
+| 🔵 | `x/x [&gx]`              | Print variable gx in hex.                           |
 | 🟢 | `info line [42]`         | Print addresses for object code for line 42.        |
 | 🟢 | `info line [*0x2c4e]`    | Print line number of object code at address.        |
 | 🔵 | `x/10i [main]`           | Disassemble first 10 instructions in main.          |
@@ -355,13 +355,13 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 |    | Command                                     | Result                                                                       |
 | :- | :------------------------------------------ | :--------------------------------------------------------------------------- |
 | 🟢 | `show commands`                             | Print command history.                                                       |
-| 🔵 | `info editing`       	                     | Print command history.                                                       |
+| 🔵 | `info editing`                              | Print command history.                                                       |
 | 🔵 | `set history filename [fname]`              | Set the name of the GDB command history file to fname.                       |
 | 🔵 | `set history save`                          | Record command history in a file.                                            |
 | 🔵 | `set history save [on/off]`                 | Record or don't record the command history into the file specified.          |
 | 🔵 | `set history size [size]`                   | Set the number of commands gdb keeps in its history list based on the size.  |
 | 🔵 | `set history size unlimited`                | Set the number of commands gdb keeps in its history list as unlimited.       |
-| 🔵 | `set history remove-duplicates [count]`     | Removed the first duplicate entry in history based on the count.                 |
+| 🔵 | `set history remove-duplicates [count]`     | Removed the first duplicate entry in history based on the count.             |
 | 🔵 | `set history remove-duplicates unlimited`   | Removed dupicate entrys in history.                                          |
 | 🔵 | `set history expansion [on/off]`            | Enable or disable history expansion.                                         |
 | 🟢 | `show history`                              | Display all four history states.                                             |
@@ -372,10 +372,10 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🟢 | `show commands`                             | Display the last ten commands in the command history.                        |
 | 🔵 | `show commands [n]`                         | Print ten commands centered on command number n.                             |
 | 🔵 | `show commands +`                           | Print ten commands just after the commands last printed.                     | 
-| 🔵 | `break class::[member]`                     | Set breakpoint on class member. May get a menu.                                |
+| 🔵 | `break class::[member]`                     | Set breakpoint on class member. May get a menu.                              |
 | 🔵 | `list class::[member]`                      | List member in class.                                                        |
 | 🔵 | `ptype [class]`                             | Print class members.                                                         |
-| 🔵 | `print [*this]`      	                     | Print contents of this pointer.                                              |
+| 🔵 | `print [*this]`                             | Print contents of this pointer.                                              |
 | 🔵 | `rbreak [regular expression]`               | Useful for breakpoint on overloaded member name.                             |
 
 </td></tr>
@@ -407,7 +407,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 </table>
 </div>
   
-#### MULTIPLE INFERIRORS CONNECTIONS
+#### MULTIPLE INFERIORS CONNECTIONS
 <div>
 <table>
 <tr><th></th>
