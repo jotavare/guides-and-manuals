@@ -39,7 +39,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 	<a href="#forks">Forks</a> •
 	<a href="#shortcuts">Shortcuts</a> •
 	<a href="#keyboard-shortcuts">Keyboard shortcuts</a> •
-	<a href="#single-key-mode">Single key mode</a> •
+	<a href="#single-key-mode">Single key mode</a>
 </p>
 
 #### DEFINITION
