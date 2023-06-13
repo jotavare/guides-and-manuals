@@ -11,16 +11,16 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 - [GitHub GDB Cheetsheat](https://gist.github.com/rkubik/b96c23bd8ed58333de37f2b8cd052c30)
 
 ## COMMANDS
-add: can also call functions.
-
-|    | Definition                |
+#### DEFINITION
+|    |                           |
 | :- | :------------------------ |
 | 🟢 | Most used commands by me  |
 | 🔵 | Least used commands by me |
 
+#### RUNNING THE PROGRAM
 <div>
 <table>
-<tr><th>RUNNING THE PROGRAM</th>
+<tr><th></th>
 <tr><td>
   
 |    | Command                               | Result                                             |
@@ -58,9 +58,10 @@ add: can also call functions.
 </table>
 </div>
 
+#### HELP
 <div>
 <table>
-<tr><th>HELP</th>
+<tr><th></th>
 <tr><td>
 
 |    | Command                                 | Result                                                 |
@@ -77,9 +78,10 @@ add: can also call functions.
 </table>
 </div>  
 
+#### LAYOUT
 <div>
 <table>
-<tr><th>LAYOUT</th>
+<tr><th></th>
 <tr><td>
 
 |    | Command                                 | Result                                                                                  |
@@ -132,9 +134,10 @@ add: can also call functions.
 </table>
 </div>
 
+#### BREAKPOINTS AND WATCHPOINTS
 <div>
 <table>
-<tr><th>BREAKPOINTS AND WATCHPOINTS</th>
+<tr><th></th>
 <tr><td>
 
 |    | Command                                                      | Result                                                      |
@@ -160,10 +163,11 @@ add: can also call functions.
 </td></tr>
 </table>
 </div>
-  
+
+#### STACK BACKTRACE
 <div>
 <table>
-<tr><th>STACK BACKTRACE</th>
+<tr><th></th>
 <tr><td>
   
 |    | Command         | Result                                  |
@@ -178,10 +182,11 @@ add: can also call functions.
 </td></tr>
 </table>
 </div>
-  
+
+#### BROWSING SOURCE
 <div>
 <table>
-<tr><th>BROWSING SOURCE</th>
+<tr><th></th>
 <tr><td>
 
 |    | Command                                   | Result                                              |
@@ -205,9 +210,10 @@ add: can also call functions.
 </table>
 </div>  
 
+#### BROWSING DATA
 <div>
 <table>
-<tr><th>BROWSING DATA</th>
+<tr><th></th>
 <tr><td>
 
 |    | Command                               | Result                                         |
@@ -242,9 +248,10 @@ add: can also call functions.
 </table>
 </div>  
 
+#### OBJECT FILE MANIPULATION
 <div>
 <table>
-<tr><th>OBJECT FILE MANIPULATION</th>
+<tr><th></th>
 <tr><td>
 
 |    | Command                  | Result                               |
@@ -259,9 +266,10 @@ add: can also call functions.
 </table>
 </div>
 
+#### SIGNAL CONTROL
 <div>
 <table>
-<tr><th>SIGNAL CONTROL</th>
+<tr><th></th>
 <tr><td>
 
 |    | Command                  | Result                                     |
@@ -281,9 +289,10 @@ add: can also call functions.
 </table>
 </div>
 
+#### MACHINE-LEVEL DEBUG
 <div>
 <table>
-<tr><th>MACHINE-LEVEL DEBUG</th>
+<tr><th></th>
 <tr><td>
 
 |    | Command                  | Result                                              |
@@ -304,9 +313,10 @@ add: can also call functions.
 </table>
 </div>
 
+#### HISTORY DISPLAY
 <div>
 <table>
-<tr><th>HISTORY DISPLAY</th>
+<tr><th></th>
 <tr><td>
 
 |    | Command                                     | Result                                                                       |
@@ -339,9 +349,10 @@ add: can also call functions.
 </table>
 </div>
 
+#### INPUT AND OUTPUT
 <div>
 <table>
-<tr><th>INPUT AND OUTPUT</th>
+<tr><th></th>
 <tr><td>
 
 |    | Command                                 | Result                                                                     |
@@ -363,9 +374,10 @@ add: can also call functions.
 </table>
 </div>
   
+#### MULTIPLE INFERIRORS CONNECTIONS
 <div>
 <table>
-<tr><th>MULTIPLE INFERIRORS CONNECTIONS</th>
+<tr><th></th>
 <tr><td>
 
 |    | Command                                      | Result                                                                 |
@@ -373,15 +385,15 @@ add: can also call functions.
 | 🔵 | `info inferiors`                             | Print a list of all inferiors currently being managed by gdb.          |
 | 🔵 | `inferior`                                   | Shows information about the current inferior.                          |
 | 🔵 | `info connections`                           | Print a list of all open target connections currently being managed.   | 
-| 🔵 | `inferior infno`                             | Make inferior number infno the current inferior.                       |
+| 🔵 | `inferior [id]`                              | Make inferior [id] the current inferior.                               |
 | 🔵 | `add-inferior`                               | Adds n inferiors to be run using executable as the executable.         |
 | 🔵 | `[-copies n]`                                |                                                                        |
 | 🔵 | `[-exec executable]`                         |                                                                        |
 | 🔵 | `[-no-connection]`                           |                                                                        |
-| 🔵 | `clone-inferior [-copies n] [infno]`         | Adds n inferiors ready to execute the same program as inferior infno.  |
-| 🔵 | `remove-inferiors infno...`                  | Removes the inferior or inferiors infno.                               |
-| 🔵 | `detach inferior infno...`                   | Detach from the inferior(s) identified by inferior number(s) infno.    |
-| 🔵 | `kill inferiors infno...`                    | Kill the inferior or inferiors identified by inferior number(s) infno. |
+| 🔵 | `clone-inferior [-copies n] [id]`            | Adds n inferiors ready to execute the same program as inferior [id].   |
+| 🔵 | `remove-inferiors [id]`                      | Removes the inferior or inferiors.                                     |
+| 🔵 | `detach inferior [id]`                       | Detach from the inferior(s) identified by inferior [id].               |
+| 🔵 | `kill inferiors [id]`                        | Kill the inferior or inferiors identified by inferior [id].            |
 | 🔵 | `set print inferior-events [on/off]`         | Enable or disable printing of new inferiors.                           |
 | 🔵 | `show print inferior-events`                 | Print if inferiors have started, exited or have been detached.         |
 | 🔵 | `maint info program-spaces`                  | Print a list of all program spaces currently being managed.            |
@@ -389,10 +401,11 @@ add: can also call functions.
 </td></tr>
 </table>
 </div>
-  
+
+#### MULTIPLE THREADS
 <div>
 <table>
-<tr><th>MULTIPLE THREADS</th>
+<tr><th></th>
 <tr><td>
 
 |    | Command                                      | Result                                                                           |
@@ -404,7 +417,7 @@ add: can also call functions.
 | 🔵 | `maint info sol-threads`                     | Display info on Solaris user threads.                                            |
 | 🔵 | `thread thread-id`                           | Make thread ID thread-id the current thread.                                     |
 | 🔵 | `thread apply [thread-id-list] command`      | Apply the named command to one or more threads.                                  |
-| 🔵 | `[-c]`                                       | Display errors, and the execution of thread apply then continues.                |
+| 🔵 | `[-c]`                                       | Display errors and the execution of the thread apply then continues.             |
 | 🔵 | `[-s]`                                       | Errors or empty output produced by a command to be silently ignored.             |
 | 🔵 | `[-q]`                                       | Disables printing the thread information.                                        |
 | 🔵 | `thread apply all -ascending command.`       | Apply a command to all threads in ascending order.                               |
@@ -425,9 +438,10 @@ add: can also call functions.
 </table>
 </div>
 
+#### FORKS
 <div>
 <table>
-<tr><th>FORKS</th>
+<tr><th></th>
 <tr><td>
 
 |    | Command                                      | Result                                                                               |
@@ -447,9 +461,10 @@ add: can also call functions.
 </table>
 </div>
 
+#### SHORTCUTS
 <div>
 <table>
-<tr><th>SHORTCUTS</th><th>SHORTCUTS</th>
+<tr><th></th><th></th>
 <tr><td>
 
 |    | Shortcut   | Command      |   
@@ -489,10 +504,11 @@ add: can also call functions.
 </td></tr>
 </table>
 </div>
-  
+
+#### KEYBOARD SHORTCUTS
 <div>
 <table>
-<tr><th>KEYBOARD SHORTCUTS</th>
+<tr><th></th>
 <tr><td>
   
 |    | Shortcut             | Result                                                   |
@@ -519,9 +535,10 @@ add: can also call functions.
 </table>
 </div>
 
+#### SINGLE KEY MODE
 <div>
 <table>
-<tr><th>SINGLE KEY MODE</th>
+<tr><th></th>
 <tr><td>
 
 |    | Shortcut                   | Result                          |
