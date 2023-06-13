@@ -6,7 +6,7 @@
 	<a href="#commands">Commands</a>
 </p>
 
-## About
+## ABOUT
 Welcome to the GDB Debugger Cheat Sheet repository! My goal is to provide a comprehensive list of optimized GDB commands and their descriptions. This repository serves as a concise quick reference guide for developers and enthusiasts working with GDB.
 
 I hope you find this optimized cheat sheet helpful for your GDB debugging needs. Happy debugging!
@@ -160,7 +160,8 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🔵 | `[half-standout]`                       | Use half bright and standout mode.                                                      |
 | 🔵 | `[bold]`                                | Use extra bright or bold mode.                                                          |
 | 🔵 | `[bold-standout]`                       | Use extra bright or bold and standout mode.                                             |
-  
+| ⚪ | <a href="#commands">↥ Back To Top</a>   | Scroll back top (index).                                                                |
+
 </td></tr>
 </table>
 </div>
