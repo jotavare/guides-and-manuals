@@ -99,7 +99,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 
 |    | Command                                 | Result                                                 |
 | :- | --------------------------------------- | ------------------------------------------------------ |
-| 🔵 | `help` or `-h`                          | List command classes.                                  |
+| 🟢 | `help` or `-h`                          | List command classes.                                  |
 | 🔵 | `help running`                          | List commands in the "running" command class.          |
 | 🔵 | `help run`                              | Bottom-level help for the command "run".               |
 | 🔵 | `help info`                             | List info commands for examining program state.        |
@@ -131,7 +131,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🔵 | `focus asm`                             | Make the assembly window active for scrolling.                                          |
 | 🔵 | `focus regs`                            | Make the register window active for scrolling.                                          |
 | 🔵 | `focus cmd`                             | Make the command window active for scrolling.                                           |
-| 🔵 | `refresh`                               | Refresh the screen. This is similar to typing `CTRL` + `L` or `ref`.                    |
+| 🟢 | `refresh`                               | Refresh the screen. This is similar to typing `CTRL` + `L` or `ref`.                    |
 | 🔵 | `tui reg float`                         | Show the floating point registers in the register window.                               |
 | 🔵 | `tui reg general`                       | Show the general registers in the register window.                                      |
 | 🔵 | `tui reg system`                        | Show the system registers in the register window.                                       |
@@ -141,9 +141,9 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🟢 | `winheight [layout] [+-number]`         | Change the height of the window name by lines (+ increase and - decreases).             |
 | 🔵 | `tabset [nchars]`                       | Set the width of tab stops to be nchars characters.                                     |
 | 🔵 | `set height lpp`                        | Specify a screen height of lpp lines.                                                   |
-| 🔵 | `show height`                           | Show current screen height.                                                             |
+| 🟢 | `show height`                           | Show current screen height.                                                             |
 | 🔵 | `set width cpl`                         | Specify a screen width of cpl characters.                                               |
-| 🔵 | `show width`                            | Show current screen width.                                                              |
+| 🟢 | `show width`                            | Show current screen width.                                                              |
 | 🔵 | `tui reg float`                         | Show the floating point registers in the register window.                               |
 | 🔵 | `tui reg system`                        | Show the system registers in the register window.                                       |
 | 🔵 | `tui reg general`                       | Show the general registers in the register window.                                      |
@@ -224,7 +224,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 
 |    | Command                                   | Result                                              |
 | :- | :---------------------------------------- | :-------------------------------------------------- |
-| 🔵 | `list [20]`                               | List 10 lines around line `20`.                     |
+| 🟢 | `list [20]`                               | List 10 lines around line `20`.                     |
 | 🔵 | `list [1,10]`                             | List lines `1` to `10`.                             |
 | 🔵 | `list [main]`                             | List lines around function `main`.                  |
 | 🔵 | `list [basic.c:main]`                     | List from another file `basic.c`.                   |
@@ -272,7 +272,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🟢 | `whatis [expression]`                 | Print type of expression.                      |
 | 🟢 | `set [variable] = [expression]`       | Assign value.                                  |
 | 🟢 | `display [expression]`                | Display expression result at stop.             |
-| 🔵 | `undisplay`                           | Delete displays.                               |
+| 🟢 | `undisplay`                           | Delete displays.                               |
 | 🟢 | `info display`                        | Show displays.                                 |
 | 🟢 | `show values`                         | Print value history.                           |
 | 🟢 | `info history`                        | Print value history.                           |
@@ -390,18 +390,18 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 
 |    | Command                                 | Result                                                                     |
 | :- | :-------------------------------------- | :------------------------------------------------------------------------- |
-| 🔵 | `info terminal`                         | Displays information recorded about the terminal modes.                    |
+| 🟢 | `info terminal`                         | Displays information recorded about the terminal modes.                    |
 | 🔵 | `run > outfile`                         | Starts your program, diverting its output to the file outfile.             |
 | 🔵 | `tty /dev/ttyb`                         | Default processes to do input and output on the terminal /dev/ttyb.        |
 | 🔵 | `set inferior-tty [tty]`                | Set the tty for the program being debugged to tty.                         |
 | 🔵 | `show inferior-tty`                     | Show the current tty for the program being debugged.                       |
-| 🔵 | `attach process-id`                     | Attach to a running process that was started outside gdb.                  |
+| 🟢 | `attach process-id`                     | Attach to a running process that was started outside gdb.                  |
 | 🔵 | `set exec-file-mismatch [ask]`          | Display a warning and ask the user whether to load the process executable. |
 | 🔵 | `set exec-file-mismatch [warn]`         | Just display a warning.                                                    |
 | 🔵 | `set exec-file-mismatch [off]`          | Don’t attempt to detect a mismatch.                                        |
 | 🔵 | `show exec-file-mismatch`               | Show the current value of exec-file-mismatch.                              |
-| 🔵 | `detach`                                | Release the attached process from gdb control.                             |
-| 🔵 | `kill`                                  | Kill the child process in which your program is running.                   |
+| 🟢 | `detach`                                | Release the attached process from gdb control.                             |
+| 🟢 | `kill`                                  | Kill the child process in which your program is running.                   |
 
 </td></tr>
 </table>
@@ -415,9 +415,9 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 
 |    | Command                                      | Result                                                                 |
 | :- | :------------------------------------------- | :--------------------------------------------------------------------- |
-| 🔵 | `info inferiors`                             | Print a list of all inferiors currently being managed by gdb.          |
+| 🟢 | `info inferiors`                             | Print a list of all inferiors currently being managed by gdb.          |
 | 🔵 | `inferior`                                   | Shows information about the current inferior.                          |
-| 🔵 | `info connections`                           | Print a list of all open target connections currently being managed.   | 
+| 🟢 | `info connections`                           | Print a list of all open target connections currently being managed.   | 
 | 🔵 | `inferior [id]`                              | Make inferior [id] the current inferior.                               |
 | 🔵 | `add-inferior`                               | Adds n inferiors to be run using executable as the executable.         |
 | 🔵 | `[-copies n]`                                |                                                                        |
@@ -443,12 +443,11 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 
 |    | Command                                      | Result                                                                           |
 | :- | :------------------------------------------- | :------------------------------------------------------------------------------- |
-| 🔵 | `thread thread-id`                           | Switch among threads.                                                            |
-| 🔵 | `info threads`                               | Inquire about existing threads.                                                  |
+| 🟢 | `thread [id]`                                | Switch among threads.                                                            |
+| 🟢 | `info threads`                               | Inquire about existing threads.                                                  |
 | 🔵 | `info threads [-gid] [thread-id-list]`       | Display information about one or more threads.                                   |
 | 🔵 | `thread apply [thread-id-list] args`         | Apply a command to a list of threads.                                            |
 | 🔵 | `maint info sol-threads`                     | Display info on Solaris user threads.                                            |
-| 🔵 | `thread thread-id`                           | Make thread ID thread-id the current thread.                                     |
 | 🔵 | `thread apply [thread-id-list] command`      | Apply the named command to one or more threads.                                  |
 | 🔵 | `[-c]`                                       | Display errors and the execution of the thread apply then continues.             |
 | 🔵 | `[-s]`                                       | Errors or empty output produced by a command to be silently ignored.             |
@@ -465,7 +464,7 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 | 🔵 | `set debug libthread-db [1/0]`               | Set the debug libthread-db as on or off.                                         |
 | 🔵 | `show debug libthread-db`                    | Display of libthread_db-related events.                                          |
 | 🔵 | `set debug threads [on/off]`                 | Set the debug threads as on or off.                                              |
-| 🔵 | `show debug threads`                         | Print additional messages when threads are created and deleted.                  |
+| 🟢 | `show debug threads`                         | Print additional messages when threads are created and deleted.                  |
 
 </td></tr>
 </table>
@@ -479,16 +478,16 @@ I hope you find this optimized cheat sheet helpful for your GDB debugging needs.
 
 |    | Command                                      | Result                                                                               |
 | :- | :------------------------------------------- | :----------------------------------------------------------------------------------- |
-| 🔵 | `set follow-fork-mode.`                      | Follow the child process instead of the parent process.                              |
-| 🔵 | `set follow-fork-mode [parent]`              | Set the debugger response to a program call of fork.                                 |
-| 🔵 | `set follow-fork-mode [child]`               | Set the debugger response to a program call of vfork.                                |
-| 🔵 | `show follow-fork-mode`                      | Display the current debugger response to a fork or vfork call.                       |
-| 🔵 | `set detach-on-fork.`                        | Debug both the parent and child processes.                                           |
-| 🔵 | `set detach-on-fork [on/off]`                | Detach one of the processes after a fork, or retain debugger control over them both. |
-| 🔵 | `show detach-on-fork [on/off]`               | Show whether detach-on-fork mode is on/off.                                          |
-| 🔵 | `set follow-exec-mode [mode]`                | Set debugger response to a program call of exec.                                     |
-| 🔵 | `[new]`                                      | Creates a new inferior and rebinds the process to this new inferior.                 |
-| 🔵 | `[same]`                                     | Keeps the process bound to the same inferior.                                        |
+| 🟢 | `set follow-fork-mode.`                      | Follow the child process instead of the parent process.                              |
+| 🟢 | `set follow-fork-mode parent`                | Set the debugger response to a program call of fork.                                 |
+| 🟢 | `set follow-fork-mode child`                 | Set the debugger response to a program call of vfork.                                |
+| 🟢 | `show follow-fork-mode`                      | Display the current debugger response to a fork or vfork call.                       |
+| 🟢 | `set detach-on-fork.`                        | Debug both the parent and child processes.                                           |
+| 🟢 | `set detach-on-fork [on/off]`                | Detach one of the processes after a fork, or retain debugger control over them both. |
+| 🟢 | `show detach-on-fork [on/off]`               | Show whether detach-on-fork mode is on/off.                                          |
+| 🟢 | `set follow-exec-mode [mode]`                | Set debugger response to a program call of exec.                                     |
+| 🟢 | `[new]`                                      | Creates a new inferior and rebinds the process to this new inferior.                 |
+| 🟢 | `[same]`                                     | Keeps the process bound to the same inferior.                                        |
 
 </td></tr>
 </table>
