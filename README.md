@@ -1,9 +1,9 @@
 <h1 align="center">
-  <img src="https://github.com/jotavare/jotavare/raw/main/42/banner/new/42_guides_manuals_banner_new.png">
+  <img src="https://github.com/jotavare/jotavare/blob/main/42/banners/guides/github_guides_banner_rectangle.png">
 </h1>
 
 <p align="center">
-	<img src="https://img.shields.io/badge/status-ongoing-success?color=%2312bab9&style=flat-square" />
+	<img src="https://img.shields.io/badge/status-in%20progress-yellow?style=flat-square"/>
 	<img src="https://img.shields.io/badge/score-42%20%2F%2042-success?color=%2312bab9&style=flat-square" />
 	<img src="https://img.shields.io/github/last-commit/jotavare/42-resources?color=%2312bab9&style=flat-square" />
 	<a href='https://www.linkedin.com/in/joaoptoliveira' target="_blank"><img alt='Linkedin' src='https://img.shields.io/badge/LinkedIn-100000?style=flat-square&logo=Linkedin&logoColor=white&labelColor=0A66C2&color=0A66C2'/></a>
