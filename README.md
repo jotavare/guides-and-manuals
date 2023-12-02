@@ -15,15 +15,15 @@
 <tr><th>GNU Project Debugger</th><th>Wifi Network Hacking</th><th>Git (empty)</th></tr>
 <tr><td>
 	<a href="https://github.com/jotavare/guides-and-manuals/tree/main/guides-and-manuals/gdb">
-	<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/gdb.png"/>
+	<img src="https://github.com/jotavare/jotavare/blob/main/42/banners/guides/github_guides_banner_square_gdb.png"/>
 	</a>
 	</td><td>
 	<a href="https://github.com/jotavare/guides-and-manuals/tree/main/guides-and-manuals/wifi-network-hacking">
-	<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/wifi.png"/>
+	<img src="https://github.com/jotavare/jotavare/blob/main/42/banners/guides/github_guides_banner_square_wifi.png"/>
 	</a>
 	</td><td>
 	<a href="https://github.com/jotavare/guides-and-manuals/tree/main/guides-and-manuals/git">
-	<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/git.png"/>
+	<img src="https://github.com/jotavare/jotavare/blob/main/42/banners/guides/github_guides_banner_square_git.png"/>
 	</a>
 </td></tr>
 </table>
@@ -34,15 +34,15 @@
 <tr><th>Linux (empty)</th><th>Valgrind (empty)</th><th>Markdown (empty)</th></tr>
 <tr><td>
 	<a href="https://github.com/jotavare/guides-and-manuals/tree/main/guides-and-manuals/linux">
-	<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/linux.png"/>
+	<img src="https://github.com/jotavare/jotavare/blob/main/42/banners/guides/github_guides_banner_square_linux.png"/>
 	</a>
 	</td><td>
 	<a href="https://github.com/jotavare/guides-and-manuals/tree/main/guides-and-manuals/valgrind">
-	<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/valgrind.png"/>
+	<img src="https://github.com/jotavare/jotavare/blob/main/42/banners/guides/github_guides_banner_square_valgrind.png"/>
 	</a>
 	</td><td>
 	<a href="https://github.com/jotavare/guides-and-manuals/tree/main/guides-and-manuals/markdown">
-	<img src="https://github.com/jotavare/jotavare/blob/main/42/banner/guides/markdown.png"/>
+	<img src="https://github.com/jotavare/jotavare/blob/main/42/banners/guides/github_guides_banner_square_markdown.png"/>
 	</a>
 </td></tr>
 </table>
